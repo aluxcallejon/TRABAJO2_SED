@@ -48,8 +48,12 @@ void init_Timer0(void)
 // ---------------------------------------------------------------
 // Tiempo= 4.Tosc.(256-TMR0).Preescalador
 // Detallar aqu� los c�lculos
+// Como con el timer0 no llegamos a 0.25s de periodo, decidimos partir el periodo en 4
+// 62.464ms=4/4*10^6(frec) * (256) * Preescalador -->En primer lugar, maximizamos el parentesis del TMR0 a 256 y calculamos el valor que podemos ponerle a Preescalador nos sale 244
+// y el proximo valor del preescalador mas cercano a 244 es 256, por lo que escogemos este valor de preescalador.
+// 62.464ms=4/4*10^6(frec) * (256-TMR0) * 256 --> Ahora calculamos el valor de TMR0 --> nos sale 12.
 // ---------------------------------------------------------------
-   OPTION_REG = 0b10000111;     //Preescalador calculado con la formula de la linea 49, maximizando primero tmr0 y calculando el Preescalador y posteriormente, calculamos tmr0
+   OPTION_REG = 0b11000111;     //Preescalador calculado con la formula de la linea 49, maximizando primero tmr0 y calculando el Preescalador y posteriormente, calculamos tmr0
                // 76543210
                // ||||||||
                // |||||||+- bit0 PS0
@@ -58,7 +62,7 @@ void init_Timer0(void)
                // ||||+---- bit3 PSA     El preescaler se utiliza para el TMR0
                // |||+----- bit4 T0SE
                // ||+------ bit5 T0CS    Utiliza Fosc/4 para temporizar
-               // |+------- bit6 INTEDG
+               // |+------- bit6 INTEDG: flanco activo interrupción externa.  1- la interrupción se producirá en el flanco | 0- la interrupción se producirá en el flanco descendente
                // --------- bit7 RBPU    No Activa los pullups internos de PORTB
 
     TMR0IE=1;  // Habilita Interrupci�n del Timer 0
@@ -92,16 +96,18 @@ void init_Timer2(void)
     //-------------------------------------------------
     // Periodo PWM =  4.Tosc.(PR2+1).Preescalador  = 4ms   // Periodo del TMR2
 	  // Detallar aqu� los c�lculos
+    //           4*(1/4M)*(PR2+1)*Preescalador=4ms------> Maximizamos el valor de PR2 a 255 --> Preescalador nos sale 15.625 -->Valor mas proximo -->Preescalador =16
+    //           4*(1/4M)*(PR2+1)*16=4ms----------------> Calculamos ahora el valor de PR2  --> PR2 = 249
     //-------------------------------------------------
-    PR2    = ???;            // PR2= ???
-    T2CON  = 0b????????;     // T2CON<6:3> = TOUTPS<3:0> = ???? PostDivisor= 1:???
+    PR2    = 249;            // PR2= ?3999
+    T2CON  = 0b00001011;     // T2CON<6:3> = TOUTPS<3:0> = 0000 PostDivisor= 1:1
                              // T2CON<2>   = TMR2ON      = '1'     ->  Activa el TMR2
-                             // T2CON<1:0> = T2CKPS<1:0> = ??    ->  Predivisor = 1:???
+                             // T2CON<1:0> = T2CKPS<1:0> = 11    ->  Predivisor =1:16
 
-    TMR2IE= ?;               // PIE1<1>='?'. Deshabilita interrupcion TMR2
+    TMR2IE= 0;               // PIE1<1>='?'. Deshabilita interrupcion TMR2
 
     CCPR1L = 0;              // Duty inicial al 0%
-    CCP1CON = ??????????;    // Activa el PWM
+    CCP1CON = 00001100;    // Activa el PWM
 }
 void init_ADC(void)
 {
@@ -110,16 +116,16 @@ void init_ADC(void)
     //-----------------------
 //                                                                                    +-----------+------------+
 //                                                                                    | ADCS<2:0> |  Fosc M�x. |
-//  ADCON0= 0b????????;       // ADCS<1:0>=??, CHS<2:0>=???, ADON=1                   +-----------+------------+
+    ADCON0= 0b01111011;       // ADCS<1:0>=??, CHS<2:0>=???, ADON=1                   +-----------+------------+
 //            |||||||+-------------- ADON = 1                                         |   000     |   1.25Mhz  |
 //            ||||||+--------------- No implementado                                  |   100     |    2.5Mhz  |
-//            |||||+---------------- GO/DONE = 0                                      |   001     |      5Mhz  |
+//            |||||+---------------- GO/DONE = 0                                      |   001     |      5Mhz  | <----
 //            ||||+----------------- CHS0= ?                                          |   101     |     10Mhz  |
 //            |||+------------------ CHS1= ?                                          |   010     |     20Mhz  |
 //            ||+------------------- CHS2= ? --> CHS<2:0>=??? -> AN6 (pin RB7)        |   110     |     20Mhz  |
 //            |+-------------------- ADCS0=?                                      +-> |   x11     | RC interno |
-//            +--------------------- ADCS1=? --> ADCS<2:0>=???   ----(~2Mhz) -----+   +-----------+------------+
-//  ADCON1= 0b????????;       // ADFM=1, ADCS2=1, VCFG<1:0>= 00
+//            +--------------------- ADCS1=? --> ADCS<2:0>=001   ----(4Mhz) -----+   +-----------+------------+
+    ADCON1= 0b10000000;       // ADFM=1, ADCS2=1, VCFG<1:0>= 00
 //            |||||||+-------------- Unused
 //            ||||||+--------------- Unused
 //            |||||+---------------- Unused
@@ -127,18 +133,16 @@ void init_ADC(void)
 //            |||+------------------ VCFG0=0 --> (Vref-)= GND
 //            ||+------------------- VCFG1=0 --> (Vref+)= Vdd
 //            |+-------------------- ADCS2= 0
-//            +--------------------- ADFM = ? (0=left, 1=right justification)
+//            +--------------------- ADFM = 1 (0=left, 1=right justification)
 
     __delay_us(750);    // Tiempo para que se estabilice inicialmente el CA/D
 }
 void init_librerias(void)
 {
     // Congiguraci�n del Teclado: Filas en RA0, RA1, RA2 y RA3. Columnas en RB0, RB1 y RB2.
-    TECLADO_ini( (?? + ??) + (?? + ??) );
-
+    TECLADO_ini((FIL_EN_PORTA+FIL_4PINES_BAJOS) + (COL_EN_PORTB+COL_3PINES_BAJOS)  | COL_PULL_UP);
     // Congiguraci�n del LCD: Bus en RA0, RA1, RA2 y RA3. RS en RA7. E en RA6.
-    LCD_ini(?? + ?? + ?? + ??, ??, ??);
-
+    LCD_ini(BUS_EN_PORTA |BUS_4PINES_BAJOS|RS_EN_PORTA|E_EN_PORTA, RS_PIN_7, E_PIN_6);
     // Env�a primer mensaje al LCD (funci�n definida en procesoSecuencia.c)
     LCD_mensaje_opciones_inicial();
 }
