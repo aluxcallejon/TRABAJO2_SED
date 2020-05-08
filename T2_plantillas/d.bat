@@ -1,0 +1,22 @@
+del funclist
+del *.dbk
+del *.cof
+cd  obj
+del *.obj
+del *.as
+del *.lst
+del *.rlf
+del *.cmf
+del *.cof
+del *.d
+del *.hxl
+del *.p1
+del *.pre
+del *.sdb
+del *.sym
+del *.dbk
+del *.hex
+cd  ..
+rmdir obj
+del *.hex
+
