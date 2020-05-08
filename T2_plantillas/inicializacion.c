@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 #include "XTAL_FREQ.h"
-     
-#include "TECLADO.h"           // Librería del componente Teclado Modificada sin REBOTES
-#include "LCD.h"               // Librería del componente LCD de 2 líneas x 16 caracteres
+
+#include "TECLADO.h"           // Librerï¿½a del componente Teclado Modificada sin REBOTES
+#include "LCD.h"               // Librerï¿½a del componente LCD de 2 lï¿½neas x 16 caracteres
 
 //==================================
 //Prototipos de funciones
@@ -12,12 +12,12 @@
 void LCD_mensaje_opciones_inicial(void);
 
 //==================================
-//Funciones de inicialización
+//Funciones de inicializaciï¿½n
 //==================================
 void init_registros(void)
 {
     // ------------------------------------------------
-    // Configuración del cristal interno a 4 Mhz
+    // Configuraciï¿½n del cristal interno a 4 Mhz
     // ------------------------------------------------
     OSCCON=  0b01100110;    // Configura a 4 Mhz                               +-------------+--------+
             // 76543210                                                        | IRCF2:IRCF0 |  Frec  |
@@ -31,25 +31,25 @@ void init_registros(void)
             //  +------- OSCCON<6> : IRCF2=1  // [IRCF2:IRCF0]=110--> 4Mhz -+->|    110      |   4Mhz |
                                               //                               |    111      |   8Mhz |
     while (IOFS==0)  { }    // Mientras no se estabilice el                    +-------------+--------+
-                            // reloj interno -> esperar aquí.
-   
-    PORTA= 0b00000000;        // Ponemos a 0 los latches de salida de PORTA 
-    PORTB= 0b00000000;        // Ponemos a 0 los latches de salida de PORTB 
-    ANSEL= 0b????????;        // AN6 (RB7) como analógico
-    TRISA= 0b????????;        // PORTA de entrada/salida ???  
-    TRISB= 0b????????;        // PORTB de entrada/salida ???
+                            // reloj interno -> esperar aquï¿½.
+
+    PORTA= 0b00000000;        // Ponemos a 0 los latches de salida de PORTA
+    PORTB= 0b00000000;        // Ponemos a 0 los latches de salida de PORTB
+    ANSEL= 0b10000000;        // AN6 (RB7) como analï¿½gico
+    TRISA= 0b00111111;        // PORTA de entrada/salida ???  Entrada --> 1
+    TRISB= 0b11000111;        // PORTB de entrada/salida ???  Salida  --> 0
 
 }
 
 void init_Timer0(void)
 {
 // ---------------------------------------------------------------
-// Configura y activa TMR0. No activar interrupción todavía...
+// Configura y activa TMR0. No activar interrupciï¿½n todavï¿½a...
 // ---------------------------------------------------------------
-// Tiempo= 4.Tosc.(256-TMR1).Preescalador
-// Detallar aquí los cálculos
+// Tiempo= 4.Tosc.(256-TMR0).Preescalador
+// Detallar aquï¿½ los cï¿½lculos
 // ---------------------------------------------------------------
-   OPTION_REG = 0b????????;
+   OPTION_REG = 0b10000111;     //Preescalador calculado con la formula de la linea 49, maximizando primero tmr0 y calculando el Preescalador y posteriormente, calculamos tmr0
                // 76543210
                // ||||||||
                // |||||||+- bit0 PS0
@@ -61,37 +61,37 @@ void init_Timer0(void)
                // |+------- bit6 INTEDG
                // --------- bit7 RBPU    No Activa los pullups internos de PORTB
 
-    TMR0IE=?;  // Habilita Interrupción del Timer 0
-    TMR0=??;   // Preparamos TMR0 inicial
+    TMR0IE=1;  // Habilita Interrupciï¿½n del Timer 0
+    TMR0=12;   // Preparamos TMR0 inicial
 }
 void init_Timer1(void)
 {
 // * ************************************************************************ *
-// * Configuración Timer 1: contador de pulsos del encoder de velocidad
-// * ************************************************************************ *
+// * Configuraciï¿½n Timer 1: contador de pulsos del encoder de velocidad
+// * *************************************************************************
     T1CKPS1=0;              // T1CON<5> = '0'.
     T1CKPS0=0;              // T1CON<4> = '0'. Preescalador a 1:1  (00= 1:1, 01= 1:2, 10= 1:4, 11 1:8)
     T1OSCEN=0;              // T1CON<3> = '0'. Desactivado oscilador externo en pines RB6-RB7
     nT1SYNC=0;              // T1CON<2>=  '0'. Sincronismo de reloj externo (no hace falta ya que el reloj es interno)
-    TMR1CS= ?;              // T1CON<1> = '?'. Utiliza RB6 para incrementar TMR1
-    TMR1ON= ?;              // T1CON<0> = '?'. Activa el TMR1
+    TMR1CS= 1;              // T1CON<1> = '?'. Utiliza RB6 para incrementar TMR1
+    TMR1ON= 1;              // T1CON<0> = '?'. Activa el TMR1
 
     TMR1  = 0;              // Ponemos a 0 el contador de pulsos del encoder de velocidad
-    TMR1IF= ?;              // PIR1<0>='?'.    Bandera TMR1 inicialmente abajo
-    TMR1IE= ?;              // PIE1<0>='?'.    NO Habilita interrupcion TMR1
+    TMR1IF= 0;              // PIR1<0>='?'.    Bandera TMR1 inicialmente abajo
+    TMR1IE= 0;              // PIE1<0>='?'.    NO Habilita interrupcion TMR1
 
-    PEIE=?;                 // NO hay interrupción del timer 1
+    PEIE=0;                 // NO hay interrupciï¿½n del timer 1
 }
 void init_Timer2(void)
 {
     //-----------------------------------------------------
-    // Módulo de comparación. Inicialmente PWM apagado
+    // Mï¿½dulo de comparaciï¿½n. Inicialmente PWM apagado
     //-----------------------------------------------------
     CCP1CON = 0b00000000;
 
     //-------------------------------------------------
     // Periodo PWM =  4.Tosc.(PR2+1).Preescalador  = 4ms   // Periodo del TMR2
-	// Detallar aquí los cálculos
+	  // Detallar aquï¿½ los cï¿½lculos
     //-------------------------------------------------
     PR2    = ???;            // PR2= ???
     T2CON  = 0b????????;     // T2CON<6:3> = TOUTPS<3:0> = ???? PostDivisor= 1:???
@@ -101,15 +101,15 @@ void init_Timer2(void)
     TMR2IE= ?;               // PIE1<1>='?'. Deshabilita interrupcion TMR2
 
     CCPR1L = 0;              // Duty inicial al 0%
-    CCP1CON = ??????????;    // Activa el PWM    
+    CCP1CON = ??????????;    // Activa el PWM
 }
 void init_ADC(void)
 {
     //-----------------------
-    // Configuración del CAD
+    // Configuraciï¿½n del CAD
     //-----------------------
 //                                                                                    +-----------+------------+
-//                                                                                    | ADCS<2:0> |  Fosc Máx. |
+//                                                                                    | ADCS<2:0> |  Fosc Mï¿½x. |
 //  ADCON0= 0b????????;       // ADCS<1:0>=??, CHS<2:0>=???, ADON=1                   +-----------+------------+
 //            |||||||+-------------- ADON = 1                                         |   000     |   1.25Mhz  |
 //            ||||||+--------------- No implementado                                  |   100     |    2.5Mhz  |
@@ -133,12 +133,12 @@ void init_ADC(void)
 }
 void init_librerias(void)
 {
-    // Congiguración del Teclado: Filas en RA0, RA1, RA2 y RA3. Columnas en RB0, RB1 y RB2.
-    TECLADO_ini( (?? + ??) + (?? + ??) );    
+    // Congiguraciï¿½n del Teclado: Filas en RA0, RA1, RA2 y RA3. Columnas en RB0, RB1 y RB2.
+    TECLADO_ini( (?? + ??) + (?? + ??) );
 
-    // Congiguración del LCD: Bus en RA0, RA1, RA2 y RA3. RS en RA7. E en RA6.
+    // Congiguraciï¿½n del LCD: Bus en RA0, RA1, RA2 y RA3. RS en RA7. E en RA6.
     LCD_ini(?? + ?? + ?? + ??, ??, ??);
-    
-    // Envía primer mensaje al LCD (función definida en procesoSecuencia.c)
+
+    // Envï¿½a primer mensaje al LCD (funciï¿½n definida en procesoSecuencia.c)
     LCD_mensaje_opciones_inicial();
 }
