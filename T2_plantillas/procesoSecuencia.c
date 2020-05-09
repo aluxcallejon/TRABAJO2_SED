@@ -1,8 +1,8 @@
 #include   <xc.h>
 #include <stdlib.h>
 
-#include "XTAL_FREQ.h"         // Definición de la frecuencia de reloj usada (4MHz) necesaria para LCD
-#include "LCD.h"               // Librería del componente LCD de 2 líneas x 16 caracteres
+#include "XTAL_FREQ.h"         // Definiciï¿½n de la frecuencia de reloj usada (4MHz) necesaria para LCD
+#include "LCD.h"               // Librerï¿½a del componente LCD de 2 lï¿½neas x 16 caracteres
 
 //==================================
 //Prototipos de funciones
@@ -17,7 +17,7 @@ void espera01Almohadilla(void);
 //==================================
 //Variables globales
 //==================================
-int valor;                               // Variable que va almacenando el número introducido por el teclado
+int valor;                               // Variable que va almacenando el nï¿½mero introducido por el teclado
 unsigned short int start=1;              // Variable que guarda el estado del motor (1=START 0=STOP)
 unsigned short int sentido=1;            // Variable que guarda el estado del sentido de giro (1=CW 0=CCW)
 
@@ -28,13 +28,13 @@ extern unsigned short int num_pulsos_ref;
 extern unsigned char tecla;
 extern unsigned char nuevaTecla;
 extern void (*estado[2])(void);
-     
+
 //==================================
-//Funciones de inicialización
+//Funciones de inicializaciï¿½n
 //==================================
-void init_procesoSecuencia(void)         // Inicialización de variables necesarias para este proceso
+void init_procesoSecuencia(void)         // Inicializaciï¿½n de variables necesarias para este proceso
 {
-    estado[1]= esperaPrimeraTecla;       // El estado inicial será esperaPrimeraTecla
+    estado[1]= esperaPrimeraTecla;       // El estado inicial serï¿½ esperaPrimeraTecla
 }
 
 //==================================
@@ -50,11 +50,11 @@ void LCD_mensaje_opciones2(void)
 {
     LCD_gotoXY(0,1);                      // Desplaza el cursor al principio de la fila inferior
     if(start==1)
-        LCD_enviaCadena("0:START ");      // Muestra el mensaje START/STOP según indique la variable start
+        LCD_enviaCadena("0:START ");      // Muestra el mensaje START/STOP segï¿½n indique la variable start
     else
         LCD_enviaCadena("0:STOP  ");
     if(sentido==1)
-        LCD_enviaCadena("1:CW    ");      // Muestra el mensaje CW/CCW según indique la variable sentido
+        LCD_enviaCadena("1:CW    ");      // Muestra el mensaje CW/CCW segï¿½n indique la variable sentido
     else
         LCD_enviaCadena("1:CCW   ");
 }
@@ -64,19 +64,19 @@ void LCD_mensaje_opciones2(void)
 //==================================
 void esperaPrimeraTecla(void)
 {
-    if (nuevaTecla==1)                    // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)                    // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = 0;                   // Baja la bandera de detección de tecla
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
         if(tecla==10)                     // Si la tecla es asterisco (=10)
         {
             LCD_gotoXY(0,1);                      // Desplaza el cursor al principio de la fila inferior
-            LCD_enviaCadena("VALOR REF: ___ #");  // Muestra el mensaje (en cada _ irá un dígito pulsado)
-            estado[1] = ???????;                  // Siguiente estado esperaPrimerValor
-        }
+            LCD_enviaCadena("VALOR REF: ___ #");  // Muestra el mensaje (en cada _ irï¿½ un dï¿½gito pulsado)
+            estado[1] = esperaPrimerValor;       // Siguiente estado esperaPrimerValor
+        }                                             //0-9 10=* 11=#
         else if (tecla==11)               // Si la tecla es almohadilla (=11)
         {
             LCD_mensaje_opciones2();              // Muestra el mensaje con las opciones
-            estado[1] = ??????;                   // Siguiente estado espera01Almohadilla
+            estado[1] = espera01Almohadilla;      // Siguiente estado espera01Almohadilla
         }
     }
 }
@@ -85,9 +85,9 @@ void esperaPrimeraTecla(void)
 //==================================
 void espera01Almohadilla(void)
 {
-    if (nuevaTecla==1)          // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)          // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = ?;                   // Baja la bandera de detección de tecla
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
         if(tecla==0)                      // Si la tecla es 0, cambia start
         {
             start=!start;
@@ -101,24 +101,24 @@ void espera01Almohadilla(void)
         else if(tecla==11)                // Si la tecla es almohadilla, aplica los valores
         {
             if(start)
-                CCP1CON=??????????;       // Activa PWM
+                CCP1CON=00001100;      // Activa PWM
             else
             {
-                CCP1CON=??????????;       // Desactiva PWM
+                CCP1CON=00000000;       // Desactiva PWM
                 RB3=0;                    // Asegura el pinn RB3 a 0
             }
             if(sentido)
             {
-                RB4=?;
-                RB5=?;                    // [Bit1:Bit0]=??. El motor gira CW
+                RB4=1;
+                RB5=0;                    // [Bit1:Bit0]=1:0. El motor gira CW
             }
             else
             {
-                RB4=?;
-                RB5=?;                    // [Bit1:Bit0]=??. El motor gira CCW
+                RB4=0;
+                RB5=1;                    // [Bit1:Bit0]=0:1. El motor gira CCW
             }
             LCD_mensaje_opciones_inicial(); // Muestra el mensaje inicial
-            estado[1] = ??????;             // Siguiente estado esperaPrimeraTecla
+            estado[1] = esperaPrimeraTecla; // Siguiente estado esperaPrimeraTecla
         }
     }
 }
@@ -128,15 +128,15 @@ void espera01Almohadilla(void)
 //==================================
 void esperaPrimerValor(void)
 {
-    if (nuevaTecla==1)          // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)          // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = ?;                   // Baja la bandera de detección de tecla
-        if(tecla<=9)                      // Si es un número
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
+        if(tecla<=9)                      // Si es un nï¿½mero
         {
-            valor = tecla;                // Se guarda el primer dígito del valor de la referencia
-            LCD_gotoXY(11,1);               // Desplaza el cursor: fila inferior columna 11 (donde está el primer _ )
-            LCD_enviaCaracter(?????????);   // Muestra el carácter correspondiente a la tecla pulsada
-            estado[1] = ??????;             // Siguiente estado esperaSegundoValor
+            valor = tecla;                 // Se guarda el primer dï¿½gito del valor de la referencia
+            LCD_gotoXY(11,1);              // Desplaza el cursor: fila inferior columna 11 (donde estï¿½ el primer _ )
+            LCD_enviaCaracter(tecla);    // Muestra el carï¿½cter correspondiente a la tecla pulsada
+            estado[1] = esperaSegundoValor;// Siguiente estado esperaSegundoValor
         }
     }
 }
@@ -146,20 +146,20 @@ void esperaPrimerValor(void)
 //==================================
 void esperaSegundoValor(void)
 {
-    if (nuevaTecla==1)          // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)          // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = ?;                   // Baja la bandera de detección de tecla
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
         if(tecla==11)                     // Si la tecla es almohadilla, ya hemos terminado
         {
             num_pulsos_ref = valor;       // Se guarda el valor introducido
             LCD_mensaje_opciones_inicial(); // Muestra el mensaje inicial
-            estado[1] = ??????;             // Siguiente estado esperaPrimeraTecla
+            estado[1] = esperaPrimeraTecla;             // Siguiente estado esperaPrimeraTecla
         }
-        else if(tecla<=9)                 // Si es un número
+        else if(tecla<=9)                 // Si es un nï¿½mero
         {
-            valor=???????;                // El valor anterior será las decenas y el nuevo será las unidades
+            valor = tecla + valor*10;                // El valor anterior serï¿½ las decenas y el nuevo serï¿½ las unidades
             LCD_gotoXY(12,1);              // Desplaza el cursor
-            LCD_enviaCaracter(?????????);  // Muestra el carácter correspondiente a la tecla pulsada
+            LCD_enviaCaracter(tecla);  // Muestra el carï¿½cter correspondiente a la tecla pulsada
             estado[1] = esperaTercerValor; // Siguiente estado
         }
     }
@@ -170,21 +170,21 @@ void esperaSegundoValor(void)
 //==================================
 void esperaTercerValor(void)
 {
-    if (nuevaTecla==1)          // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)          // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = ?;                   // Baja la bandera de detección de tecla
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
         if(tecla==11)                     // Si la tecla es almohadilla, ya hemos terminado
         {
             num_pulsos_ref = valor;       // Se guarda el valor introducido
             LCD_mensaje_opciones_inicial(); // Muestra el mensaje inicial
-            estado[1] = ???????;            // Siguiente estado esperaPrimeraTecla
+            estado[1] = esperaPrimeraTecla; // Siguiente estado esperaPrimeraTecla
         }
-        else if(tecla<=9)                 // Si es un número
+        else if(tecla<=9)                 // Si es un nï¿½mero
         {
-            valor=??????;                 // El valor anterior serán las centenas y decenas, y el nuevo será las unidades
-            LCD_gotoXY(13,1);                   // Desplaza el cursor
-            LCD_enviaCaracter(?????????);       // Muestra el carácter correspondiente a la tecla pulsada
-            estado[1] = ?????;                  // Siguiente estado esperaAlmohadillaValor
+            valor=tecla+valor*10;                 // El valor anterior serï¿½n las centenas y decenas, y el nuevo serï¿½ las unidades
+            LCD_gotoXY(13,1);                     // Desplaza el cursor
+            LCD_enviaCaracter('tecla');           // Muestra el carï¿½cter correspondiente a la tecla pulsada
+            estado[1] = esperaAlmohadillaValor;   // Siguiente estado esperaAlmohadillaValor
         }
     }
 }
@@ -194,14 +194,14 @@ void esperaTercerValor(void)
 //==================================
 void esperaAlmohadillaValor(void)
 {
-    if (nuevaTecla==1)          // ¿Hay un nuevo carácter?
+    if (nuevaTecla==1)          // ï¿½Hay un nuevo carï¿½cter?
     {
-        nuevaTecla = ?;                   // Baja la bandera de detección de tecla
+        nuevaTecla = 0;                   // Baja la bandera de detecciï¿½n de tecla
         if(tecla==11)                     // Si la tecla es almohadilla, ya hemos terminado
         {
             num_pulsos_ref = valor;       // Se guarda el valor introducido
             LCD_mensaje_opciones_inicial(); // Muestra el mensaje inicial
-            estado[1] = ?????;              // Siguiente estado esperaPrimeraTecla
+            estado[1] = esperaPrimeraTecla;              // Siguiente estado esperaPrimeraTecla
         }
     }
 }

@@ -8,9 +8,9 @@ int error;                                // Variable de entrada al PI
 int errorAnt=0;                           // Valor interno del PI (error anterior)
 int salidaPI=0;                           // Valor interno del PI (salida sin dividir)
 unsigned short int Ton=0;                 // Valor de salida del PI (salida ya dividida)
-unsigned short int max_duty;              // Valor de saturación del Duty Cycle
-unsigned  short int cuenta_ints_T0=???;   // Contador de interrupciones para temporizar 0,25 seg con el Timer 0
-unsigned  short int cuenta_1s=???;        // Contador de interrupciones para temporizar 1 seg con el Timer 0
+unsigned short int max_duty;              // Valor de saturaciï¿½n del Duty Cycle
+unsigned  short int cuenta_ints_T0=4;   // Contador de interrupciones para temporizar 0,25 seg con el Timer 0
+unsigned  short int cuenta_1s=16;        // Contador de interrupciones para temporizar 1 seg con el Timer 0
 
 //==================================
 //Variables definidas en otros archivos
@@ -24,12 +24,12 @@ extern unsigned int valor_TMR1;
 // ==================================
 short int control_PI(int error)
 {
-    #define Kp 4                          // Definición de constantes
+    #define Kp 4                          // Definiciï¿½n de constantes
     #define Ki 1
 
-    salidaPI=salidaPI+Kp*(error-errorAnt)+Ki*error;     // Expresión del PI en valores multiplicados por 16
+    salidaPI=salidaPI+Kp*(error-errorAnt)+Ki*error;     // Expresiï¿½n del PI en valores multiplicados por 16
     errorAnt=error;                                     // Se guarda el valor anterior del error
-    if(salidaPI > (((int)max_duty)<<4))                 // Saturación de la salida a valor multiplicado 16
+    if(salidaPI > (((int)max_duty)<<4))                 // Saturaciï¿½n de la salida a valor multiplicado 16
         salidaPI=(((int)max_duty)<<4);
     if(salidaPI < 0)
         salidaPI=  0;
@@ -37,36 +37,36 @@ short int control_PI(int error)
 }
 
 // *******************************************
-// Interrupción
+// Interrupciï¿½n
 // *******************************************
-static void interrupt rutinaInterrupcion(void)         
+static void interrupt rutinaInterrupcion(void)
 {
-    if(TMR0IF && TMR0IE)        // Interrupción del timer 0 cada 62,464 milisegundos
+    if(TMR0IF && TMR0IE)        // Interrupciï¿½n del timer 0 cada 62,464 milisegundos
     {
-        TMR0IF =  ?;            // Baja la bandera. Evento: desbordamiento de TMR0
-        TMR0   = ???;           // Prepara el timer para la siguiente interrupción
+        TMR0IF =  0;            // Baja la bandera. Evento: desbordamiento de TMR0
+        TMR0   = 12;           // Prepara el timer para la siguiente interrupciï¿½n
 
         // Actualiza cuenta_ints_T0
-        if(???)   // Cada ??? interrupciones -> 0,25 segundos
+        if(cuenta_ints_T0 == 4)   // Cada ??? interrupciones -> 0,25 segundos
         {
-            cuenta_ints_T0=???;
+            cuenta_ints_T0++;
             valor_TMR1 = TMR1;           // Guarda el valor de pulsos leidos en TMR1 en 0.25seg, para mostrarlo en el LCD
             TMR1=0;                      // Reinicia la cuenta de pulsos para la nueva ventana de 0.25s
 
             // Se ajusta el PWM mediante el PI
             error= num_pulsos_ref - valor_TMR1; // El error del PI es la referencia menos el valor medido
-            Ton=control_PI(error);              // Cálculo del control PI
+            Ton=control_PI(error);              // Cï¿½lculo del control PI
             CCPR1L=Ton;                         // Actualiza el Ton del PWM calculado por el PI
         }
         // Actualiza cuenta_1s
-        if(???)        // Cada ???? interrupciones -> 1 segundo
+        if(cuenta_1s == 16)        // Cada ???? interrupciones -> 1 segundo
         {
-            cuenta_1s=???;
+            cuenta_1s++;
             tiempo_1s=1;        // Activa la bandera para avisar de que ha pasado 1 segundo
         }
     }
     //================================================================
-    else              // Interrupción no programada (error)
+    else              // Interrupciï¿½n no programada (error)
     //================================================================
     {
         INTCON=0;
