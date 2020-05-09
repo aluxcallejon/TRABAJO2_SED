@@ -3,91 +3,91 @@
 [d edition pro ]
 [d chip 16F88 ]
 [d frameptr 6 ]
-"34 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
+"34 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [e E979 _BOOL `uc
 FALSE 0
 TRUE 1
 ]
-"211 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"211 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [e E979 _BOOL `uc
 FALSE 0
 TRUE 1
 ]
-"4 c:\sed_tools\xc8\sources\common\abdiv.c
+"4 d:\sed_tools\xc8\sources\common\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
-"4 c:\sed_tools\xc8\sources\common\abmod.c
+"4 d:\sed_tools\xc8\sources\common\abmod.c
 [v ___abmod __abmod `(c  1 e 1 0 ]
-"33 c:\sed_tools\xc8\sources\common\abtoft.c
+"33 d:\sed_tools\xc8\sources\common\abtoft.c
 [v ___abtoft __abtoft `(f  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\aldiv.c
+"6 d:\sed_tools\xc8\sources\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"5 c:\sed_tools\xc8\sources\common\almod.c
+"5 d:\sed_tools\xc8\sources\common\almod.c
 [v ___almod __almod `(l  1 e 4 0 ]
-"42 c:\sed_tools\xc8\sources\common\altoft.c
+"42 d:\sed_tools\xc8\sources\common\altoft.c
 [v ___altoft __altoft `(f  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\atdiv.c
+"6 d:\sed_tools\xc8\sources\common\atdiv.c
 [v ___atdiv __atdiv `(m  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\atmod.c
+"6 d:\sed_tools\xc8\sources\common\atmod.c
 [v ___atmod __atmod `(m  1 e 3 0 ]
-"37 c:\sed_tools\xc8\sources\common\attoft.c
+"37 d:\sed_tools\xc8\sources\common\attoft.c
 [v ___attoft __attoft `(f  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\awdiv.c
+"6 d:\sed_tools\xc8\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"6 c:\sed_tools\xc8\sources\common\awmod.c
+"6 d:\sed_tools\xc8\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"32 c:\sed_tools\xc8\sources\common\awtoft.c
+"32 d:\sed_tools\xc8\sources\common\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
-"4 c:\sed_tools\xc8\sources\common\bmul.c
+"4 d:\sed_tools\xc8\sources\common\bmul.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
-"492 c:\sed_tools\xc8\sources\common\doprnt.c
+"492 d:\sed_tools\xc8\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
-"62 c:\sed_tools\xc8\sources\common\float.c
+"62 d:\sed_tools\xc8\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 c:\sed_tools\xc8\sources\common\ftadd.c
+"86 d:\sed_tools\xc8\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"4 c:\sed_tools\xc8\sources\common\ftge.c
+"4 d:\sed_tools\xc8\sources\common\ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]
-"51 c:\sed_tools\xc8\sources\common\ftmul.c
+"51 d:\sed_tools\xc8\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"15 c:\sed_tools\xc8\sources\common\ftneg.c
+"15 d:\sed_tools\xc8\sources\common\ftneg.c
 [v ___ftneg __ftneg `(f  1 e 3 0 ]
-"18 c:\sed_tools\xc8\sources\common\ftsub.c
+"18 d:\sed_tools\xc8\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"44 c:\sed_tools\xc8\sources\common\fttol.c
+"44 d:\sed_tools\xc8\sources\common\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
-"8 c:\sed_tools\xc8\sources\common\isdigit.c
+"8 d:\sed_tools\xc8\sources\common\isdigit.c
 [v _isdigit isdigit `(b  1 e 0 0 ]
-"4 c:\sed_tools\xc8\sources\common\lbdiv.c
+"4 d:\sed_tools\xc8\sources\common\lbdiv.c
 [v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
-"4 c:\sed_tools\xc8\sources\common\lbmod.c
+"4 d:\sed_tools\xc8\sources\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
-"27 c:\sed_tools\xc8\sources\common\lbtoft.c
+"27 d:\sed_tools\xc8\sources\common\lbtoft.c
 [v ___lbtoft __lbtoft `(f  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\lldiv.c
+"6 d:\sed_tools\xc8\sources\common\lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"6 c:\sed_tools\xc8\sources\common\llmod.c
+"6 d:\sed_tools\xc8\sources\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
-"35 c:\sed_tools\xc8\sources\common\lltoft.c
+"35 d:\sed_tools\xc8\sources\common\lltoft.c
 [v ___lltoft __lltoft `(f  1 e 3 0 ]
-"9 c:\sed_tools\xc8\sources\common\lmul.c
+"9 d:\sed_tools\xc8\sources\common\lmul.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"6 c:\sed_tools\xc8\sources\common\ltdiv.c
+"6 d:\sed_tools\xc8\sources\common\ltdiv.c
 [v ___ltdiv __ltdiv `(um  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\ltmod.c
+"6 d:\sed_tools\xc8\sources\common\ltmod.c
 [v ___ltmod __ltmod `(um  1 e 3 0 ]
-"30 c:\sed_tools\xc8\sources\common\lttoft.c
+"30 d:\sed_tools\xc8\sources\common\lttoft.c
 [v ___lttoft __lttoft `(f  1 e 3 0 ]
-"6 c:\sed_tools\xc8\sources\common\lwdiv.c
+"6 d:\sed_tools\xc8\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"6 c:\sed_tools\xc8\sources\common\lwmod.c
+"6 d:\sed_tools\xc8\sources\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"28 c:\sed_tools\xc8\sources\common\lwtoft.c
+"28 d:\sed_tools\xc8\sources\common\lwtoft.c
 [v ___lwtoft __lwtoft `(f  1 e 3 0 ]
-"9 c:\sed_tools\xc8\sources\common\tmul.c
+"9 d:\sed_tools\xc8\sources\common\tmul.c
 [v ___tmul __tmul `(um  1 e 3 0 ]
-"3 c:\sed_tools\xc8\sources\common\wmul.c
+"3 d:\sed_tools\xc8\sources\common\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"6 c:\sed_tools\xc8\sources\pic\eeprom.c
+"6 d:\sed_tools\xc8\sources\pic\eeprom.c
 [v _eecpymem eecpymem `(v  1 e 0 0 ]
 "24
 [v _memcpyee memcpyee `(v  1 e 0 0 ]
@@ -115,9 +115,9 @@ TRUE 1
 [v ___fttoee __fttoee `(f  1 e 3 0 ]
 "131
 [v ___fltoee __fltoee `(d  1 e 3 0 ]
-"49 c:\sed_tools\xc8\sources\pic\ftdiv.c
+"49 d:\sed_tools\xc8\sources\pic\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"17 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
+"17 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
 [v _init_registros init_registros `(v  1 e 0 0 ]
 "44
 [v _init_Timer0 init_Timer0 `(v  1 e 0 0 ]
@@ -129,11 +129,11 @@ TRUE 1
 [v _init_ADC init_ADC `(v  1 e 0 0 ]
 "140
 [v _init_librerias init_librerias `(v  1 e 0 0 ]
-"25 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
+"25 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
 [v _control_PI control_PI `(s  1 e 2 0 ]
 "42
 [v _rutinaInterrupcion rutinaInterrupcion `II(v  1 s 0 rutinaInterrupcion ]
-"35 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\LCD.c
+"35 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\LCD.c
 [v _LCD_enviaCaracter___ LCD_enviaCaracter___ `(v  1 e 0 0 ]
 "77
 [v _LCD_ini LCD_ini `(v  1 e 0 0 ]
@@ -147,7 +147,7 @@ TRUE 1
 [v _LCD_enviablancos LCD_enviablancos `(v  1 e 0 0 ]
 "240
 [v _LCD_enviaCadena LCD_enviaCadena `(v  1 e 0 0 ]
-"53 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
+"53 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
 [v _init_procesoHisteresis init_procesoHisteresis `(v  1 e 0 0 ]
 "60
 [v _estado100 estado100 `(v  1 e 0 0 ]
@@ -155,7 +155,7 @@ TRUE 1
 [v _estado10 estado10 `(v  1 e 0 0 ]
 "86
 [v _estado50 estado50 `(v  1 e 0 0 ]
-"35 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"35 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _init_procesoSecuencia init_procesoSecuencia `(v  1 e 0 0 ]
 "43
 [v _LCD_mensaje_opciones_inicial LCD_mensaje_opciones_inicial `(v  1 e 0 0 ]
@@ -173,19 +173,19 @@ TRUE 1
 [v _esperaTercerValor esperaTercerValor `(v  1 e 0 0 ]
 "195
 [v _esperaAlmohadillaValor esperaAlmohadillaValor `(v  1 e 0 0 ]
-"24 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
+"24 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [v _init_procesoTeclado init_procesoTeclado `(v  1 e 0 0 ]
 "32
 [v _esperaPulsarTecla esperaPulsarTecla `(v  1 e 0 0 ]
 "45
 [v _esperaSoltarTecla esperaSoltarTecla `(v  1 e 0 0 ]
-"126 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"126 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [v _TECLADO_ini TECLADO_ini `(v  1 e 0 0 ]
 "210
 [v _TECLADO_pulsado TECLADO_pulsado `(E979  1 e 1 0 ]
 "237
 [v _TECLADO_leer TECLADO_leer `(E979  1 e 1 0 ]
-"59 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\trabajo.c
+"59 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\trabajo.c
 [v _main main `(v  1 e 0 0 ]
 "53 c:\sed_tools\xc8\include\pic16f88.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -201,8 +201,6 @@ TRUE 1
 [v _T2CON T2CON `VEuc  1 e 1 @18 ]
 "710
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
-"722
-[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
 "885
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "891
@@ -223,16 +221,6 @@ TRUE 1
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "1885
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
-"1989
-[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
-"1995
-[v _EEADR EEADR `VEuc  1 e 1 @269 ]
-"2013
-[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
-"2063
-[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
-"2117
-[v _CARRY CARRY `VEb  1 e 0 @24 ]
 "2193
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "2199
@@ -241,16 +229,12 @@ TRUE 1
 [v _IOFS IOFS `VEb  1 e 0 @1146 ]
 "2237
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
-"2269
-[v _RB3 RB3 `VEb  1 e 0 @51 ]
 "2271
 [v _RB4 RB4 `VEb  1 e 0 @52 ]
 "2273
 [v _RB5 RB5 `VEb  1 e 0 @53 ]
 "2281
 [v _RBIF RBIF `VEb  1 e 0 @88 ]
-"2293
-[v _RD RD `VEb  1 e 0 @3168 ]
 "2345
 [v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
 "2347
@@ -271,17 +255,33 @@ TRUE 1
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
 "2371
 [v _TMR2IE TMR2IE `VEb  1 e 0 @1121 ]
-"2461
-[v _WR WR `VEb  1 e 0 @3169 ]
-"2463
-[v _WREN WREN `VEb  1 e 0 @3170 ]
 "2483
 [v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
 "2487
 [v _nT1SYNC nT1SYNC `VEb  1 e 0 @130 ]
-"354 c:\sed_tools\xc8\sources\common\doprnt.c
+"722 d:\sed_tools\xc8\include\pic16f88.h
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1989
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"1995
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2013
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"2063
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2117
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"2269
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2293
+[v _RD RD `VEb  1 e 0 @3168 ]
+"2461
+[v _WR WR `VEb  1 e 0 @3169 ]
+"2463
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"354 d:\sed_tools\xc8\sources\common\doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
-"7 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
+"7 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
 [v _error error `i  1 e 2 0 ]
 "8
 [v _errorAnt errorAnt `i  1 e 2 0 ]
@@ -295,7 +295,7 @@ TRUE 1
 [v _cuenta_ints_T0 cuenta_ints_T0 `us  1 e 2 0 ]
 "13
 [v _cuenta_1s cuenta_1s `us  1 e 2 0 ]
-"147 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\LCD.h
+"147 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\LCD.h
 [v _LCD_var_cursor LCD_var_cursor `uc  1 e 1 0 ]
 "148
 [v _LCD_var_TRIS LCD_var_TRIS `uc  1 e 1 0 ]
@@ -317,17 +317,17 @@ TRUE 1
 [v _LCD_RS_PORT_TRIS_PUNTERO LCD_RS_PORT_TRIS_PUNTERO `*.39VEuc  1 e 2 0 ]
 "158
 [v _LCD_E_PORT_TRIS_PUNTERO LCD_E_PORT_TRIS_PUNTERO `*.39VEuc  1 e 2 0 ]
-"20 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"20 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _valor valor `i  1 e 2 0 ]
 "21
 [v _start start `us  1 e 2 0 ]
 "22
 [v _sentido sentido `us  1 e 2 0 ]
-"7 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
+"7 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [v _tecla tecla `uc  1 e 1 0 ]
 "8
 [v _nuevaTecla nuevaTecla `uc  1 e 1 0 ]
-"27 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"27 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [v _tabla_3col tabla_3col `DCC[12]uc  1 e 12 0 ]
 "34
 [v _REBOTES_lectura REBOTES_lectura `us  1 e 2 0 ]
@@ -355,7 +355,7 @@ TRUE 1
 [v _TECLADO_PORT_COL_PUNTERO TECLADO_PORT_COL_PUNTERO `*.39VEuc  1 e 2 0 ]
 "56
 [v _TECLADO_PORT_FIL_PUNTERO TECLADO_PORT_FIL_PUNTERO `*.39VEuc  1 e 2 0 ]
-"32 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\trabajo.c
+"32 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\trabajo.c
 [v _num_pulsos_ref num_pulsos_ref `us  1 e 2 0 ]
 "33
 [v _valor_TMR1 valor_TMR1 `ui  1 e 2 0 ]
@@ -372,7 +372,7 @@ TRUE 1
 {
 "128
 } 0
-"492 c:\sed_tools\xc8\sources\common\doprnt.c
+"492 d:\sed_tools\xc8\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
@@ -397,7 +397,7 @@ TRUE 1
 [v sprintf@sp sp `*.4uc  1 a 1 29 ]
 "1550
 } 0
-"8 c:\sed_tools\xc8\sources\common\isdigit.c
+"8 d:\sed_tools\xc8\sources\common\isdigit.c
 [v _isdigit isdigit `(b  1 e 0 0 ]
 {
 [v isdigit@c c `uc  1 a 1 wreg ]
@@ -406,7 +406,7 @@ TRUE 1
 [v isdigit@c c `uc  1 a 1 1 ]
 "15
 } 0
-"6 c:\sed_tools\xc8\sources\common\lwmod.c
+"6 d:\sed_tools\xc8\sources\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "11
@@ -416,7 +416,7 @@ TRUE 1
 [v ___lwmod@dividend dividend `ui  1 p 2 10 ]
 "26
 } 0
-"6 c:\sed_tools\xc8\sources\common\lwdiv.c
+"6 d:\sed_tools\xc8\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "11
@@ -428,32 +428,32 @@ TRUE 1
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "31
 } 0
-"17 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
+"17 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
 [v _init_registros init_registros `(v  1 e 0 0 ]
 {
 "42
 } 0
-"24 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
+"24 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [v _init_procesoTeclado init_procesoTeclado `(v  1 e 0 0 ]
 {
 "27
 } 0
-"35 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"35 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _init_procesoSecuencia init_procesoSecuencia `(v  1 e 0 0 ]
 {
 "38
 } 0
-"53 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
+"53 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
 [v _init_procesoHisteresis init_procesoHisteresis `(v  1 e 0 0 ]
 {
 "57
 } 0
-"140 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
+"140 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
 [v _init_librerias init_librerias `(v  1 e 0 0 ]
 {
 "148
 } 0
-"126 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"126 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [v _TECLADO_ini TECLADO_ini `(v  1 e 0 0 ]
 {
 [v TECLADO_ini@config config `uc  1 a 1 wreg ]
@@ -462,7 +462,7 @@ TRUE 1
 [v TECLADO_ini@config config `uc  1 a 1 4 ]
 "205
 } 0
-"77 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\LCD.c
+"77 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\LCD.c
 [v _LCD_ini LCD_ini `(v  1 e 0 0 ]
 {
 [v LCD_ini@config config `uc  1 a 1 wreg ]
@@ -482,7 +482,7 @@ TRUE 1
 [v LCD_enciende@config config `uc  1 a 1 7 ]
 "221
 } 0
-"89 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
+"89 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\inicializacion.c
 [v _init_Timer2 init_Timer2 `(v  1 e 0 0 ]
 {
 "111
@@ -502,7 +502,7 @@ TRUE 1
 {
 "139
 } 0
-"45 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
+"45 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [v _esperaSoltarTecla esperaSoltarTecla `(v  1 e 0 0 ]
 {
 "51
@@ -512,7 +512,7 @@ TRUE 1
 {
 "40
 } 0
-"195 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"195 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _esperaAlmohadillaValor esperaAlmohadillaValor `(v  1 e 0 0 ]
 {
 "207
@@ -542,7 +542,7 @@ TRUE 1
 {
 "82
 } 0
-"71 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
+"71 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c
 [v _estado10 estado10 `(v  1 e 0 0 ]
 {
 "83
@@ -557,12 +557,12 @@ TRUE 1
 {
 "108
 } 0
-"210 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"210 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [v _TECLADO_pulsado TECLADO_pulsado `(E979  1 e 1 0 ]
 {
 "227
 } 0
-"3 c:\sed_tools\xc8\sources\common\wmul.c
+"3 d:\sed_tools\xc8\sources\common\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "5
@@ -572,7 +572,7 @@ TRUE 1
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "41
 } 0
-"237 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
+"237 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\TECLADO.c
 [v _TECLADO_leer TECLADO_leer `(E979  1 e 1 0 ]
 {
 "240
@@ -581,7 +581,7 @@ TRUE 1
 [v TECLADO_leer@i i `uc  1 a 1 2 ]
 "332
 } 0
-"43 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"43 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _LCD_mensaje_opciones_inicial LCD_mensaje_opciones_inicial `(v  1 e 0 0 ]
 {
 "47
@@ -591,7 +591,7 @@ TRUE 1
 {
 "60
 } 0
-"240 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\LCD.c
+"240 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\LCD.c
 [v _LCD_enviaCadena LCD_enviaCadena `(v  1 e 0 0 ]
 {
 "242
@@ -613,7 +613,7 @@ TRUE 1
 [v LCD_envia_4bits@dato dato `uc  1 a 1 4 ]
 "173
 } 0
-"42 C:\Users\gines\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
+"42 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
 [v _rutinaInterrupcion rutinaInterrupcion `II(v  1 s 0 rutinaInterrupcion ]
 {
 "75

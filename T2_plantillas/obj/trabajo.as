@@ -251,111 +251,111 @@ EEADRH equ 010Fh ;#
 EECON1 equ 018Ch ;# 
 # 2065 "c:\sed_tools\xc8\include\pic16f88.h"
 EECON2 equ 018Dh ;# 
-# 49 "c:\sed_tools\xc8\include\pic16f88.h"
+# 49 "d:\sed_tools\xc8\include\pic16f88.h"
 INDF equ 00h ;# 
-# 55 "c:\sed_tools\xc8\include\pic16f88.h"
+# 55 "d:\sed_tools\xc8\include\pic16f88.h"
 TMR0 equ 01h ;# 
-# 61 "c:\sed_tools\xc8\include\pic16f88.h"
+# 61 "d:\sed_tools\xc8\include\pic16f88.h"
 PCL equ 02h ;# 
-# 67 "c:\sed_tools\xc8\include\pic16f88.h"
+# 67 "d:\sed_tools\xc8\include\pic16f88.h"
 STATUS equ 03h ;# 
-# 154 "c:\sed_tools\xc8\include\pic16f88.h"
+# 154 "d:\sed_tools\xc8\include\pic16f88.h"
 FSR equ 04h ;# 
-# 160 "c:\sed_tools\xc8\include\pic16f88.h"
+# 160 "d:\sed_tools\xc8\include\pic16f88.h"
 PORTA equ 05h ;# 
-# 221 "c:\sed_tools\xc8\include\pic16f88.h"
+# 221 "d:\sed_tools\xc8\include\pic16f88.h"
 PORTB equ 06h ;# 
-# 282 "c:\sed_tools\xc8\include\pic16f88.h"
+# 282 "d:\sed_tools\xc8\include\pic16f88.h"
 PCLATH equ 0Ah ;# 
-# 301 "c:\sed_tools\xc8\include\pic16f88.h"
+# 301 "d:\sed_tools\xc8\include\pic16f88.h"
 INTCON equ 0Bh ;# 
-# 378 "c:\sed_tools\xc8\include\pic16f88.h"
+# 378 "d:\sed_tools\xc8\include\pic16f88.h"
 PIR1 equ 0Ch ;# 
-# 433 "c:\sed_tools\xc8\include\pic16f88.h"
+# 433 "d:\sed_tools\xc8\include\pic16f88.h"
 PIR2 equ 0Dh ;# 
-# 466 "c:\sed_tools\xc8\include\pic16f88.h"
+# 466 "d:\sed_tools\xc8\include\pic16f88.h"
 TMR1 equ 0Eh ;# 
-# 472 "c:\sed_tools\xc8\include\pic16f88.h"
+# 472 "d:\sed_tools\xc8\include\pic16f88.h"
 TMR1L equ 0Eh ;# 
-# 478 "c:\sed_tools\xc8\include\pic16f88.h"
+# 478 "d:\sed_tools\xc8\include\pic16f88.h"
 TMR1H equ 0Fh ;# 
-# 484 "c:\sed_tools\xc8\include\pic16f88.h"
+# 484 "d:\sed_tools\xc8\include\pic16f88.h"
 T1CON equ 010h ;# 
-# 555 "c:\sed_tools\xc8\include\pic16f88.h"
+# 555 "d:\sed_tools\xc8\include\pic16f88.h"
 TMR2 equ 011h ;# 
-# 561 "c:\sed_tools\xc8\include\pic16f88.h"
+# 561 "d:\sed_tools\xc8\include\pic16f88.h"
 T2CON equ 012h ;# 
-# 631 "c:\sed_tools\xc8\include\pic16f88.h"
+# 631 "d:\sed_tools\xc8\include\pic16f88.h"
 SSPBUF equ 013h ;# 
-# 637 "c:\sed_tools\xc8\include\pic16f88.h"
+# 637 "d:\sed_tools\xc8\include\pic16f88.h"
 SSPCON equ 014h ;# 
-# 706 "c:\sed_tools\xc8\include\pic16f88.h"
+# 706 "d:\sed_tools\xc8\include\pic16f88.h"
 CCPR1 equ 015h ;# 
-# 712 "c:\sed_tools\xc8\include\pic16f88.h"
+# 712 "d:\sed_tools\xc8\include\pic16f88.h"
 CCPR1L equ 015h ;# 
-# 718 "c:\sed_tools\xc8\include\pic16f88.h"
+# 718 "d:\sed_tools\xc8\include\pic16f88.h"
 CCPR1H equ 016h ;# 
-# 724 "c:\sed_tools\xc8\include\pic16f88.h"
+# 724 "d:\sed_tools\xc8\include\pic16f88.h"
 CCP1CON equ 017h ;# 
-# 781 "c:\sed_tools\xc8\include\pic16f88.h"
+# 781 "d:\sed_tools\xc8\include\pic16f88.h"
 RCSTA equ 018h ;# 
-# 875 "c:\sed_tools\xc8\include\pic16f88.h"
+# 875 "d:\sed_tools\xc8\include\pic16f88.h"
 TXREG equ 019h ;# 
-# 881 "c:\sed_tools\xc8\include\pic16f88.h"
+# 881 "d:\sed_tools\xc8\include\pic16f88.h"
 RCREG equ 01Ah ;# 
-# 887 "c:\sed_tools\xc8\include\pic16f88.h"
+# 887 "d:\sed_tools\xc8\include\pic16f88.h"
 ADRESH equ 01Eh ;# 
-# 893 "c:\sed_tools\xc8\include\pic16f88.h"
+# 893 "d:\sed_tools\xc8\include\pic16f88.h"
 ADCON0 equ 01Fh ;# 
-# 988 "c:\sed_tools\xc8\include\pic16f88.h"
+# 988 "d:\sed_tools\xc8\include\pic16f88.h"
 OPTION_REG equ 081h ;# 
-# 1057 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1057 "d:\sed_tools\xc8\include\pic16f88.h"
 TRISA equ 085h ;# 
-# 1118 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1118 "d:\sed_tools\xc8\include\pic16f88.h"
 TRISB equ 086h ;# 
-# 1179 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1179 "d:\sed_tools\xc8\include\pic16f88.h"
 PIE1 equ 08Ch ;# 
-# 1234 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1234 "d:\sed_tools\xc8\include\pic16f88.h"
 PIE2 equ 08Dh ;# 
-# 1267 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1267 "d:\sed_tools\xc8\include\pic16f88.h"
 PCON equ 08Eh ;# 
-# 1300 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1300 "d:\sed_tools\xc8\include\pic16f88.h"
 OSCCON equ 08Fh ;# 
-# 1370 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1370 "d:\sed_tools\xc8\include\pic16f88.h"
 OSCTUNE equ 090h ;# 
-# 1427 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1427 "d:\sed_tools\xc8\include\pic16f88.h"
 PR2 equ 092h ;# 
-# 1433 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1433 "d:\sed_tools\xc8\include\pic16f88.h"
 SSPADD equ 093h ;# 
-# 1439 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1439 "d:\sed_tools\xc8\include\pic16f88.h"
 SSPSTAT equ 094h ;# 
-# 1607 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1607 "d:\sed_tools\xc8\include\pic16f88.h"
 TXSTA equ 098h ;# 
-# 1687 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1687 "d:\sed_tools\xc8\include\pic16f88.h"
 SPBRG equ 099h ;# 
-# 1693 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1693 "d:\sed_tools\xc8\include\pic16f88.h"
 ANSEL equ 09Bh ;# 
-# 1748 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1748 "d:\sed_tools\xc8\include\pic16f88.h"
 CMCON equ 09Ch ;# 
-# 1817 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1817 "d:\sed_tools\xc8\include\pic16f88.h"
 CVRCON equ 09Dh ;# 
-# 1881 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1881 "d:\sed_tools\xc8\include\pic16f88.h"
 ADRESL equ 09Eh ;# 
-# 1887 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1887 "d:\sed_tools\xc8\include\pic16f88.h"
 ADCON1 equ 09Fh ;# 
-# 1934 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1934 "d:\sed_tools\xc8\include\pic16f88.h"
 WDTCON equ 0105h ;# 
-# 1991 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1991 "d:\sed_tools\xc8\include\pic16f88.h"
 EEDATA equ 010Ch ;# 
-# 1997 "c:\sed_tools\xc8\include\pic16f88.h"
+# 1997 "d:\sed_tools\xc8\include\pic16f88.h"
 EEADR equ 010Dh ;# 
-# 2003 "c:\sed_tools\xc8\include\pic16f88.h"
+# 2003 "d:\sed_tools\xc8\include\pic16f88.h"
 EEDATH equ 010Eh ;# 
-# 2009 "c:\sed_tools\xc8\include\pic16f88.h"
+# 2009 "d:\sed_tools\xc8\include\pic16f88.h"
 EEADRH equ 010Fh ;# 
-# 2015 "c:\sed_tools\xc8\include\pic16f88.h"
+# 2015 "d:\sed_tools\xc8\include\pic16f88.h"
 EECON1 equ 018Ch ;# 
-# 2065 "c:\sed_tools\xc8\include\pic16f88.h"
+# 2065 "d:\sed_tools\xc8\include\pic16f88.h"
 EECON2 equ 018Dh ;# 
 # 49 "c:\sed_tools\xc8\include\pic16f88.h"
 INDF equ 00h ;# 
@@ -1038,7 +1038,7 @@ _tabla_3col:
 __end_of_tabla_3col:
 	global	_dpowers
 psect	strings
-	file	"c:\sed_tools\xc8\sources\common\doprnt.c"
+	file	"d:\sed_tools\xc8\sources\common\doprnt.c"
 	line	354
 _dpowers:
 	retlw	01h
@@ -2501,7 +2501,7 @@ GLOBAL	__end_of_main
 
 ;; *************** function _sprintf *****************
 ;; Defined at:
-;;		line 492 in file "c:\sed_tools\xc8\sources\common\doprnt.c"
+;;		line 492 in file "d:\sed_tools\xc8\sources\common\doprnt.c"
 ;; Parameters:    Size  Location     Type
 ;;  sp              1    wreg     PTR unsigned char 
 ;;		 -> cadena(20), 
@@ -2543,12 +2543,12 @@ GLOBAL	__end_of_main
 ;; This function uses a non-reentrant model
 ;;
 psect	text1,local,class=CODE,delta=2,merge=1
-	file	"c:\sed_tools\xc8\sources\common\doprnt.c"
+	file	"d:\sed_tools\xc8\sources\common\doprnt.c"
 	line	492
 global __ptext1
 __ptext1:	;psect for function _sprintf
 psect	text1
-	file	"c:\sed_tools\xc8\sources\common\doprnt.c"
+	file	"d:\sed_tools\xc8\sources\common\doprnt.c"
 	line	492
 	global	__size_of_sprintf
 	__size_of_sprintf	equ	__end_of_sprintf-_sprintf
@@ -3204,7 +3204,7 @@ GLOBAL	__end_of_sprintf
 
 ;; *************** function _isdigit *****************
 ;; Defined at:
-;;		line 8 in file "c:\sed_tools\xc8\sources\common\isdigit.c"
+;;		line 8 in file "d:\sed_tools\xc8\sources\common\isdigit.c"
 ;; Parameters:    Size  Location     Type
 ;;  c               1    wreg     unsigned char 
 ;; Auto vars:     Size  Location     Type
@@ -3232,12 +3232,12 @@ GLOBAL	__end_of_sprintf
 ;; This function uses a non-reentrant model
 ;;
 psect	text2,local,class=CODE,delta=2,merge=1
-	file	"c:\sed_tools\xc8\sources\common\isdigit.c"
+	file	"d:\sed_tools\xc8\sources\common\isdigit.c"
 	line	8
 global __ptext2
 __ptext2:	;psect for function _isdigit
 psect	text2
-	file	"c:\sed_tools\xc8\sources\common\isdigit.c"
+	file	"d:\sed_tools\xc8\sources\common\isdigit.c"
 	line	8
 	global	__size_of_isdigit
 	__size_of_isdigit	equ	__end_of_isdigit-_isdigit
@@ -3299,7 +3299,7 @@ GLOBAL	__end_of_isdigit
 
 ;; *************** function ___lwmod *****************
 ;; Defined at:
-;;		line 6 in file "c:\sed_tools\xc8\sources\common\lwmod.c"
+;;		line 6 in file "d:\sed_tools\xc8\sources\common\lwmod.c"
 ;; Parameters:    Size  Location     Type
 ;;  divisor         2    8[BANK0 ] unsigned int 
 ;;  dividend        2   10[BANK0 ] unsigned int 
@@ -3328,12 +3328,12 @@ GLOBAL	__end_of_isdigit
 ;; This function uses a non-reentrant model
 ;;
 psect	text3,local,class=CODE,delta=2,merge=1
-	file	"c:\sed_tools\xc8\sources\common\lwmod.c"
+	file	"d:\sed_tools\xc8\sources\common\lwmod.c"
 	line	6
 global __ptext3
 __ptext3:	;psect for function ___lwmod
 psect	text3
-	file	"c:\sed_tools\xc8\sources\common\lwmod.c"
+	file	"d:\sed_tools\xc8\sources\common\lwmod.c"
 	line	6
 	global	__size_of___lwmod
 	__size_of___lwmod	equ	__end_of___lwmod-___lwmod
@@ -3486,7 +3486,7 @@ GLOBAL	__end_of___lwmod
 
 ;; *************** function ___lwdiv *****************
 ;; Defined at:
-;;		line 6 in file "c:\sed_tools\xc8\sources\common\lwdiv.c"
+;;		line 6 in file "d:\sed_tools\xc8\sources\common\lwdiv.c"
 ;; Parameters:    Size  Location     Type
 ;;  divisor         2    0[BANK0 ] unsigned int 
 ;;  dividend        2    2[BANK0 ] unsigned int 
@@ -3516,12 +3516,12 @@ GLOBAL	__end_of___lwmod
 ;; This function uses a non-reentrant model
 ;;
 psect	text4,local,class=CODE,delta=2,merge=1
-	file	"c:\sed_tools\xc8\sources\common\lwdiv.c"
+	file	"d:\sed_tools\xc8\sources\common\lwdiv.c"
 	line	6
 global __ptext4
 __ptext4:	;psect for function ___lwdiv
 psect	text4
-	file	"c:\sed_tools\xc8\sources\common\lwdiv.c"
+	file	"d:\sed_tools\xc8\sources\common\lwdiv.c"
 	line	6
 	global	__size_of___lwdiv
 	__size_of___lwdiv	equ	__end_of___lwdiv-___lwdiv
@@ -6269,13 +6269,19 @@ l350:
 	
 l3402:	
 	movf	(_tecla),w
+	addlw	low(030h)
 	movwf	(??_esperaTercerValor+0)+0
+	movlw	high(030h)
+	skipnc
+	movlw	(high(030h)+1)&0ffh
+	movwf	((??_esperaTercerValor+0)+0)+1
 	movlw	04h
+	movwf	btemp+1
 u2745:
-	clrc
+	rlf	(??_esperaTercerValor+0)+1,w
+	rrf	(??_esperaTercerValor+0)+1,f
 	rrf	(??_esperaTercerValor+0)+0,f
-	addlw	-1
-	skipz
+	decfsz	btemp+1,f
 	goto	u2745
 	movf	0+(??_esperaTercerValor+0)+0,w
 	andlw	0Fh
@@ -6285,6 +6291,7 @@ l3404:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movf	(_tecla),w
+	addlw	030h
 	andlw	0Fh
 	fcall	_LCD_envia_4bits
 	goto	l3406
@@ -6754,13 +6761,19 @@ l306:
 	
 l3336:	
 	movf	(_tecla),w
+	addlw	low(030h)
 	movwf	(??_esperaSegundoValor+0)+0
+	movlw	high(030h)
+	skipnc
+	movlw	(high(030h)+1)&0ffh
+	movwf	((??_esperaSegundoValor+0)+0)+1
 	movlw	04h
+	movwf	btemp+1
 u2655:
-	clrc
+	rlf	(??_esperaSegundoValor+0)+1,w
+	rrf	(??_esperaSegundoValor+0)+1,f
 	rrf	(??_esperaSegundoValor+0)+0,f
-	addlw	-1
-	skipz
+	decfsz	btemp+1,f
 	goto	u2655
 	movf	0+(??_esperaSegundoValor+0)+0,w
 	andlw	0Fh
@@ -6770,6 +6783,7 @@ l3338:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movf	(_tecla),w
+	addlw	030h
 	andlw	0Fh
 	fcall	_LCD_envia_4bits
 	goto	l3340
@@ -7422,13 +7436,19 @@ l262:
 	
 l3270:	
 	movf	(_tecla),w
+	addlw	low(030h)
 	movwf	(??_esperaPrimerValor+0)+0
+	movlw	high(030h)
+	skipnc
+	movlw	(high(030h)+1)&0ffh
+	movwf	((??_esperaPrimerValor+0)+0)+1
 	movlw	04h
+	movwf	btemp+1
 u2565:
-	clrc
+	rlf	(??_esperaPrimerValor+0)+1,w
+	rrf	(??_esperaPrimerValor+0)+1,f
 	rrf	(??_esperaPrimerValor+0)+0,f
-	addlw	-1
-	skipz
+	decfsz	btemp+1,f
 	goto	u2565
 	movf	0+(??_esperaPrimerValor+0)+0,w
 	andlw	0Fh
@@ -7438,6 +7458,7 @@ l3272:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
 	movf	(_tecla),w
+	addlw	030h
 	andlw	0Fh
 	fcall	_LCD_envia_4bits
 	goto	l3274
@@ -8461,7 +8482,7 @@ GLOBAL	__end_of_TECLADO_pulsado
 
 ;; *************** function ___wmul *****************
 ;; Defined at:
-;;		line 3 in file "c:\sed_tools\xc8\sources\common\wmul.c"
+;;		line 3 in file "d:\sed_tools\xc8\sources\common\wmul.c"
 ;; Parameters:    Size  Location     Type
 ;;  multiplier      2    0[BANK0 ] unsigned int 
 ;;  multiplicand    2    2[BANK0 ] unsigned int 
@@ -8492,12 +8513,12 @@ GLOBAL	__end_of_TECLADO_pulsado
 ;; This function uses a non-reentrant model
 ;;
 psect	text29,local,class=CODE,delta=2,merge=1
-	file	"c:\sed_tools\xc8\sources\common\wmul.c"
+	file	"d:\sed_tools\xc8\sources\common\wmul.c"
 	line	3
 global __ptext29
 __ptext29:	;psect for function ___wmul
 psect	text29
-	file	"c:\sed_tools\xc8\sources\common\wmul.c"
+	file	"d:\sed_tools\xc8\sources\common\wmul.c"
 	line	3
 	global	__size_of___wmul
 	__size_of___wmul	equ	__end_of___wmul-___wmul

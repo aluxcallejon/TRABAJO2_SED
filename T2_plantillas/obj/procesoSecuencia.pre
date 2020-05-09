@@ -1,13 +1,13 @@
 
 # 1 "procesoSecuencia.c"
 
-# 21 "c:\sed_tools\xc8\include\htc.h"
+# 21 "d:\sed_tools\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 47 "c:\sed_tools\xc8\include\pic16f88.h"
+# 47 "d:\sed_tools\xc8\include\pic16f88.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1253,25 +1253,25 @@ extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
 
-# 27 "c:\sed_tools\xc8\include\pic.h"
+# 27 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 # 80
 extern unsigned int flash_read(unsigned short addr);
 
-# 41 "c:\sed_tools\xc8\include\eeprom_routines.h"
+# 41 "d:\sed_tools\xc8\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 153 "c:\sed_tools\xc8\include\pic.h"
+# 153 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 4 "c:\sed_tools\xc8\include\stdlib.h"
+# 4 "d:\sed_tools\xc8\include\stdlib.h"
 typedef int ptrdiff_t;
 typedef unsigned size_t;
 typedef unsigned short wchar_t;
@@ -1347,10 +1347,10 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 13 "c:\sed_tools\xc8\include\stddef.h"
+# 13 "d:\sed_tools\xc8\include\stddef.h"
 extern int errno;
 
-# 65 "c:\sed_tools\xc8\include\GenericTypeDefs.h"
+# 65 "d:\sed_tools\xc8\include\GenericTypeDefs.h"
 typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 
 
@@ -1941,7 +1941,7 @@ if(tecla<=9)
 {
 valor = tecla;
 do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 11; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0);
-do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
+do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla+48) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla+48) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
 estado[1] = esperaSegundoValor;
 }
 }
@@ -1965,7 +1965,7 @@ else if(tecla<=9)
 {
 valor = tecla + valor*10;
 do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 12; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0);
-do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
+do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla+48) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla+48) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
 estado[1] = esperaTercerValor;
 }
 }
@@ -1989,7 +1989,7 @@ else if(tecla<=9)
 {
 valor=tecla+valor*10;
 do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 13; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0);
-do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
+do { (*LCD_RS_PORT_PUNTERO)|= LCD_RS; do { LCD_envia_4bits( (((tecla+48) >> 4) & 0b00001111) ); LCD_envia_4bits( ((tecla+48) & 0b00001111) ); }while(0); if ( (++LCD_var_cursor & 0b00010000) != 0) { if ((LCD_var_cursor & 0b10000000)==0) { do { LCD_var_cursor= (0==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } else { do { LCD_var_cursor= (1==0 ? 0b00000000 : 0b01000000) | 0; do{ (*LCD_RS_PORT_PUNTERO)&= ~LCD_RS; do { LCD_envia_4bits( ((((LCD_var_cursor | 0b10000000)) >> 4) & 0b00001111) ); LCD_envia_4bits( (((LCD_var_cursor | 0b10000000)) & 0b00001111) ); }while(0); }while(0); }while(0); } LCD_var_cursor&= 0b11100000; } }while(0);
 estado[1] = esperaAlmohadillaValor;
 }
 }

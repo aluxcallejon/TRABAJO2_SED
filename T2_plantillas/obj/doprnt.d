@@ -1,1 +1,1 @@
- obj/doprnt.d  obj/doprnt.p1:  c:/sed_tools/xc8/sources/common/doprnt.c
+ obj/doprnt.d  obj/doprnt.p1:  d:/sed_tools/xc8/sources/common/doprnt.c

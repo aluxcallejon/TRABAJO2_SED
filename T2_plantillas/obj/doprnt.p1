@@ -1,13 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"10 c:\sed_tools\xc8\include\stdarg.h
+"10 d:\sed_tools\xc8\include\stdarg.h
 [v ___va_start `(*v ~T0 @X0 0 ef ]
 [p i ___va_start ]
-"7 c:\sed_tools\xc8\include\ctype.h
+"7 d:\sed_tools\xc8\include\ctype.h
 [v _isdigit `(b ~T0 @X0 0 ef1`uc ]
-"13 c:\sed_tools\xc8\include\stdarg.h
+"13 d:\sed_tools\xc8\include\stdarg.h
 [v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
 [p i ___va_arg ]
-"13 c:\sed_tools\xc8\sources\common\doprnt.c
+"13 d:\sed_tools\xc8\sources\common\doprnt.c
 [p n 350 ]
 "354
 [v _dpowers `Cui ~T0 @X0 -> 0 `x s ]

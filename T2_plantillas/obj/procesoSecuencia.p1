@@ -16,7 +16,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _esperaPrimerValor `(v ~T0 @X0 0 ef ]
 "15
 [v _espera01Almohadilla `(v ~T0 @X0 0 ef ]
-"722 c:\sed_tools\xc8\include\pic16f88.h
+"722 d:\sed_tools\xc8\include\pic16f88.h
 [v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
 "2269
 [v _RB3 `Vb ~T0 @X0 0 e@51 ]
@@ -32,7 +32,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _esperaTercerValor `(v ~T0 @X0 0 ef ]
 "14
 [v _esperaAlmohadillaValor `(v ~T0 @X0 0 ef ]
-"49 c:\sed_tools\xc8\include\pic16f88.h
+"49 d:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -450,8 +450,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
 [e :U 188 ]
 {
-[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
 [e :U 187 ]
 [e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 189  ]
@@ -567,8 +567,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
 [e :U 229 ]
 {
-[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
 [e :U 228 ]
 [e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 230  ]
@@ -685,8 +685,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
 [e :U 270 ]
 {
-[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
 [e :U 269 ]
 [e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 271  ]

@@ -135,7 +135,7 @@ void esperaPrimerValor(void)
         {
             valor = tecla;                 // Se guarda el primer d�gito del valor de la referencia
             LCD_gotoXY(11,1);              // Desplaza el cursor: fila inferior columna 11 (donde est� el primer _ )
-            LCD_enviaCaracter(tecla);    // Muestra el car�cter correspondiente a la tecla pulsada
+            LCD_enviaCaracter(tecla+48);    // Muestra el car�cter correspondiente a la tecla pulsada
             estado[1] = esperaSegundoValor;// Siguiente estado esperaSegundoValor
         }
     }
@@ -159,7 +159,7 @@ void esperaSegundoValor(void)
         {
             valor = tecla + valor*10;                // El valor anterior ser� las decenas y el nuevo ser� las unidades
             LCD_gotoXY(12,1);              // Desplaza el cursor
-            LCD_enviaCaracter(tecla);  // Muestra el car�cter correspondiente a la tecla pulsada
+            LCD_enviaCaracter(tecla+48);  // Muestra el car�cter correspondiente a la tecla pulsada
             estado[1] = esperaTercerValor; // Siguiente estado
         }
     }
@@ -183,7 +183,7 @@ void esperaTercerValor(void)
         {
             valor=tecla+valor*10;                 // El valor anterior ser�n las centenas y decenas, y el nuevo ser� las unidades
             LCD_gotoXY(13,1);                     // Desplaza el cursor
-            LCD_enviaCaracter(tecla);           // Muestra el car�cter correspondiente a la tecla pulsada
+            LCD_enviaCaracter(tecla+48);           // Muestra el car�cter correspondiente a la tecla pulsada
             estado[1] = esperaAlmohadillaValor;   // Siguiente estado esperaAlmohadillaValor
         }
     }
