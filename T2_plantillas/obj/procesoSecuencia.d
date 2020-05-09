@@ -1,0 +1,1 @@
+ obj/procesoSecuencia.d  obj/procesoSecuencia.p1:  procesoSecuencia.c XTAL_FREQ.h LCD.h

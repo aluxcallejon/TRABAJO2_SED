@@ -1,0 +1,787 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[v F1526 `(v ~T0 @X0 0 tf ]
+"30 procesoSecuencia.c
+[v _estado `*F1526 ~T0 @X0 -> 0 `x e ]
+"10
+[v _esperaPrimeraTecla `(v ~T0 @X0 0 ef ]
+"72 LCD.h
+[v _LCD_envia_4bits `(v ~T0 @X0 0 ef1`uc ]
+"75
+[v _LCD_enviaCadena `(v ~T0 @X0 0 ef1`*Cuc ]
+"29 procesoSecuencia.c
+[v _nuevaTecla `uc ~T0 @X0 0 e ]
+"28
+[v _tecla `uc ~T0 @X0 0 e ]
+"11
+[v _esperaPrimerValor `(v ~T0 @X0 0 ef ]
+"15
+[v _espera01Almohadilla `(v ~T0 @X0 0 ef ]
+"722 c:\sed_tools\xc8\include\pic16f88.h
+[v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
+"2269
+[v _RB3 `Vb ~T0 @X0 0 e@51 ]
+"2271
+[v _RB4 `Vb ~T0 @X0 0 e@52 ]
+"2273
+[v _RB5 `Vb ~T0 @X0 0 e@53 ]
+"12 procesoSecuencia.c
+[v _esperaSegundoValor `(v ~T0 @X0 0 ef ]
+"27
+[v _num_pulsos_ref `us ~T0 @X0 0 e ]
+"13
+[v _esperaTercerValor `(v ~T0 @X0 0 ef ]
+"14
+[v _esperaAlmohadillaValor `(v ~T0 @X0 0 ef ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"147 LCD.h
+[v _LCD_var_cursor `uc ~T0 @X0 1 e ]
+"148
+[v _LCD_var_TRIS `uc ~T0 @X0 1 e ]
+"149
+[v _LCD_E `uc ~T0 @X0 1 e ]
+"150
+[v _LCD_RS `uc ~T0 @X0 1 e ]
+"151
+[v _LCD_BUS_PORT_PINES `uc ~T0 @X0 1 e ]
+"153
+[v _LCD_BUS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"154
+[v _LCD_RS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"155
+[v _LCD_E_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"156
+[v _LCD_BUS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"157
+[v _LCD_RS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"158
+[v _LCD_E_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"20 procesoSecuencia.c
+[v _valor `i ~T0 @X0 1 e ]
+"21
+[v _start `us ~T0 @X0 1 e ]
+[i _start
+-> -> 1 `i `us
+]
+"22
+[v _sentido `us ~T0 @X0 1 e ]
+[i _sentido
+-> -> 1 `i `us
+]
+"35
+[v _init_procesoSecuencia `(v ~T0 @X0 1 ef ]
+"36
+{
+[e :U _init_procesoSecuencia ]
+[f ]
+"37
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"38
+[e :UE 121 ]
+}
+"43
+[v _LCD_mensaje_opciones_inicial `(v ~T0 @X0 1 ef ]
+"44
+{
+[e :U _LCD_mensaje_opciones_inicial ]
+[f ]
+"45
+[e :U 125 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 128 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 131 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 130 ]
+}
+[e :U 127 ]
+}
+[e :U 124 ]
+"46
+[e ( _LCD_enviaCadena (1 :s 1C ]
+"47
+[e :UE 122 ]
+}
+"49
+[v _LCD_mensaje_opciones2 `(v ~T0 @X0 1 ef ]
+"50
+{
+[e :U _LCD_mensaje_opciones2 ]
+[f ]
+"51
+[e :U 135 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 138 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 141 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 140 ]
+}
+[e :U 137 ]
+}
+[e :U 134 ]
+"52
+[e $ ! == -> _start `ui -> -> 1 `i `ui 142  ]
+"53
+[e ( _LCD_enviaCadena (1 :s 2C ]
+[e $U 143  ]
+"54
+[e :U 142 ]
+"55
+[e ( _LCD_enviaCadena (1 :s 3C ]
+[e :U 143 ]
+"56
+[e $ ! == -> _sentido `ui -> -> 1 `i `ui 144  ]
+"57
+[e ( _LCD_enviaCadena (1 :s 4C ]
+[e $U 145  ]
+"58
+[e :U 144 ]
+"59
+[e ( _LCD_enviaCadena (1 :s 5C ]
+[e :U 145 ]
+"60
+[e :UE 132 ]
+}
+"65
+[v _esperaPrimeraTecla `(v ~T0 @X0 1 ef ]
+"66
+{
+[e :U _esperaPrimeraTecla ]
+[f ]
+"67
+[e $ ! == -> _nuevaTecla `i -> 1 `i 147  ]
+"68
+{
+"69
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"70
+[e $ ! == -> _tecla `i -> 10 `i 148  ]
+"71
+{
+"72
+[e :U 151 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 154 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 157 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 156 ]
+}
+[e :U 153 ]
+}
+[e :U 150 ]
+"73
+[e ( _LCD_enviaCadena (1 :s 6C ]
+"74
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimerValor ]
+"75
+}
+[e $U 158  ]
+"76
+[e :U 148 ]
+[e $ ! == -> _tecla `i -> 11 `i 159  ]
+"77
+{
+"78
+[e ( _LCD_mensaje_opciones2 ..  ]
+"79
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _espera01Almohadilla ]
+"80
+}
+[e :U 159 ]
+"81
+[e :U 158 ]
+}
+[e :U 147 ]
+"82
+[e :UE 146 ]
+}
+"86
+[v _espera01Almohadilla `(v ~T0 @X0 1 ef ]
+"87
+{
+[e :U _espera01Almohadilla ]
+[f ]
+"88
+[e $ ! == -> _nuevaTecla `i -> 1 `i 161  ]
+"89
+{
+"90
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"91
+[e $ ! == -> _tecla `i -> 0 `i 162  ]
+"92
+{
+"93
+[e = _start -> -> ! != -> _start `ui -> -> -> 0 `i `us `ui `i `us ]
+"94
+[e ( _LCD_mensaje_opciones2 ..  ]
+"95
+}
+[e $U 163  ]
+"96
+[e :U 162 ]
+[e $ ! == -> _tecla `i -> 1 `i 164  ]
+"97
+{
+"98
+[e = _sentido -> -> ! != -> _sentido `ui -> -> -> 0 `i `us `ui `i `us ]
+"99
+[e ( _LCD_mensaje_opciones2 ..  ]
+"100
+}
+[e $U 165  ]
+"101
+[e :U 164 ]
+[e $ ! == -> _tecla `i -> 11 `i 166  ]
+"102
+{
+"103
+[e $ ! != -> _start `ui -> -> -> 0 `i `us `ui 167  ]
+"104
+[e = _CCP1CON -> -> 576 `i `uc ]
+[e $U 168  ]
+"105
+[e :U 167 ]
+"106
+{
+"107
+[e = _CCP1CON -> -> 0 `i `uc ]
+"108
+[e = _RB3 -> -> 0 `i `b ]
+"109
+}
+[e :U 168 ]
+"110
+[e $ ! != -> _sentido `ui -> -> -> 0 `i `us `ui 169  ]
+"111
+{
+"112
+[e = _RB4 -> -> 1 `i `b ]
+"113
+[e = _RB5 -> -> 0 `i `b ]
+"114
+}
+[e $U 170  ]
+"115
+[e :U 169 ]
+"116
+{
+"117
+[e = _RB4 -> -> 0 `i `b ]
+"118
+[e = _RB5 -> -> 1 `i `b ]
+"119
+}
+[e :U 170 ]
+"120
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"121
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"122
+}
+[e :U 166 ]
+"123
+[e :U 165 ]
+[e :U 163 ]
+}
+[e :U 161 ]
+"124
+[e :UE 160 ]
+}
+"129
+[v _esperaPrimerValor `(v ~T0 @X0 1 ef ]
+"130
+{
+[e :U _esperaPrimerValor ]
+[f ]
+"131
+[e $ ! == -> _nuevaTecla `i -> 1 `i 172  ]
+"132
+{
+"133
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"134
+[e $ ! <= -> _tecla `i -> 9 `i 173  ]
+"135
+{
+"136
+[e = _valor -> _tecla `i ]
+"137
+[e :U 176 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 11 `i `uc ]
+[e :U 179 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 182 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 181 ]
+}
+[e :U 178 ]
+}
+[e :U 175 ]
+"138
+[e :U 185 ]
+{
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+[e :U 188 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+}
+[e :U 187 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 189  ]
+{
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 190  ]
+{
+[e :U 193 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 196 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 199 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 198 ]
+}
+[e :U 195 ]
+}
+[e :U 192 ]
+}
+[e $U 200  ]
+[e :U 190 ]
+{
+[e :U 203 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 206 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 209 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 208 ]
+}
+[e :U 205 ]
+}
+[e :U 202 ]
+}
+[e :U 200 ]
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+}
+[e :U 189 ]
+}
+[e :U 184 ]
+"139
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaSegundoValor ]
+"140
+}
+[e :U 173 ]
+"141
+}
+[e :U 172 ]
+"142
+[e :UE 171 ]
+}
+"147
+[v _esperaSegundoValor `(v ~T0 @X0 1 ef ]
+"148
+{
+[e :U _esperaSegundoValor ]
+[f ]
+"149
+[e $ ! == -> _nuevaTecla `i -> 1 `i 211  ]
+"150
+{
+"151
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"152
+[e $ ! == -> _tecla `i -> 11 `i 212  ]
+"153
+{
+"154
+[e = _num_pulsos_ref -> _valor `us ]
+"155
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"156
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"157
+}
+[e $U 213  ]
+"158
+[e :U 212 ]
+[e $ ! <= -> _tecla `i -> 9 `i 214  ]
+"159
+{
+"160
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"161
+[e :U 217 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 12 `i `uc ]
+[e :U 220 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 223 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 222 ]
+}
+[e :U 219 ]
+}
+[e :U 216 ]
+"162
+[e :U 226 ]
+{
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+[e :U 229 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+}
+[e :U 228 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 230  ]
+{
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 231  ]
+{
+[e :U 234 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 237 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 240 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 239 ]
+}
+[e :U 236 ]
+}
+[e :U 233 ]
+}
+[e $U 241  ]
+[e :U 231 ]
+{
+[e :U 244 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 247 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 250 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 249 ]
+}
+[e :U 246 ]
+}
+[e :U 243 ]
+}
+[e :U 241 ]
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+}
+[e :U 230 ]
+}
+[e :U 225 ]
+"163
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaTercerValor ]
+"164
+}
+[e :U 214 ]
+"165
+[e :U 213 ]
+}
+[e :U 211 ]
+"166
+[e :UE 210 ]
+}
+"171
+[v _esperaTercerValor `(v ~T0 @X0 1 ef ]
+"172
+{
+[e :U _esperaTercerValor ]
+[f ]
+"173
+[e $ ! == -> _nuevaTecla `i -> 1 `i 252  ]
+"174
+{
+"175
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"176
+[e $ ! == -> _tecla `i -> 11 `i 253  ]
+"177
+{
+"178
+[e = _num_pulsos_ref -> _valor `us ]
+"179
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"180
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"181
+}
+[e $U 254  ]
+"182
+[e :U 253 ]
+[e $ ! <= -> _tecla `i -> 9 `i 255  ]
+"183
+{
+"184
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"185
+[e :U 258 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 13 `i `uc ]
+[e :U 261 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 264 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 263 ]
+}
+[e :U 260 ]
+}
+[e :U 257 ]
+"186
+[e :U 267 ]
+{
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+[e :U 270 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> _tecla `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> _tecla `i -> 15 `i `uc ]
+}
+[e :U 269 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 271  ]
+{
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 272  ]
+{
+[e :U 275 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 278 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 281 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 280 ]
+}
+[e :U 277 ]
+}
+[e :U 274 ]
+}
+[e $U 282  ]
+[e :U 272 ]
+{
+[e :U 285 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 288 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 291 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 290 ]
+}
+[e :U 287 ]
+}
+[e :U 284 ]
+}
+[e :U 282 ]
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+}
+[e :U 271 ]
+}
+[e :U 266 ]
+"187
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaAlmohadillaValor ]
+"188
+}
+[e :U 255 ]
+"189
+[e :U 254 ]
+}
+[e :U 252 ]
+"190
+[e :UE 251 ]
+}
+"195
+[v _esperaAlmohadillaValor `(v ~T0 @X0 1 ef ]
+"196
+{
+[e :U _esperaAlmohadillaValor ]
+[f ]
+"197
+[e $ ! == -> _nuevaTecla `i -> 1 `i 293  ]
+"198
+{
+"199
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"200
+[e $ ! == -> _tecla `i -> 11 `i 294  ]
+"201
+{
+"202
+[e = _num_pulsos_ref -> _valor `us ]
+"203
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"204
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"205
+}
+[e :U 294 ]
+"206
+}
+[e :U 293 ]
+"207
+[e :UE 292 ]
+}
+[a 6C 86 65 76 79 82 32 82 69 70 58 32 95 95 95 32 35 0 ]
+[a 2C 48 58 83 84 65 82 84 32 0 ]
+[a 3C 48 58 83 84 79 80 32 32 0 ]
+[a 5C 49 58 67 67 87 32 32 32 0 ]
+[a 4C 49 58 67 87 32 32 32 32 0 ]
+[a 1C 79 80 67 73 79 78 69 83 32 42 32 35 32 32 32 32 0 ]

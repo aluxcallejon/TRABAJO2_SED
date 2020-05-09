@@ -1,0 +1,1 @@
+ obj/LCD.d  obj/LCD.p1:  LCD.c XTAL_FREQ.h LCD.h

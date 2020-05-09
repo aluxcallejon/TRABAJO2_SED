@@ -112,7 +112,8 @@ void main(void)
             GO_nDONE=1;
 
             //Nos aseguramos que haya terminado hacer la conversion,tarda en torno a 100us
-            delay(1);
+            //delay(1);
+            __delay_us(100);
             //-----------------------------------------------------------------
             // Almacena resultado de 10 bits en ADC_resultado  (ADFM=1 justificado a la derecha, 10 bits)
             //-----------------------------------------------------------------

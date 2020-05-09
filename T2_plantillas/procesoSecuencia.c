@@ -183,7 +183,7 @@ void esperaTercerValor(void)
         {
             valor=tecla+valor*10;                 // El valor anterior ser�n las centenas y decenas, y el nuevo ser� las unidades
             LCD_gotoXY(13,1);                     // Desplaza el cursor
-            LCD_enviaCaracter('tecla');           // Muestra el car�cter correspondiente a la tecla pulsada
+            LCD_enviaCaracter(tecla);           // Muestra el car�cter correspondiente a la tecla pulsada
             estado[1] = esperaAlmohadillaValor;   // Siguiente estado esperaAlmohadillaValor
         }
     }

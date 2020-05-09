@@ -36,7 +36,10 @@
 //==================================
 //Variables globales
 //==================================
-
+void  init_procesoHisteresis(void);
+void  estado10(void);
+void  estado50(void);
+void  estado100(void);
 //==================================
 //Variables definidas en otros archivos
 //==================================
@@ -60,7 +63,7 @@ void estado100()
     estado[2]=estado10;//Si ha superado los 100 pasamos a estado10
     max_duty=M10; //Asignamos el duty correspondiente a este estado
   }else{
-    estado[2]=100;//No hemos superado los 100, por lo que nos quedamos en este estado
+    estado[2]=estado100;//No hemos superado los 100, por lo que nos quedamos en este estado
     max_duty=M100; //Asignamos el duty correspondiente a este estado
   }
 }

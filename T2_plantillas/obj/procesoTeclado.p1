@@ -1,0 +1,181 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[v F1371 `(v ~T0 @X0 0 tf ]
+"13 procesoTeclado.c
+[v _estado `*F1371 ~T0 @X0 -> 0 `x e ]
+"18
+[v _esperaPulsarTecla `(v ~T0 @X0 0 ef ]
+"34
+[c E979 0 1 .. ]
+[n E979 _BOOL FALSE TRUE  ]
+"93 TECLADO.h
+[v _TECLADO_leer `(E979 ~T0 @X0 0 ef ]
+"73
+[v _TECLADO_dato `uc ~T0 @X0 0 e ]
+"19 procesoTeclado.c
+[v _esperaSoltarTecla `(v ~T0 @X0 0 ef ]
+"94 TECLADO.h
+[v _TECLADO_pulsado `(E979 ~T0 @X0 0 ef ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"7 procesoTeclado.c
+[v _tecla `uc ~T0 @X0 1 e ]
+"8
+[v _nuevaTecla `uc ~T0 @X0 1 e ]
+[i _nuevaTecla
+-> -> 0 `i `uc
+]
+"24
+[v _init_procesoTeclado `(v ~T0 @X0 1 ef ]
+"25
+{
+[e :U _init_procesoTeclado ]
+[f ]
+"26
+[e = *U + &U _estado * -> -> -> 0 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPulsarTecla ]
+"27
+[e :UE 117 ]
+}
+"32
+[v _esperaPulsarTecla `(v ~T0 @X0 1 ef ]
+"33
+{
+[e :U _esperaPulsarTecla ]
+[f ]
+"34
+[e $ ! != -> ( _TECLADO_leer ..  `i -> -> -> 0 `i `E979 `i 119  ]
+"35
+{
+"36
+[e = _tecla _TECLADO_dato ]
+"37
+[e = _nuevaTecla -> -> 1 `i `uc ]
+"38
+[e = *U + &U _estado * -> -> -> 0 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaSoltarTecla ]
+"39
+}
+[e :U 119 ]
+"40
+[e :UE 118 ]
+}
+"45
+[v _esperaSoltarTecla `(v ~T0 @X0 1 ef ]
+"46
+{
+[e :U _esperaSoltarTecla ]
+[f ]
+"47
+[e $ ! == -> ( _TECLADO_pulsado ..  `i -> 0 `i 121  ]
+"48
+{
+"49
+[e = *U + &U _estado * -> -> -> 0 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPulsarTecla ]
+"50
+}
+[e :U 121 ]
+"51
+[e :UE 120 ]
+}

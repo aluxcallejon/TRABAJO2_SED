@@ -1,0 +1,296 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[v F1581 `(v ~T0 @X0 0 tf ]
+[p mainexit ]
+"46 trabajo.c
+[v _init_registros `(v ~T0 @X0 0 ef ]
+"47
+[v _init_Timer0 `(v ~T0 @X0 0 ef ]
+"48
+[v _init_Timer1 `(v ~T0 @X0 0 ef ]
+"49
+[v _init_Timer2 `(v ~T0 @X0 0 ef ]
+"50
+[v _init_ADC `(v ~T0 @X0 0 ef ]
+"51
+[v _init_procesoTeclado `(v ~T0 @X0 0 ef ]
+"52
+[v _init_procesoSecuencia `(v ~T0 @X0 0 ef ]
+"53
+[v _init_procesoHisteresis `(v ~T0 @X0 0 ef ]
+"54
+[v _init_librerias `(v ~T0 @X0 0 ef ]
+"2271 c:\sed_tools\xc8\include\pic16f88.h
+[v _RB4 `Vb ~T0 @X0 0 e@52 ]
+"2273
+[v _RB5 `Vb ~T0 @X0 0 e@53 ]
+"2193
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"205 c:\sed_tools\xc8\include\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"72 LCD.h
+[v _LCD_envia_4bits `(v ~T0 @X0 0 ef1`uc ]
+"75
+[v _LCD_enviaCadena `(v ~T0 @X0 0 ef1`*Cuc ]
+"2199 c:\sed_tools\xc8\include\pic16f88.h
+[v _GO_nDONE `Vb ~T0 @X0 0 e@250 ]
+[v F974 `(v ~T0 @X0 1 tf1`ul ]
+"154 c:\sed_tools\xc8\include\pic.h
+[v __delay `JF974 ~T0 @X0 0 e ]
+[p i __delay ]
+"885 c:\sed_tools\xc8\include\pic16f88.h
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"1879
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"147 LCD.h
+[v _LCD_var_cursor `uc ~T0 @X0 1 e ]
+"148
+[v _LCD_var_TRIS `uc ~T0 @X0 1 e ]
+"149
+[v _LCD_E `uc ~T0 @X0 1 e ]
+"150
+[v _LCD_RS `uc ~T0 @X0 1 e ]
+"151
+[v _LCD_BUS_PORT_PINES `uc ~T0 @X0 1 e ]
+"153
+[v _LCD_BUS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"154
+[v _LCD_RS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"155
+[v _LCD_E_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"156
+[v _LCD_BUS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"157
+[v _LCD_RS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"158
+[v _LCD_E_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"26 trabajo.c
+[p x FOSC=INTOSCIO ]
+[p x WDTE=OFF ]
+[p x PWRTE=OFF ]
+[p x CP=OFF ]
+[p x MCLRE=ON ]
+[p x BOREN=OFF ]
+[p x LVP=OFF ]
+[p x CPD=OFF ]
+[p x WRT=OFF ]
+[p x DEBUG=OFF ]
+[p x CCPMX=RB3 ]
+[p x FCMEN=OFF ]
+[p x IESO=OFF ]
+"32
+[v _num_pulsos_ref `us ~T0 @X0 1 e ]
+"33
+[v _valor_TMR1 `ui ~T0 @X0 1 e ]
+"34
+[v _tiempo_1s `us ~T0 @X0 1 e ]
+[i _tiempo_1s
+-> -> 1 `i `us
+]
+"35
+[v _cadena `uc ~T0 @X0 -> 20 `i e ]
+"36
+[v _ADC_resultado `i ~T0 @X0 1 e ]
+"41
+[v _estado `*F1581 ~T0 @X0 -> 3 `i e ]
+"59
+[v _main `(v ~T0 @X0 1 ef ]
+"60
+{
+[e :U _main ]
+[f ]
+"66
+[e ( _init_registros ..  ]
+"68
+[e ( _init_Timer0 ..  ]
+"70
+[e ( _init_Timer1 ..  ]
+"72
+[e ( _init_Timer2 ..  ]
+"74
+[e ( _init_ADC ..  ]
+"76
+[e ( _init_procesoTeclado ..  ]
+"78
+[e ( _init_procesoSecuencia ..  ]
+"80
+[e ( _init_procesoHisteresis ..  ]
+"82
+[e ( _init_librerias ..  ]
+"84
+[e = _num_pulsos_ref -> -> 100 `i `us ]
+"86
+[e = _RB4 -> -> 1 `i `b ]
+"87
+[e = _RB5 -> -> 0 `i `b ]
+"89
+[e = _GIE -> -> 1 `i `b ]
+"94
+[e :U 124 ]
+"95
+{
+"96
+[e ( *U *U + &U _estado * -> -> -> 0 `i `ui `ux -> -> # *U &U _estado `ui `ux ..  ]
+"98
+[e ( *U *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux ..  ]
+"100
+[e ( *U *U + &U _estado * -> -> -> 2 `i `ui `ux -> -> # *U &U _estado `ui `ux ..  ]
+"102
+[e $ ! != -> _tiempo_1s `ui -> -> -> 0 `i `us `ui 126  ]
+"103
+{
+"104
+[e = _tiempo_1s -> -> 0 `i `us ]
+"105
+[e ( _sprintf (1 , , (. , &U _cadena :s 1C -> _num_pulsos_ref `i _valor_TMR1 ]
+"106
+[e :U 129 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 132 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 135 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 134 ]
+}
+[e :U 131 ]
+}
+[e :U 128 ]
+"107
+[e ( _LCD_enviaCadena (1 -> &U _cadena `*Cuc ]
+"112
+[e = _GO_nDONE -> -> 1 `i `b ]
+"116
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"121
+[e $ ! = _GO_nDONE -> -> 0 `i `b 136  ]
+{
+"122
+[e = _ADC_resultado | << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
+"123
+}
+[e :U 136 ]
+"126
+}
+[e :U 126 ]
+"127
+}
+[e :U 123 ]
+"94
+[e $U 124  ]
+[e :U 125 ]
+"128
+[e :UE 122 ]
+}
+[p f _sprintf 8421504 ]
+[a 1C 114 101 102 58 37 51 100 32 118 97 108 58 37 52 100 0 ]
+

@@ -1,0 +1,470 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S104 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S104 . b0 b1 b2 b3 b4 b5 b6 b7 ]
+[u S103 `uc 1 `S104 1 ]
+[n S103 . Val bits ]
+"158 c:\sed_tools\xc8\include\pic16f88.h
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"219
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1055
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1116
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"2483
+[v _nRBPU `Vb ~T0 @X0 0 e@1039 ]
+"211 TECLADO.c
+[c E979 0 1 .. ]
+[n E979 _BOOL FALSE TRUE  ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"27 TECLADO.c
+[v _tabla_3col `Cuc ~T0 @X0 -> 12 `i e ]
+[i _tabla_3col
+:U ..
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+-> -> 6 `i `uc
+-> -> 7 `i `uc
+-> -> 8 `i `uc
+-> -> 9 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+-> -> 11 `i `uc
+..
+]
+"34
+[v _REBOTES_lectura `us ~T0 @X0 1 e ]
+"47
+[v _TECLADO_dato `uc ~T0 @X0 1 e ]
+"48
+[v _TECLADO_banderas `S103 ~T0 @X0 1 e ]
+"49
+[v _TECLADO_config `Vuc ~T0 @X0 1 e ]
+"52
+[v _TECLADO_COL_PINES `uc ~T0 @X0 1 e ]
+"53
+[v _TECLADO_FIL_PINES `uc ~T0 @X0 1 e ]
+"55
+[v _TECLADO_PORT_COL_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"56
+[v _TECLADO_PORT_FIL_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"126
+[v _TECLADO_ini `(v ~T0 @X0 1 ef1`uc ]
+"127
+{
+[e :U _TECLADO_ini ]
+"126
+[v _config `uc ~T0 @X0 1 r1 ]
+"127
+[f ]
+"128
+[e = _TECLADO_config _config ]
+"130
+[e = _TECLADO_PORT_FIL_PUNTERO ? == & -> _config `i -> 1 `i -> 0 `i : &U _PORTA &U _PORTB ]
+"131
+[e = _TECLADO_FIL_PINES -> ? == & -> _config `i -> 4 `i -> 0 `i : -> 15 `i -> 240 `i `uc ]
+"133
+[e = _TECLADO_PORT_COL_PUNTERO ? == & -> _config `i -> 2 `i -> 0 `i : &U _PORTA &U _PORTB ]
+"135
+[e $U 119  ]
+"136
+{
+"138
+[e :U 120 ]
+[e = _TECLADO_COL_PINES -> -> 7 `i `uc ]
+"139
+[e $U 118  ]
+"140
+[e :U 121 ]
+[e = _TECLADO_COL_PINES -> -> 56 `i `uc ]
+"141
+[e $U 118  ]
+"142
+[e :U 122 ]
+[e = _TECLADO_COL_PINES -> -> 224 `i `uc ]
+"143
+[e $U 118  ]
+"144
+}
+[e $U 118  ]
+"135
+[e :U 119 ]
+[e [\ & -> _config `i -> 56 `i , $ -> 8 `i 120
+ , $ -> 16 `i 121
+ , $ -> 24 `i 122
+ 118 ]
+"144
+[e :U 118 ]
+"150
+[e $ ! == & -> _TECLADO_config `i -> -> -> 2 `i `uc `i -> 0 `i 123  ]
+"151
+{
+"154
+[e =| _TRISA _TECLADO_COL_PINES ]
+"167
+}
+[e $U 124  ]
+"168
+[e :U 123 ]
+"169
+{
+"171
+[e =| _TRISB _TECLADO_COL_PINES ]
+"175
+[e $ ! != & -> _TECLADO_config `i -> -> -> 64 `i `uc `i -> 0 `i 125  ]
+"176
+{
+"178
+[e = _nRBPU -> -> 0 `i `b ]
+"194
+}
+[e :U 125 ]
+"195
+}
+[e :U 124 ]
+"201
+[e $ ! != & -> _TECLADO_config `i -> -> -> 1 `i `uc `i -> 0 `i 126  ]
+"202
+[e =& _TRISB -> ~ -> _TECLADO_FIL_PINES `i `uc ]
+[e $U 127  ]
+"203
+[e :U 126 ]
+"204
+[e =& _TRISA -> ~ -> _TECLADO_FIL_PINES `i `uc ]
+[e :U 127 ]
+"205
+[e :UE 117 ]
+}
+"210
+[v _TECLADO_pulsado `(E979 ~T0 @X0 1 ef ]
+"211
+{
+[e :U _TECLADO_pulsado ]
+[f ]
+"215
+[e =& *U _TECLADO_PORT_FIL_PUNTERO -> ~ -> _TECLADO_FIL_PINES `i `uc ]
+"218
+[e $ ! == & -> _TECLADO_config `i -> 2 `i -> 0 `i 129  ]
+{
+[e = _REBOTES_lectura -> & -> _PORTA `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e $U 130  ]
+[e :U 129 ]
+{
+[e = _REBOTES_lectura -> & -> _PORTB `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e :U 130 ]
+"219
+[e $ ! == -> _REBOTES_lectura `ui -> _TECLADO_COL_PINES `ui 131  ]
+"220
+{
+"221
+[e = . . _TECLADO_banderas 1 6 -> -> 0 `i `uc ]
+"222
+[e ) -> . `E979 0 `E979 ]
+[e $UE 128  ]
+"223
+}
+[e :U 131 ]
+"225
+[e = . . _TECLADO_banderas 1 6 -> -> 1 `i `uc ]
+"226
+[e ) -> . `E979 1 `E979 ]
+[e $UE 128  ]
+"227
+[e :UE 128 ]
+}
+"237
+[v _TECLADO_leer `(E979 ~T0 @X0 1 ef ]
+"238
+{
+[e :U _TECLADO_leer ]
+[f ]
+"239
+[v _i `uc ~T0 @X0 1 a ]
+"240
+[v _bit_a_testear `us ~T0 @X0 1 a ]
+"242
+[e = _TECLADO_dato -> -> 0 `i `uc ]
+"243
+[e = . . _TECLADO_banderas 1 7 -> -> 0 `i `uc ]
+"244
+[e = . . _TECLADO_banderas 1 6 -> -> 0 `i `uc ]
+"252
+[e =& *U _TECLADO_PORT_FIL_PUNTERO -> ~ -> _TECLADO_FIL_PINES `i `uc ]
+"253
+[e $ ! == & -> _TECLADO_config `i -> 2 `i -> 0 `i 133  ]
+{
+[e = _REBOTES_lectura -> & -> _PORTA `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e $U 134  ]
+[e :U 133 ]
+{
+[e = _REBOTES_lectura -> & -> _PORTB `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e :U 134 ]
+"254
+[e $ ! == -> _REBOTES_lectura `ui -> _TECLADO_COL_PINES `ui 135  ]
+"255
+{
+"256
+[e = . . _TECLADO_banderas 1 6 -> -> 0 `i `uc ]
+"257
+[e ) -> . `E979 0 `E979 ]
+[e $UE 132  ]
+"258
+}
+[e :U 135 ]
+"260
+[e = . . _TECLADO_banderas 1 6 -> -> 1 `i `uc ]
+"271
+[e $U 137  ]
+"272
+{
+"273
+[e :U 138 ]
+[e = _bit_a_testear -> -> 254 `i `us ]
+[e $U 136  ]
+"274
+[e :U 139 ]
+[e = _bit_a_testear -> -> 251 `i `us ]
+[e $U 136  ]
+"275
+[e :U 140 ]
+[e = _bit_a_testear -> -> 239 `i `us ]
+[e $U 136  ]
+"276
+[e :U 141 ]
+[e = _bit_a_testear -> -> 255 `i `us ]
+[e $U 136  ]
+"277
+}
+[e $U 136  ]
+"271
+[e :U 137 ]
+[e [\ _TECLADO_FIL_PINES , $ -> -> 15 `i `uc 138
+ , $ -> -> 60 `i `uc 139
+ , $ -> -> 240 `i `uc 140
+ 141 ]
+"277
+[e :U 136 ]
+"282
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 142  ]
+[e $U 143  ]
+"283
+[e :U 142 ]
+{
+"285
+[e = *U _TECLADO_PORT_FIL_PUNTERO -> & -> | -> *U _TECLADO_PORT_FIL_PUNTERO `i -> _TECLADO_FIL_PINES `i `ui -> _bit_a_testear `ui `uc ]
+"288
+[e $ ! == & -> _TECLADO_config `i -> 2 `i -> 0 `i 145  ]
+{
+[e = _REBOTES_lectura -> & -> _PORTA `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e $U 146  ]
+[e :U 145 ]
+{
+[e = _REBOTES_lectura -> & -> _PORTB `i -> _TECLADO_COL_PINES `i `us ]
+}
+[e :U 146 ]
+"289
+[e $ ! != -> _REBOTES_lectura `ui -> _TECLADO_COL_PINES `ui 147  ]
+"290
+[e $U 143  ]
+[e :U 147 ]
+"295
+[e = _bit_a_testear -> | << -> _bit_a_testear `ui -> 1 `i -> -> 1 `i `ui `us ]
+"299
+[e =+ _TECLADO_dato -> -> 3 `i `uc ]
+"300
+}
+"282
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 142  ]
+[e :U 143 ]
+"300
+}
+"306
+[e $U 149  ]
+"307
+{
+"311
+[e :U 150 ]
+"312
+[e $ ! == -> _REBOTES_lectura `ui -> -> 6 `i `ui 151  ]
+[e =+ _TECLADO_dato -> -> 0 `i `uc ]
+[e $U 152  ]
+"313
+[e :U 151 ]
+[e $ ! == -> _REBOTES_lectura `ui -> -> 5 `i `ui 153  ]
+[e =+ _TECLADO_dato -> -> 1 `i `uc ]
+[e $U 154  ]
+"314
+[e :U 153 ]
+[e $ ! == -> _REBOTES_lectura `ui -> -> 3 `i `ui 155  ]
+[e =+ _TECLADO_dato -> -> 2 `i `uc ]
+[e $U 156  ]
+"315
+[e :U 155 ]
+[e ) -> . `E979 0 `E979 ]
+[e $UE 132  ]
+[e :U 156 ]
+[e :U 154 ]
+[e :U 152 ]
+"316
+[e $U 148  ]
+"317
+[e :U 157 ]
+"318
+[e $ ! == -> _REBOTES_lectura `ui -> -> 192 `i `ui 158  ]
+[e =+ _TECLADO_dato -> -> 0 `i `uc ]
+[e $U 159  ]
+"319
+[e :U 158 ]
+[e $ ! == -> _REBOTES_lectura `ui -> -> 160 `i `ui 160  ]
+[e =+ _TECLADO_dato -> -> 1 `i `uc ]
+[e $U 161  ]
+"320
+[e :U 160 ]
+[e $ ! == -> _REBOTES_lectura `ui -> -> 96 `i `ui 162  ]
+[e =+ _TECLADO_dato -> -> 2 `i `uc ]
+[e $U 163  ]
+"321
+[e :U 162 ]
+[e ) -> . `E979 0 `E979 ]
+[e $UE 132  ]
+[e :U 163 ]
+[e :U 161 ]
+[e :U 159 ]
+"322
+[e $U 148  ]
+"324
+}
+[e $U 148  ]
+"306
+[e :U 149 ]
+[e [\ _TECLADO_COL_PINES , $ -> -> 7 `i `uc 150
+ , $ -> -> 224 `i `uc 157
+ 148 ]
+"324
+[e :U 148 ]
+"327
+[e = _TECLADO_dato *U + &U _tabla_3col * -> _TECLADO_dato `ux -> -> # *U &U _tabla_3col `ui `ux ]
+"330
+[e = . . _TECLADO_banderas 1 7 -> -> 1 `i `uc ]
+"331
+[e ) -> . `E979 1 `E979 ]
+[e $UE 132  ]
+"332
+[e :UE 132 ]
+}

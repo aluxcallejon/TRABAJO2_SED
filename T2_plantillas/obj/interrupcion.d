@@ -1,0 +1,1 @@
+ obj/interrupcion.d  obj/interrupcion.p1:  interrupcion.c

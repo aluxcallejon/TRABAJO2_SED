@@ -1,0 +1,1 @@
+ obj/procesoHisteresis.d  obj/procesoHisteresis.p1:  procesoHisteresis.c

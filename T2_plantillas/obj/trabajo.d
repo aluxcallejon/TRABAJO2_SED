@@ -1,0 +1,1 @@
+ obj/trabajo.d  obj/trabajo.p1:  trabajo.c XTAL_FREQ.h LCD.h TECLADO.h

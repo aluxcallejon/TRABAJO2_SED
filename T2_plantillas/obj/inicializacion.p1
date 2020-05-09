@@ -1,0 +1,317 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"1298 c:\sed_tools\xc8\include\pic16f88.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
+"2219
+[v _IOFS `Vb ~T0 @X0 0 e@1146 ]
+"158
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"219
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1691
+[v _ANSEL `Vuc ~T0 @X0 0 e@155 ]
+"1055
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1116
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"986
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"2359
+[v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
+"53
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"2347
+[v _T1CKPS1 `Vb ~T0 @X0 0 e@133 ]
+"2345
+[v _T1CKPS0 `Vb ~T0 @X0 0 e@132 ]
+"2351
+[v _T1OSCEN `Vb ~T0 @X0 0 e@131 ]
+"2487
+[v _nT1SYNC `Vb ~T0 @X0 0 e@130 ]
+"2363
+[v _TMR1CS `Vb ~T0 @X0 0 e@129 ]
+"2369
+[v _TMR1ON `Vb ~T0 @X0 0 e@128 ]
+"464
+[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+"2367
+[v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
+"2365
+[v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
+"2237
+[v _PEIE `Vb ~T0 @X0 0 e@94 ]
+"722
+[v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
+"1425
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"559
+[v _T2CON `Vuc ~T0 @X0 0 e@18 ]
+"2371
+[v _TMR2IE `Vb ~T0 @X0 0 e@1121 ]
+"710
+[v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
+"891
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"1885
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+[v F974 `(v ~T0 @X0 1 tf1`ul ]
+"154 c:\sed_tools\xc8\include\pic.h
+[v __delay `JF974 ~T0 @X0 0 e ]
+[p i __delay ]
+"86 TECLADO.h
+[v _TECLADO_ini `(v ~T0 @X0 0 ef1`uc ]
+"71 LCD.h
+[v _LCD_ini `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"12 inicializacion.c
+[v _LCD_mensaje_opciones_inicial `(v ~T0 @X0 0 ef ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"147 LCD.h
+[v _LCD_var_cursor `uc ~T0 @X0 1 e ]
+"148
+[v _LCD_var_TRIS `uc ~T0 @X0 1 e ]
+"149
+[v _LCD_E `uc ~T0 @X0 1 e ]
+"150
+[v _LCD_RS `uc ~T0 @X0 1 e ]
+"151
+[v _LCD_BUS_PORT_PINES `uc ~T0 @X0 1 e ]
+"153
+[v _LCD_BUS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"154
+[v _LCD_RS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"155
+[v _LCD_E_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"156
+[v _LCD_BUS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"157
+[v _LCD_RS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"158
+[v _LCD_E_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"17 inicializacion.c
+[v _init_registros `(v ~T0 @X0 1 ef ]
+"18
+{
+[e :U _init_registros ]
+[f ]
+"22
+[e = _OSCCON -> -> 102 `i `uc ]
+"33
+[e $U 122  ]
+[e :U 123 ]
+{
+}
+[e :U 122 ]
+[e $ == -> _IOFS `i -> 0 `i 123  ]
+[e :U 124 ]
+"36
+[e = _PORTA -> -> 0 `i `uc ]
+"37
+[e = _PORTB -> -> 0 `i `uc ]
+"38
+[e = _ANSEL -> -> 128 `i `uc ]
+"39
+[e = _TRISA -> -> 63 `i `uc ]
+"40
+[e = _TRISB -> -> 199 `i `uc ]
+"42
+[e :UE 121 ]
+}
+"44
+[v _init_Timer0 `(v ~T0 @X0 1 ef ]
+"45
+{
+[e :U _init_Timer0 ]
+[f ]
+"56
+[e = _OPTION_REG -> -> 199 `i `uc ]
+"68
+[e = _TMR0IE -> -> 1 `i `b ]
+"69
+[e = _TMR0 -> -> 12 `i `uc ]
+"70
+[e :UE 125 ]
+}
+"71
+[v _init_Timer1 `(v ~T0 @X0 1 ef ]
+"72
+{
+[e :U _init_Timer1 ]
+[f ]
+"76
+[e = _T1CKPS1 -> -> 0 `i `b ]
+"77
+[e = _T1CKPS0 -> -> 0 `i `b ]
+"78
+[e = _T1OSCEN -> -> 0 `i `b ]
+"79
+[e = _nT1SYNC -> -> 0 `i `b ]
+"80
+[e = _TMR1CS -> -> 1 `i `b ]
+"81
+[e = _TMR1ON -> -> 1 `i `b ]
+"83
+[e = _TMR1 -> -> 0 `i `us ]
+"84
+[e = _TMR1IF -> -> 0 `i `b ]
+"85
+[e = _TMR1IE -> -> 0 `i `b ]
+"87
+[e = _PEIE -> -> 0 `i `b ]
+"88
+[e :UE 126 ]
+}
+"89
+[v _init_Timer2 `(v ~T0 @X0 1 ef ]
+"90
+{
+[e :U _init_Timer2 ]
+[f ]
+"94
+[e = _CCP1CON -> -> 0 `i `uc ]
+"102
+[e = _PR2 -> -> 249 `i `uc ]
+"103
+[e = _T2CON -> -> 11 `i `uc ]
+"107
+[e = _TMR2IE -> -> 0 `i `b ]
+"109
+[e = _CCPR1L -> -> 0 `i `uc ]
+"110
+[e = _CCP1CON -> -> 576 `i `uc ]
+"111
+[e :UE 127 ]
+}
+"112
+[v _init_ADC `(v ~T0 @X0 1 ef ]
+"113
+{
+[e :U _init_ADC ]
+[f ]
+"119
+[e = _ADCON0 -> -> 123 `i `uc ]
+"128
+[e = _ADCON1 -> -> 128 `i `uc ]
+"138
+[e ( __delay (1 -> * -> -> 750 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"139
+[e :UE 128 ]
+}
+"140
+[v _init_librerias `(v ~T0 @X0 1 ef ]
+"141
+{
+[e :U _init_librerias ]
+[f ]
+"143
+[e ( _TECLADO_ini (1 -> | + + -> 0 `i -> 0 `i + -> 2 `i -> 8 `i -> 64 `i `uc ]
+"145
+[e ( _LCD_ini (3 , , -> | | | -> 0 `i -> 0 `i -> 0 `i -> 0 `i `uc -> -> 128 `i `uc -> -> 64 `i `uc ]
+"147
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"148
+[e :UE 129 ]
+}

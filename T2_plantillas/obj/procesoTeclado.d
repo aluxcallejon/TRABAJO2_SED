@@ -1,0 +1,1 @@
+ obj/procesoTeclado.d  obj/procesoTeclado.p1:  procesoTeclado.c TECLADO.h

@@ -1,0 +1,702 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"72 LCD.h
+[v _LCD_envia_4bits `(v ~T0 @X0 0 ef1`uc ]
+"158 c:\sed_tools\xc8\include\pic16f88.h
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"219
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1055
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1116
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1691
+[v _ANSEL `Vuc ~T0 @X0 0 e@155 ]
+[v F974 `(v ~T0 @X0 1 tf1`ul ]
+"154 c:\sed_tools\xc8\include\pic.h
+[v __delay `JF974 ~T0 @X0 0 e ]
+[p i __delay ]
+"74 LCD.h
+[v _LCD_enciende `(v ~T0 @X0 0 ef1`uc ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
+[; <" INDF equ 00h ;# ">
+"55
+[; <" TMR0 equ 01h ;# ">
+"61
+[; <" PCL equ 02h ;# ">
+"67
+[; <" STATUS equ 03h ;# ">
+"154
+[; <" FSR equ 04h ;# ">
+"160
+[; <" PORTA equ 05h ;# ">
+"221
+[; <" PORTB equ 06h ;# ">
+"282
+[; <" PCLATH equ 0Ah ;# ">
+"301
+[; <" INTCON equ 0Bh ;# ">
+"378
+[; <" PIR1 equ 0Ch ;# ">
+"433
+[; <" PIR2 equ 0Dh ;# ">
+"466
+[; <" TMR1 equ 0Eh ;# ">
+"472
+[; <" TMR1L equ 0Eh ;# ">
+"478
+[; <" TMR1H equ 0Fh ;# ">
+"484
+[; <" T1CON equ 010h ;# ">
+"555
+[; <" TMR2 equ 011h ;# ">
+"561
+[; <" T2CON equ 012h ;# ">
+"631
+[; <" SSPBUF equ 013h ;# ">
+"637
+[; <" SSPCON equ 014h ;# ">
+"706
+[; <" CCPR1 equ 015h ;# ">
+"712
+[; <" CCPR1L equ 015h ;# ">
+"718
+[; <" CCPR1H equ 016h ;# ">
+"724
+[; <" CCP1CON equ 017h ;# ">
+"781
+[; <" RCSTA equ 018h ;# ">
+"875
+[; <" TXREG equ 019h ;# ">
+"881
+[; <" RCREG equ 01Ah ;# ">
+"887
+[; <" ADRESH equ 01Eh ;# ">
+"893
+[; <" ADCON0 equ 01Fh ;# ">
+"988
+[; <" OPTION_REG equ 081h ;# ">
+"1057
+[; <" TRISA equ 085h ;# ">
+"1118
+[; <" TRISB equ 086h ;# ">
+"1179
+[; <" PIE1 equ 08Ch ;# ">
+"1234
+[; <" PIE2 equ 08Dh ;# ">
+"1267
+[; <" PCON equ 08Eh ;# ">
+"1300
+[; <" OSCCON equ 08Fh ;# ">
+"1370
+[; <" OSCTUNE equ 090h ;# ">
+"1427
+[; <" PR2 equ 092h ;# ">
+"1433
+[; <" SSPADD equ 093h ;# ">
+"1439
+[; <" SSPSTAT equ 094h ;# ">
+"1607
+[; <" TXSTA equ 098h ;# ">
+"1687
+[; <" SPBRG equ 099h ;# ">
+"1693
+[; <" ANSEL equ 09Bh ;# ">
+"1748
+[; <" CMCON equ 09Ch ;# ">
+"1817
+[; <" CVRCON equ 09Dh ;# ">
+"1881
+[; <" ADRESL equ 09Eh ;# ">
+"1887
+[; <" ADCON1 equ 09Fh ;# ">
+"1934
+[; <" WDTCON equ 0105h ;# ">
+"1991
+[; <" EEDATA equ 010Ch ;# ">
+"1997
+[; <" EEADR equ 010Dh ;# ">
+"2003
+[; <" EEDATH equ 010Eh ;# ">
+"2009
+[; <" EEADRH equ 010Fh ;# ">
+"2015
+[; <" EECON1 equ 018Ch ;# ">
+"2065
+[; <" EECON2 equ 018Dh ;# ">
+"147 LCD.h
+[v _LCD_var_cursor `uc ~T0 @X0 1 e ]
+"148
+[v _LCD_var_TRIS `uc ~T0 @X0 1 e ]
+"149
+[v _LCD_E `uc ~T0 @X0 1 e ]
+"150
+[v _LCD_RS `uc ~T0 @X0 1 e ]
+"151
+[v _LCD_BUS_PORT_PINES `uc ~T0 @X0 1 e ]
+"153
+[v _LCD_BUS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"154
+[v _LCD_RS_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"155
+[v _LCD_E_PORT_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"156
+[v _LCD_BUS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"157
+[v _LCD_RS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"158
+[v _LCD_E_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
+"35 LCD.c
+[v _LCD_enviaCaracter___ `(v ~T0 @X0 1 ef1`uc ]
+"36
+{
+[e :U _LCD_enviaCaracter___ ]
+"35
+[v _caracter `uc ~T0 @X0 1 r1 ]
+"36
+[f ]
+"39
+[e $ ! == & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 118  ]
+"40
+{
+"41
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 119  ]
+"42
+{
+"44
+[e :U 122 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 125 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 128 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 127 ]
+}
+[e :U 124 ]
+}
+[e :U 121 ]
+"45
+}
+[e $U 129  ]
+"46
+[e :U 119 ]
+"47
+{
+"48
+[e :U 132 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 135 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 138 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 137 ]
+}
+[e :U 134 ]
+}
+[e :U 131 ]
+"49
+}
+[e :U 129 ]
+"50
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+"51
+}
+[e :U 118 ]
+"53
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+"54
+[e :U 141 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> _caracter `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> _caracter `i -> 15 `i `uc ]
+}
+[e :U 140 ]
+"55
+[e :UE 117 ]
+}
+"77
+[v _LCD_ini `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+"78
+{
+[e :U _LCD_ini ]
+"77
+[v _config `uc ~T0 @X0 1 r1 ]
+[v _RS_PIN `uc ~T0 @X0 1 r2 ]
+[v _E_PIN `uc ~T0 @X0 1 r3 ]
+"78
+[f ]
+"80
+[e = _LCD_BUS_PORT_PINES -> ? == & -> _config `i -> 2 `i -> 0 `i : -> 15 `i -> 240 `i `uc ]
+"81
+[e = _LCD_E _E_PIN ]
+"82
+[e = _LCD_RS _RS_PIN ]
+"84
+[e = _LCD_BUS_PORT_PUNTERO ? == & -> _config `i -> 1 `i -> 0 `i : &U _PORTA &U _PORTB ]
+"85
+[e = _LCD_RS_PORT_PUNTERO ? == & -> _config `i -> 4 `i -> 0 `i : &U _PORTA &U _PORTB ]
+"86
+[e = _LCD_E_PORT_PUNTERO ? == & -> _config `i -> 8 `i -> 0 `i : &U _PORTA &U _PORTB ]
+"87
+[e = _LCD_BUS_PORT_TRIS_PUNTERO ? == & -> _config `i -> 1 `i -> 0 `i : &U _TRISA &U _TRISB ]
+"88
+[e = _LCD_RS_PORT_TRIS_PUNTERO ? == & -> _config `i -> 4 `i -> 0 `i : &U _TRISA &U _TRISB ]
+"89
+[e = _LCD_E_PORT_TRIS_PUNTERO ? == & -> _config `i -> 8 `i -> 0 `i : &U _TRISA &U _TRISB ]
+"92
+[e $ ! == _LCD_RS_PORT_PUNTERO &U _PORTA 143  ]
+{
+"93
+[e $ ! <= -> _RS_PIN `i -> 8 `i 144  ]
+"94
+[e =& _ANSEL -> ~ -> _RS_PIN `i `uc ]
+[e :U 144 ]
+"95
+}
+[e $U 145  ]
+"96
+[e :U 143 ]
+{
+"97
+[e $ ! >= -> _RS_PIN `i -> 64 `i 146  ]
+"98
+[e =& _ANSEL -> ~ >> -> _RS_PIN `i -> 1 `i `uc ]
+[e :U 146 ]
+"99
+}
+[e :U 145 ]
+"101
+[e $ ! == _LCD_E_PORT_PUNTERO &U _PORTA 147  ]
+{
+"102
+[e $ ! <= -> _E_PIN `i -> 8 `i 148  ]
+"103
+[e =& _ANSEL -> ~ -> _E_PIN `i `uc ]
+[e :U 148 ]
+"104
+}
+[e $U 149  ]
+"105
+[e :U 147 ]
+{
+"106
+[e $ ! >= -> _E_PIN `i -> 64 `i 150  ]
+"107
+[e =& _ANSEL -> ~ >> -> _E_PIN `i -> 1 `i `uc ]
+[e :U 150 ]
+"108
+}
+[e :U 149 ]
+"110
+[e $ ! && == _LCD_BUS_PORT_PUNTERO &U _PORTA == -> _LCD_BUS_PORT_PINES `i -> 15 `i 151  ]
+"111
+[e =& _ANSEL -> ~ -> _LCD_BUS_PORT_PINES `i `uc ]
+[e $U 152  ]
+"112
+[e :U 151 ]
+[e $ ! && == _LCD_BUS_PORT_PUNTERO &U _PORTB == -> _LCD_BUS_PORT_PINES `i -> 240 `i 153  ]
+"113
+[e =& _ANSEL -> -> 159 `i `uc ]
+[e :U 153 ]
+"119
+[e :U 152 ]
+[e =& *U _LCD_E_PORT_TRIS_PUNTERO -> ~ -> _LCD_E `i `uc ]
+"120
+[e =& *U _LCD_RS_PORT_TRIS_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+"121
+[e = _LCD_var_TRIS *U _LCD_BUS_PORT_TRIS_PUNTERO ]
+"122
+[e =& *U _LCD_E_PORT_PUNTERO -> ~ -> _LCD_E `i `uc ]
+"123
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+"124
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"126
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+"127
+[e ( _LCD_envia_4bits (1 -> -> 3 `i `uc ]
+"128
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"129
+[e ( _LCD_envia_4bits (1 -> -> 3 `i `uc ]
+"130
+[e ( __delay (1 -> * -> -> 110 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"131
+[e ( _LCD_envia_4bits (1 -> -> 3 `i `uc ]
+"132
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"133
+[e ( _LCD_envia_4bits (1 -> -> 2 `i `uc ]
+"135
+[e ( _LCD_enciende (1 -> | -> 1 `i -> 2 `i `uc ]
+"137
+[e :UE 142 ]
+}
+"148
+[v _LCD_envia_4bits `(v ~T0 @X0 1 ef1`uc ]
+"149
+{
+[e :U _LCD_envia_4bits ]
+"148
+[v _dato `uc ~T0 @X0 1 r1 ]
+"149
+[f ]
+"150
+[v _a `uc ~T0 @X0 1 a ]
+[v _LCD_var_TRIS `uc ~T0 @X0 1 a ]
+"151
+[e = _LCD_var_TRIS *U _LCD_BUS_PORT_TRIS_PUNTERO ]
+"154
+[e $ ! == -> _LCD_BUS_PORT_PINES `i -> 240 `i 155  ]
+"155
+{
+"156
+[e = _dato -> & << -> _dato `i -> 4 `i -> 240 `i `uc ]
+"157
+}
+[e :U 155 ]
+"159
+[e = _a *U _LCD_BUS_PORT_PUNTERO ]
+"160
+[e = _a -> & -> _a `i ~ -> _LCD_BUS_PORT_PINES `i `uc ]
+"161
+[e = _dato -> | -> _dato `i -> _a `i `uc ]
+"164
+[e =& *U _LCD_BUS_PORT_TRIS_PUNTERO -> ~ -> _LCD_BUS_PORT_PINES `i `uc ]
+"167
+[e = *U _LCD_BUS_PORT_PUNTERO _dato ]
+"168
+[e =| *U _LCD_E_PORT_PUNTERO _LCD_E ]
+"169
+[e =& *U _LCD_E_PORT_PUNTERO -> ~ -> _LCD_E `i `uc ]
+"170
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"172
+[e = *U _LCD_BUS_PORT_TRIS_PUNTERO _LCD_var_TRIS ]
+"173
+[e :UE 154 ]
+}
+"179
+[v _LCD_envia_8bits_______ `(v ~T0 @X0 1 ef1`uc ]
+"180
+{
+[e :U _LCD_envia_8bits_______ ]
+"179
+[v _dato `uc ~T0 @X0 1 r1 ]
+"180
+[f ]
+"181
+[v _a `uc ~T0 @X0 1 a ]
+"182
+[e = _a -> & >> -> _dato `i -> 4 `i -> 15 `i `uc ]
+"183
+[e ( _LCD_envia_4bits (1 _a ]
+"185
+[e = _a -> & -> _dato `i -> 15 `i `uc ]
+"186
+[e ( _LCD_envia_4bits (1 _a ]
+"187
+[e :UE 156 ]
+}
+"196
+[v _LCD_enciende `(v ~T0 @X0 1 ef1`uc ]
+"197
+{
+[e :U _LCD_enciende ]
+"196
+[v _config `uc ~T0 @X0 1 r1 ]
+"197
+[f ]
+"198
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"201
+[e :U 160 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 163 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 40 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 40 `i -> 15 `i `uc ]
+}
+[e :U 162 ]
+}
+[e :U 159 ]
+"203
+[e :U 166 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 169 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 1 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 1 `i -> 15 `i `uc ]
+}
+[e :U 168 ]
+}
+[e :U 165 ]
+"207
+[e $U 171  ]
+"208
+{
+"209
+[e :U 172 ]
+[e :U 175 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 178 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 12 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 12 `i -> 15 `i `uc ]
+}
+[e :U 177 ]
+}
+[e :U 174 ]
+[e $U 170  ]
+"210
+[e :U 179 ]
+[e :U 182 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 185 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 14 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 14 `i -> 15 `i `uc ]
+}
+[e :U 184 ]
+}
+[e :U 181 ]
+[e $U 170  ]
+"211
+[e :U 186 ]
+[e :U 189 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 192 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 13 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 13 `i -> 15 `i `uc ]
+}
+[e :U 191 ]
+}
+[e :U 188 ]
+[e $U 170  ]
+"212
+[e :U 193 ]
+"213
+[e :U 194 ]
+[e :U 197 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 200 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 15 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 15 `i -> 15 `i `uc ]
+}
+[e :U 199 ]
+}
+[e :U 196 ]
+[e $U 170  ]
+"214
+}
+[e $U 170  ]
+"207
+[e :U 171 ]
+[e [\ _config , $ -> | -> 0 `i -> 0 `i `uc 172
+ , $ -> | -> 1 `i -> 0 `i `uc 179
+ , $ -> | -> 0 `i -> 2 `i `uc 186
+ , $ -> | -> 1 `i -> 2 `i `uc 193
+ 194 ]
+"214
+[e :U 170 ]
+"218
+[e :U 203 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 206 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 6 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 6 `i -> 15 `i `uc ]
+}
+[e :U 205 ]
+}
+[e :U 202 ]
+"220
+[e = _LCD_var_cursor -> -> 0 `i `uc ]
+"221
+[e :UE 157 ]
+}
+"226
+[v _LCD_enviablancos `(v ~T0 @X0 1 ef1`uc ]
+"227
+{
+[e :U _LCD_enviablancos ]
+"226
+[v _n `uc ~T0 @X0 1 r1 ]
+"227
+[f ]
+"228
+{
+[e $ > -> _n `i -> 0 `i 208  ]
+[e $U 209  ]
+"229
+[e :U 208 ]
+{
+"230
+[e :U 213 ]
+{
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+[e :U 216 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> 32 `ui -> 4 `i -> -> 15 `i `ui `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> 32 `ui -> -> 15 `i `ui `uc ]
+}
+[e :U 215 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 217  ]
+{
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 218  ]
+{
+[e :U 221 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 224 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 227 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 226 ]
+}
+[e :U 223 ]
+}
+[e :U 220 ]
+}
+[e $U 228  ]
+[e :U 218 ]
+{
+[e :U 231 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 234 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 237 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 236 ]
+}
+[e :U 233 ]
+}
+[e :U 230 ]
+}
+[e :U 228 ]
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+}
+[e :U 217 ]
+}
+[e :U 212 ]
+"231
+}
+"228
+[e -- _n -> -> 1 `i `uc ]
+[e $ > -> _n `i -> 0 `i 208  ]
+[e :U 209 ]
+"231
+}
+"232
+[e :UE 207 ]
+}
+"240
+[v _LCD_enviaCadena `(v ~T0 @X0 1 ef1`*Cuc ]
+"241
+{
+[e :U _LCD_enviaCadena ]
+"240
+[v _cadena `*Cuc ~T0 @X0 1 r1 ]
+"241
+[f ]
+"242
+[v _i `uc ~T0 @X0 1 a ]
+"243
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 242  ]
+"244
+[e :U 239 ]
+[e :U 245 ]
+{
+[e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
+[e :U 248 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> -> *U + _cadena * -> _i `ux -> -> # *U _cadena `ui `ux `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & -> *U + _cadena * -> _i `ux -> -> # *U _cadena `ui `ux `i -> 15 `i `uc ]
+}
+[e :U 247 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 249  ]
+{
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 250  ]
+{
+[e :U 253 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 256 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 259 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 258 ]
+}
+[e :U 255 ]
+}
+[e :U 252 ]
+}
+[e $U 260  ]
+[e :U 250 ]
+{
+[e :U 263 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 266 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 269 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 268 ]
+}
+[e :U 265 ]
+}
+[e :U 262 ]
+}
+[e :U 260 ]
+[e =& _LCD_var_cursor -> -> 224 `i `uc ]
+}
+[e :U 249 ]
+}
+[e :U 244 ]
+"243
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 242 ]
+[e $ != -> *U + _cadena * -> _i `ux -> -> # *U _cadena `ui `ux `i -> 0 `i 239  ]
+[e :U 240 ]
+"244
+}
+"245
+[e :UE 238 ]
+}

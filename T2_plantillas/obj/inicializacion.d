@@ -1,0 +1,1 @@
+ obj/inicializacion.d  obj/inicializacion.p1:  inicializacion.c XTAL_FREQ.h LCD.h TECLADO.h
