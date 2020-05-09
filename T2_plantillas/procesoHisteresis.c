@@ -52,3 +52,54 @@ void init_procesoHisteresis(void)     // Inicializaci�n de variables necesaria
     estado[2]= estado100;             // El estado inicial ser� estado100
     max_duty=M100;                    // Valor inicial del Duty Cycle correspondiente a estado100
 }
+
+
+void estado100()
+{
+  if(ADC_resultado > 100){ //Compruebo si la temperatura ha superado 100ºc
+    estado[2]=estado10;//Si ha superado los 100 pasamos a estado10
+    max_duty=M10; //Asignamos el duty correspondiente a este estado
+  }else{
+    estado[2]=100;//No hemos superado los 100, por lo que nos quedamos en este estado
+    max_duty=M100; //Asignamos el duty correspondiente a este estado
+  }
+}
+
+void estado10(void)
+{
+  //Comprobamos si hemos cambiado de estado,solo cambiamos si hemos bajado de 50ºC
+if(ADC_resultado>=T50){
+  //No hemos bajado de 50ºC,nos quedamos en el mismo
+  estado[2]=estado10;
+  max_duty=M10; //Asignamos el duty correspondiente a este estado
+}else{
+  //Hemos bajado de 50ºC,vamos a estado 50
+estado[2]=estado50;
+max_duty=M50; //Asignamos el duty correspondiente a este estado
+}
+}
+
+
+void estado50(void)  //Estado 50
+{
+
+
+
+  //si seguimos en el rango de temperaturas 30<=ADC_resultado<=70 nos mantenemos en el estado
+  if( (30<=ADC_resultado) || (ADC_resultado<=70) ){
+    //seguimos en el mismo estado
+    estado[2]=estado50;
+    max_duty=M50; //Asignamos el duty correspondiente a este estado
+  }
+  if( ADC_resultado>70 ){
+    //vamos al estado10
+    estado[2]=estado10;
+    max_duty=M10; //Asignamos el duty correspondiente a este estado
+  }
+  if( ADC_resultado<30 ){
+    //vamos al estado 100
+    estado[2]=estado100;
+    max_duty=M100; //Asignamos el duty correspondiente a este estado
+  }
+
+}
