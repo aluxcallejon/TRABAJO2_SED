@@ -1,13 +1,13 @@
 
 # 1 "trabajo.c"
 
-# 21 "c:\sed_tools\xc8\include\htc.h"
+# 21 "d:\sed_tools\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 47 "c:\sed_tools\xc8\include\pic16f88.h"
+# 47 "d:\sed_tools\xc8\include\pic16f88.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1253,25 +1253,25 @@ extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
 
-# 27 "c:\sed_tools\xc8\include\pic.h"
+# 27 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 # 80
 extern unsigned int flash_read(unsigned short addr);
 
-# 41 "c:\sed_tools\xc8\include\eeprom_routines.h"
+# 41 "d:\sed_tools\xc8\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 153 "c:\sed_tools\xc8\include\pic.h"
+# 153 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 4 "c:\sed_tools\xc8\include\stdlib.h"
+# 4 "d:\sed_tools\xc8\include\stdlib.h"
 typedef int ptrdiff_t;
 typedef unsigned size_t;
 typedef unsigned short wchar_t;
@@ -1347,7 +1347,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 7 "c:\sed_tools\xc8\include\stdarg.h"
+# 7 "d:\sed_tools\xc8\include\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -1356,7 +1356,7 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 23 "c:\sed_tools\xc8\include\stdio.h"
+# 23 "d:\sed_tools\xc8\include\stdio.h"
 extern int errno;
 
 # 54
@@ -1366,7 +1366,7 @@ char * ptr;
 void (* func)(char);
 };
 
-# 17 "c:\sed_tools\xc8\include\conio.h"
+# 17 "d:\sed_tools\xc8\include\conio.h"
 extern int errno;
 
 
@@ -1383,7 +1383,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 99 "c:\sed_tools\xc8\include\stdio.h"
+# 99 "d:\sed_tools\xc8\include\stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -1410,10 +1410,10 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 13 "c:\sed_tools\xc8\include\stddef.h"
+# 13 "d:\sed_tools\xc8\include\stddef.h"
 extern int errno;
 
-# 65 "c:\sed_tools\xc8\include\GenericTypeDefs.h"
+# 65 "d:\sed_tools\xc8\include\GenericTypeDefs.h"
 typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
 
 
@@ -1977,9 +1977,8 @@ _delay((unsigned long)((100)*(4000000/4000000.0)));
 
 
 
-if(GO_nDONE=0){
 ADC_resultado= (ADRESH << 8 | ADRESL );
-}
+
 
 
 }

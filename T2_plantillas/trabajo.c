@@ -118,9 +118,8 @@ void main(void)
             // Almacena resultado de 10 bits en ADC_resultado  (ADFM=1 justificado a la derecha, 10 bits)
             //-----------------------------------------------------------------
              // 10 bits: 2bits de ADRESH + 8 bits de ADRESL
-            if(GO_nDONE=0){ //Si la convesion ha terminado,sacamos el dato (es redundante,puesto que hemos utilizado el delay pero nos aseguramos)
             ADC_resultado= (ADRESH << 8 | ADRESL );  //Sacamos el resultado de la conversion(teniendo en cuenta la justificacion usada)
-            }
+            
 
 
         }

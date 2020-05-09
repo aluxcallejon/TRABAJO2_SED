@@ -358,76 +358,79 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 "103
 [e $ ! != -> _start `ui -> -> -> 0 `i `us `ui 167  ]
-"104
-[e = _CCP1CON -> -> 576 `i `uc ]
-[e $U 168  ]
-"105
-[e :U 167 ]
-"106
 {
+"105
+[e = _CCP1CON -> -> 12 `i `uc ]
+"106
+}
+[e $U 168  ]
 "107
-[e = _CCP1CON -> -> 0 `i `uc ]
+[e :U 167 ]
 "108
-[e = _RB3 -> -> 0 `i `b ]
+{
 "109
+[e = _CCP1CON -> -> 0 `i `uc ]
+"110
+[e = _RB3 -> -> 0 `i `b ]
+"111
 }
 [e :U 168 ]
-"110
-[e $ ! != -> _sentido `ui -> -> -> 0 `i `us `ui 169  ]
-"111
-{
 "112
-[e = _RB4 -> -> 1 `i `b ]
+[e $ ! != -> _sentido `ui -> -> -> 0 `i `us `ui 169  ]
 "113
-[e = _RB5 -> -> 0 `i `b ]
+{
 "114
+[e = _RB4 -> -> 1 `i `b ]
+"115
+[e = _RB5 -> -> 0 `i `b ]
+"116
 }
 [e $U 170  ]
-"115
-[e :U 169 ]
-"116
-{
 "117
-[e = _RB4 -> -> 0 `i `b ]
+[e :U 169 ]
 "118
-[e = _RB5 -> -> 1 `i `b ]
+{
 "119
+[e = _RB4 -> -> 0 `i `b ]
+"120
+[e = _RB5 -> -> 1 `i `b ]
+"121
 }
 [e :U 170 ]
-"120
-[e ( _LCD_mensaje_opciones_inicial ..  ]
-"121
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
 "122
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"123
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"124
 }
 [e :U 166 ]
-"123
+"125
 [e :U 165 ]
 [e :U 163 ]
 }
 [e :U 161 ]
-"124
+"126
 [e :UE 160 ]
 }
-"129
+"131
 [v _esperaPrimerValor `(v ~T0 @X0 1 ef ]
-"130
+"132
 {
 [e :U _esperaPrimerValor ]
 [f ]
-"131
-[e $ ! == -> _nuevaTecla `i -> 1 `i 172  ]
-"132
-{
 "133
-[e = _nuevaTecla -> -> 0 `i `uc ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 172  ]
 "134
-[e $ ! <= -> _tecla `i -> 9 `i 173  ]
-"135
 {
+"135
+[e = _nuevaTecla -> -> 0 `i `uc ]
 "136
-[e = _valor -> _tecla `i ]
+[e $ ! <= -> _tecla `i -> 9 `i 173  ]
 "137
+{
+"138
+[e = _valor -> _tecla `i ]
+"139
 [e :U 176 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 11 `i `uc ]
@@ -444,7 +447,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 178 ]
 }
 [e :U 175 ]
-"138
+"140
 [e :U 185 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
@@ -501,50 +504,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 189 ]
 }
 [e :U 184 ]
-"139
+"141
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaSegundoValor ]
-"140
+"142
 }
 [e :U 173 ]
-"141
+"143
 }
 [e :U 172 ]
-"142
+"144
 [e :UE 171 ]
 }
-"147
+"149
 [v _esperaSegundoValor `(v ~T0 @X0 1 ef ]
-"148
+"150
 {
 [e :U _esperaSegundoValor ]
 [f ]
-"149
-[e $ ! == -> _nuevaTecla `i -> 1 `i 211  ]
-"150
-{
 "151
-[e = _nuevaTecla -> -> 0 `i `uc ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 211  ]
 "152
-[e $ ! == -> _tecla `i -> 11 `i 212  ]
-"153
 {
+"153
+[e = _nuevaTecla -> -> 0 `i `uc ]
 "154
-[e = _num_pulsos_ref -> _valor `us ]
+[e $ ! == -> _tecla `i -> 11 `i 212  ]
 "155
-[e ( _LCD_mensaje_opciones_inicial ..  ]
+{
 "156
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+[e = _num_pulsos_ref -> _valor `us ]
 "157
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"158
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"159
 }
 [e $U 213  ]
-"158
+"160
 [e :U 212 ]
 [e $ ! <= -> _tecla `i -> 9 `i 214  ]
-"159
-{
-"160
-[e = _valor + -> _tecla `i * _valor -> 10 `i ]
 "161
+{
+"162
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"163
 [e :U 217 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 12 `i `uc ]
@@ -561,7 +564,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 219 ]
 }
 [e :U 216 ]
-"162
+"164
 [e :U 226 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
@@ -618,51 +621,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 230 ]
 }
 [e :U 225 ]
-"163
+"165
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaTercerValor ]
-"164
+"166
 }
 [e :U 214 ]
-"165
+"167
 [e :U 213 ]
 }
 [e :U 211 ]
-"166
+"168
 [e :UE 210 ]
 }
-"171
+"173
 [v _esperaTercerValor `(v ~T0 @X0 1 ef ]
-"172
+"174
 {
 [e :U _esperaTercerValor ]
 [f ]
-"173
-[e $ ! == -> _nuevaTecla `i -> 1 `i 252  ]
-"174
-{
 "175
-[e = _nuevaTecla -> -> 0 `i `uc ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 252  ]
 "176
-[e $ ! == -> _tecla `i -> 11 `i 253  ]
-"177
 {
+"177
+[e = _nuevaTecla -> -> 0 `i `uc ]
 "178
-[e = _num_pulsos_ref -> _valor `us ]
+[e $ ! == -> _tecla `i -> 11 `i 253  ]
 "179
-[e ( _LCD_mensaje_opciones_inicial ..  ]
+{
 "180
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+[e = _num_pulsos_ref -> _valor `us ]
 "181
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"182
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"183
 }
 [e $U 254  ]
-"182
+"184
 [e :U 253 ]
 [e $ ! <= -> _tecla `i -> 9 `i 255  ]
-"183
-{
-"184
-[e = _valor + -> _tecla `i * _valor -> 10 `i ]
 "185
+{
+"186
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"187
 [e :U 258 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 13 `i `uc ]
@@ -679,7 +682,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 260 ]
 }
 [e :U 257 ]
-"186
+"188
 [e :U 267 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
@@ -736,47 +739,47 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 271 ]
 }
 [e :U 266 ]
-"187
+"189
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaAlmohadillaValor ]
-"188
+"190
 }
 [e :U 255 ]
-"189
+"191
 [e :U 254 ]
 }
 [e :U 252 ]
-"190
+"192
 [e :UE 251 ]
 }
-"195
+"197
 [v _esperaAlmohadillaValor `(v ~T0 @X0 1 ef ]
-"196
+"198
 {
 [e :U _esperaAlmohadillaValor ]
 [f ]
-"197
-[e $ ! == -> _nuevaTecla `i -> 1 `i 293  ]
-"198
-{
 "199
-[e = _nuevaTecla -> -> 0 `i `uc ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 293  ]
 "200
-[e $ ! == -> _tecla `i -> 11 `i 294  ]
-"201
 {
+"201
+[e = _nuevaTecla -> -> 0 `i `uc ]
 "202
-[e = _num_pulsos_ref -> _valor `us ]
+[e $ ! == -> _tecla `i -> 11 `i 294  ]
 "203
-[e ( _LCD_mensaje_opciones_inicial ..  ]
+{
 "204
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+[e = _num_pulsos_ref -> _valor `us ]
 "205
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"206
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"207
 }
 [e :U 294 ]
-"206
+"208
 }
 [e :U 293 ]
-"207
+"209
 [e :UE 292 ]
 }
 [a 6C 86 65 76 79 82 32 82 69 70 58 32 95 95 95 32 35 0 ]

@@ -165,13 +165,13 @@ TRUE 1
 [v _esperaPrimeraTecla esperaPrimeraTecla `(v  1 e 0 0 ]
 "86
 [v _espera01Almohadilla espera01Almohadilla `(v  1 e 0 0 ]
-"129
+"131
 [v _esperaPrimerValor esperaPrimerValor `(v  1 e 0 0 ]
-"147
+"149
 [v _esperaSegundoValor esperaSegundoValor `(v  1 e 0 0 ]
-"171
+"173
 [v _esperaTercerValor esperaTercerValor `(v  1 e 0 0 ]
-"195
+"197
 [v _esperaAlmohadillaValor esperaAlmohadillaValor `(v  1 e 0 0 ]
 "24 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c
 [v _init_procesoTeclado init_procesoTeclado `(v  1 e 0 0 ]
@@ -187,7 +187,9 @@ TRUE 1
 [v _TECLADO_leer TECLADO_leer `(E979  1 e 1 0 ]
 "59 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\trabajo.c
 [v _main main `(v  1 e 0 0 ]
-"53 c:\sed_tools\xc8\include\pic16f88.h
+"2483 c:\sed_tools\xc8\include\pic16f88.h
+[v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
+"53 d:\sed_tools\xc8\include\pic16f88.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "158
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -201,6 +203,8 @@ TRUE 1
 [v _T2CON T2CON `VEuc  1 e 1 @18 ]
 "710
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"722
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
 "885
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "891
@@ -221,6 +225,16 @@ TRUE 1
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "1885
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"1989
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"1995
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2013
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"2063
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"2117
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
 "2193
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "2199
@@ -229,12 +243,16 @@ TRUE 1
 [v _IOFS IOFS `VEb  1 e 0 @1146 ]
 "2237
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2269
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
 "2271
 [v _RB4 RB4 `VEb  1 e 0 @52 ]
 "2273
 [v _RB5 RB5 `VEb  1 e 0 @53 ]
 "2281
 [v _RBIF RBIF `VEb  1 e 0 @88 ]
+"2293
+[v _RD RD `VEb  1 e 0 @3168 ]
 "2345
 [v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
 "2347
@@ -255,30 +273,12 @@ TRUE 1
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
 "2371
 [v _TMR2IE TMR2IE `VEb  1 e 0 @1121 ]
-"2483
-[v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
-"2487
-[v _nT1SYNC nT1SYNC `VEb  1 e 0 @130 ]
-"722 d:\sed_tools\xc8\include\pic16f88.h
-[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
-"1989
-[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
-"1995
-[v _EEADR EEADR `VEuc  1 e 1 @269 ]
-"2013
-[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
-"2063
-[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
-"2117
-[v _CARRY CARRY `VEb  1 e 0 @24 ]
-"2269
-[v _RB3 RB3 `VEb  1 e 0 @51 ]
-"2293
-[v _RD RD `VEb  1 e 0 @3168 ]
 "2461
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2463
 [v _WREN WREN `VEb  1 e 0 @3170 ]
+"2487
+[v _nT1SYNC nT1SYNC `VEb  1 e 0 @130 ]
 "354 d:\sed_tools\xc8\sources\common\doprnt.c
 [v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
 "7 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
@@ -370,7 +370,7 @@ TRUE 1
 "59
 [v _main main `(v  1 e 0 0 ]
 {
-"128
+"127
 } 0
 "492 d:\sed_tools\xc8\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -512,30 +512,30 @@ TRUE 1
 {
 "40
 } 0
-"195 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
+"197 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c
 [v _esperaAlmohadillaValor esperaAlmohadillaValor `(v  1 e 0 0 ]
 {
-"207
+"209
 } 0
-"171
+"173
 [v _esperaTercerValor esperaTercerValor `(v  1 e 0 0 ]
 {
-"190
+"192
 } 0
-"147
+"149
 [v _esperaSegundoValor esperaSegundoValor `(v  1 e 0 0 ]
 {
-"166
+"168
 } 0
 "86
 [v _espera01Almohadilla espera01Almohadilla `(v  1 e 0 0 ]
 {
-"124
+"126
 } 0
-"129
+"131
 [v _esperaPrimerValor esperaPrimerValor `(v  1 e 0 0 ]
 {
-"142
+"144
 } 0
 "65
 [v _esperaPrimeraTecla esperaPrimeraTecla `(v  1 e 0 0 ]
@@ -616,7 +616,7 @@ TRUE 1
 "42 C:\Users\luisc\github\TRABAJO2_SED\T2_plantillas\interrupcion.c
 [v _rutinaInterrupcion rutinaInterrupcion `II(v  1 s 0 rutinaInterrupcion ]
 {
-"75
+"77
 } 0
 "25
 [v _control_PI control_PI `(s  1 e 2 0 ]

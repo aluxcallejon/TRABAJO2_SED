@@ -100,11 +100,13 @@ void espera01Almohadilla(void)
         }
         else if(tecla==11)                // Si la tecla es almohadilla, aplica los valores
         {
-            if(start)
-                CCP1CON=00001100;      // Activa PWM
+            if(start){
+
+                CCP1CON=0b00001100;      // Activa PWM
+              }
             else
             {
-                CCP1CON=00000000;       // Desactiva PWM
+                CCP1CON=0b00000000;       // Desactiva PWM
                 RB3=0;                    // Asegura el pinn RB3 a 0
             }
             if(sentido)

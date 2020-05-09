@@ -12,7 +12,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _estado10 `(v ~T0 @X0 0 ef ]
 "41
 [v _estado50 `(v ~T0 @X0 0 ef ]
-"49 c:\sed_tools\xc8\include\pic16f88.h
+"49 d:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -138,7 +138,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _estado100 ]
 [f ]
 "62
-[e $ ! > _ADC_resultado -> 100 `i 95  ]
+[e $ ! > _ADC_resultado -> 818 `i 95  ]
 {
 "63
 [e = *U + &U _estado * -> -> -> 2 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _estado10 ]
@@ -194,7 +194,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _estado50 ]
 [f ]
 "92
-[e $ ! || <= -> 30 `i _ADC_resultado <= _ADC_resultado -> 70 `i 101  ]
+[e $ ! || <= -> 245 `i _ADC_resultado <= _ADC_resultado -> 573 `i 101  ]
 {
 "94
 [e = *U + &U _estado * -> -> -> 2 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _estado50 ]
@@ -204,7 +204,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 101 ]
 "97
-[e $ ! > _ADC_resultado -> 70 `i 102  ]
+[e $ ! > _ADC_resultado -> 573 `i 102  ]
 {
 "99
 [e = *U + &U _estado * -> -> -> 2 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _estado10 ]
@@ -214,7 +214,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 102 ]
 "102
-[e $ ! < _ADC_resultado -> 30 `i 103  ]
+[e $ ! < _ADC_resultado -> 245 `i 103  ]
 {
 "104
 [e = *U + &U _estado * -> -> -> 2 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _estado100 ]

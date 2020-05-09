@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1298 c:\sed_tools\xc8\include\pic16f88.h
+"1298 d:\sed_tools\xc8\include\pic16f88.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
 "2219
 [v _IOFS `Vb ~T0 @X0 0 e@1146 ]
@@ -54,7 +54,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "1885
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 [v F974 `(v ~T0 @X0 1 tf1`ul ]
-"154 c:\sed_tools\xc8\include\pic.h
+"154 d:\sed_tools\xc8\include\pic.h
 [v __delay `JF974 ~T0 @X0 0 e ]
 [p i __delay ]
 "86 TECLADO.h
@@ -63,7 +63,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LCD_ini `(v ~T0 @X0 0 ef3`uc`uc`uc ]
 "12 inicializacion.c
 [v _LCD_mensaje_opciones_inicial `(v ~T0 @X0 0 ef ]
-"49 c:\sed_tools\xc8\include\pic16f88.h
+"49 d:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -212,7 +212,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "37
 [e = _PORTB -> -> 0 `i `uc ]
 "38
-[e = _ANSEL -> -> 128 `i `uc ]
+[e = _ANSEL -> -> 64 `i `uc ]
 "39
 [e = _TRISA -> -> 63 `i `uc ]
 "40
@@ -275,13 +275,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "102
 [e = _PR2 -> -> 249 `i `uc ]
 "103
-[e = _T2CON -> -> 11 `i `uc ]
+[e = _T2CON -> -> 15 `i `uc ]
 "107
-[e = _TMR2IE -> -> 0 `i `b ]
+[e = _TMR2IE -> -> 1 `i `b ]
 "109
 [e = _CCPR1L -> -> 0 `i `uc ]
 "110
-[e = _CCP1CON -> -> 576 `i `uc ]
+[e = _CCP1CON -> -> 12 `i `uc ]
 "111
 [e :UE 127 ]
 }
@@ -292,7 +292,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _init_ADC ]
 [f ]
 "119
-[e = _ADCON0 -> -> 123 `i `uc ]
+[e = _ADCON0 -> -> 115 `i `uc ]
 "128
 [e = _ADCON1 -> -> 128 `i `uc ]
 "138

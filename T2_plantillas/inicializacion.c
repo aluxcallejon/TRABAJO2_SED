@@ -35,7 +35,7 @@ void init_registros(void)
 
     PORTA= 0b00000000;        // Ponemos a 0 los latches de salida de PORTA
     PORTB= 0b00000000;        // Ponemos a 0 los latches de salida de PORTB
-    ANSEL= 0b10000000;        // AN6 (RB7) como anal�gico
+    ANSEL= 0b01000000;        // AN6 (RB7) como anal�gico
     TRISA= 0b00111111;        // PORTA de entrada/salida ???  Entrada --> 1
     TRISB= 0b11000111;        // PORTB de entrada/salida ???  Salida  --> 0
 
@@ -100,14 +100,14 @@ void init_Timer2(void)
     //           4*(1/4M)*(PR2+1)*16=4ms----------------> Calculamos ahora el valor de PR2  --> PR2 = 249
     //-------------------------------------------------
     PR2    = 249;            // PR2= ?3999
-    T2CON  = 0b00001011;     // T2CON<6:3> = TOUTPS<3:0> = 0000 PostDivisor= 1:1
+    T2CON  = 0b00001111;     // T2CON<6:3> = TOUTPS<3:0> = 0000 PostDivisor= 1:1
                              // T2CON<2>   = TMR2ON      = '1'     ->  Activa el TMR2
                              // T2CON<1:0> = T2CKPS<1:0> = 11    ->  Predivisor =1:16
 
-    TMR2IE= 0;               // PIE1<1>='?'. Deshabilita interrupcion TMR2
+    TMR2IE= 1;               // PIE1<1>='?'. Deshabilita interrupcion TMR2
 
     CCPR1L = 0;              // Duty inicial al 0%
-    CCP1CON = 00001100;    // Activa el PWM
+    CCP1CON = 0b00001100;    // Activa el PWM
 }
 void init_ADC(void)
 {
@@ -116,19 +116,19 @@ void init_ADC(void)
     //-----------------------
 //                                                                                    +-----------+------------+
 //                                                                                    | ADCS<2:0> |  Fosc M�x. |
-    ADCON0= 0b01111011;       // ADCS<1:0>=??, CHS<2:0>=???, ADON=1                   +-----------+------------+
+    ADCON0= 0b01110011;       // ADCS<1:0>=??, CHS<2:0>=???, ADON=1                   +-----------+------------+
 //            |||||||+-------------- ADON = 1                                         |   000     |   1.25Mhz  |
 //            ||||||+--------------- No implementado                                  |   100     |    2.5Mhz  |
 //            |||||+---------------- GO/DONE = 0                                      |   001     |      5Mhz  | <----
-//            ||||+----------------- CHS0= ?                                          |   101     |     10Mhz  |
-//            |||+------------------ CHS1= ?                                          |   010     |     20Mhz  |
-//            ||+------------------- CHS2= ? --> CHS<2:0>=??? -> AN6 (pin RB7)        |   110     |     20Mhz  |
-//            |+-------------------- ADCS0=?                                      +-> |   x11     | RC interno |
-//            +--------------------- ADCS1=? --> ADCS<2:0>=001   ----(4Mhz) -----+   +-----------+------------+
+//            ||||+----------------- CHS0= 0                                          |   101     |     10Mhz  |
+//            |||+------------------ CHS1= 1                                          |   010     |     20Mhz  |
+//            ||+------------------- CHS2= 1 --> CHS<2:0>=??? -> AN6 (pin RB7)        |   110     |     20Mhz  |
+//            |+-------------------- ADCS0=1                                      +-> |   x11     | RC interno |
+//            +--------------------- ADCS1=0 --> ADCS<2:0>=001   ----(4Mhz) -----+   +-----------+------------+
     ADCON1= 0b10000000;       // ADFM=1, ADCS2=1, VCFG<1:0>= 00
 //            |||||||+-------------- Unused
 //            ||||||+--------------- Unused
-//            |||||+---------------- Unused
+//            |||||+---------------- UnuseD
 //            ||||+----------------- Unused
 //            |||+------------------ VCFG0=0 --> (Vref-)= GND
 //            ||+------------------- VCFG1=0 --> (Vref+)= Vdd

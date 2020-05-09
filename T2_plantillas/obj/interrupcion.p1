@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2361 c:\sed_tools\xc8\include\pic16f88.h
+"2361 d:\sed_tools\xc8\include\pic16f88.h
 [v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "2359
 [v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
@@ -7,19 +7,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
 "20 interrupcion.c
 [v _valor_TMR1 `ui ~T0 @X0 0 e ]
-"464 c:\sed_tools\xc8\include\pic16f88.h
+"464 d:\sed_tools\xc8\include\pic16f88.h
 [v _TMR1 `Vus ~T0 @X0 0 e@14 ]
 "19 interrupcion.c
 [v _num_pulsos_ref `us ~T0 @X0 0 e ]
-"710 c:\sed_tools\xc8\include\pic16f88.h
+"710 d:\sed_tools\xc8\include\pic16f88.h
 [v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
 "18 interrupcion.c
 [v _tiempo_1s `us ~T0 @X0 0 e ]
-"299 c:\sed_tools\xc8\include\pic16f88.h
+"299 d:\sed_tools\xc8\include\pic16f88.h
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 "2281
 [v _RBIF `Vb ~T0 @X0 0 e@88 ]
-"49 c:\sed_tools\xc8\include\pic16f88.h
+"49 d:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -147,12 +147,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "12
 [v _cuenta_ints_T0 `us ~T0 @X0 1 e ]
 [i _cuenta_ints_T0
--> -> 4 `i `us
+-> -> 0 `i `us
 ]
 "13
 [v _cuenta_1s `us ~T0 @X0 1 e ]
 [i _cuenta_1s
--> -> 16 `i `us
+-> -> 0 `i `us
 ]
 "25
 [v _control_PI `(s ~T0 @X0 1 ef1`i ]
@@ -196,50 +196,54 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TMR0IF -> -> 0 `i `b ]
 "47
 [e = _TMR0 -> -> 12 `i `uc ]
-"50
-[e $ ! == -> _cuenta_ints_T0 `ui -> -> 4 `i `ui 98  ]
-"51
-{
-"52
+"49
 [e ++ _cuenta_ints_T0 -> -> 1 `i `us ]
+"50
+[e ++ _cuenta_1s -> -> 1 `i `us ]
+"52
+[e $ ! == -> _cuenta_ints_T0 `ui -> -> 4 `i `ui 98  ]
 "53
-[e = _valor_TMR1 -> _TMR1 `ui ]
+{
 "54
+[e = _cuenta_ints_T0 -> -> 0 `i `us ]
+"55
+[e = _valor_TMR1 -> _TMR1 `ui ]
+"56
 [e = _TMR1 -> -> 0 `i `us ]
-"57
-[e = _error -> - -> _num_pulsos_ref `ui _valor_TMR1 `i ]
-"58
-[e = _Ton -> ( _control_PI (1 _error `us ]
 "59
-[e = _CCPR1L -> _Ton `uc ]
+[e = _error -> - -> _num_pulsos_ref `ui _valor_TMR1 `i ]
 "60
+[e = _Ton -> ( _control_PI (1 _error `us ]
+"61
+[e = _CCPR1L -> _Ton `uc ]
+"62
 }
 [e :U 98 ]
-"62
-[e $ ! == -> _cuenta_1s `ui -> -> 16 `i `ui 99  ]
-"63
-{
 "64
-[e ++ _cuenta_1s -> -> 1 `i `us ]
+[e $ ! == -> _cuenta_1s `ui -> -> 16 `i `ui 99  ]
 "65
-[e = _tiempo_1s -> -> 1 `i `us ]
+{
 "66
+[e = _cuenta_1s -> -> 0 `i `us ]
+"67
+[e = _tiempo_1s -> -> 1 `i `us ]
+"68
 }
 [e :U 99 ]
-"67
+"69
 }
 [e $U 100  ]
-"69
-[e :U 97 ]
 "71
-{
-"72
-[e = _INTCON -> -> 0 `i `uc ]
+[e :U 97 ]
 "73
-[e = _RBIF -> -> 0 `i `b ]
+{
 "74
+[e = _INTCON -> -> 0 `i `uc ]
+"75
+[e = _RBIF -> -> 0 `i `b ]
+"76
 }
 [e :U 100 ]
-"75
+"77
 [e :UE 96 ]
 }

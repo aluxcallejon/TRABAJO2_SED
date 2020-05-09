@@ -1,13 +1,13 @@
 
 # 1 "interrupcion.c"
 
-# 21 "c:\sed_tools\xc8\include\htc.h"
+# 21 "d:\sed_tools\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 47 "c:\sed_tools\xc8\include\pic16f88.h"
+# 47 "d:\sed_tools\xc8\include\pic16f88.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1253,25 +1253,25 @@ extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
 
-# 27 "c:\sed_tools\xc8\include\pic.h"
+# 27 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 # 80
 extern unsigned int flash_read(unsigned short addr);
 
-# 41 "c:\sed_tools\xc8\include\eeprom_routines.h"
+# 41 "d:\sed_tools\xc8\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 153 "c:\sed_tools\xc8\include\pic.h"
+# 153 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 4 "c:\sed_tools\xc8\include\stdlib.h"
+# 4 "d:\sed_tools\xc8\include\stdlib.h"
 typedef int ptrdiff_t;
 typedef unsigned size_t;
 typedef unsigned short wchar_t;
@@ -1353,8 +1353,8 @@ int errorAnt=0;
 int salidaPI=0;
 unsigned short int Ton=0;
 unsigned short int max_duty;
-unsigned short int cuenta_ints_T0=4;
-unsigned short int cuenta_1s=16;
+unsigned short int cuenta_ints_T0=0;
+unsigned short int cuenta_1s=0;
 
 
 
@@ -1390,10 +1390,12 @@ if(TMR0IF && TMR0IE)
 TMR0IF = 0;
 TMR0 = 12;
 
+cuenta_ints_T0++;
+cuenta_1s++;
 
 if(cuenta_ints_T0 == 4)
 {
-cuenta_ints_T0++;
+cuenta_ints_T0=0;
 valor_TMR1 = TMR1;
 TMR1=0;
 
@@ -1405,7 +1407,7 @@ CCPR1L=Ton;
 
 if(cuenta_1s == 16)
 {
-cuenta_1s++;
+cuenta_1s=0;
 tiempo_1s=1;
 }
 }

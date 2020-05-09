@@ -19,29 +19,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _init_procesoHisteresis `(v ~T0 @X0 0 ef ]
 "54
 [v _init_librerias `(v ~T0 @X0 0 ef ]
-"2271 c:\sed_tools\xc8\include\pic16f88.h
+"2271 d:\sed_tools\xc8\include\pic16f88.h
 [v _RB4 `Vb ~T0 @X0 0 e@52 ]
 "2273
 [v _RB5 `Vb ~T0 @X0 0 e@53 ]
 "2193
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
-"205 c:\sed_tools\xc8\include\stdio.h
+"205 d:\sed_tools\xc8\include\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "72 LCD.h
 [v _LCD_envia_4bits `(v ~T0 @X0 0 ef1`uc ]
 "75
 [v _LCD_enviaCadena `(v ~T0 @X0 0 ef1`*Cuc ]
-"2199 c:\sed_tools\xc8\include\pic16f88.h
+"2199 d:\sed_tools\xc8\include\pic16f88.h
 [v _GO_nDONE `Vb ~T0 @X0 0 e@250 ]
 [v F974 `(v ~T0 @X0 1 tf1`ul ]
-"154 c:\sed_tools\xc8\include\pic.h
+"154 d:\sed_tools\xc8\include\pic.h
 [v __delay `JF974 ~T0 @X0 0 e ]
 [p i __delay ]
-"885 c:\sed_tools\xc8\include\pic16f88.h
+"885 d:\sed_tools\xc8\include\pic16f88.h
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
 "1879
 [v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"49 c:\sed_tools\xc8\include\pic16f88.h
+"49 d:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -272,23 +272,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "116
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "121
-[e $ ! = _GO_nDONE -> -> 0 `i `b 136  ]
-{
-"122
 [e = _ADC_resultado | << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
-"123
-}
-[e :U 136 ]
-"126
+"125
 }
 [e :U 126 ]
-"127
+"126
 }
 [e :U 123 ]
 "94
 [e $U 124  ]
 [e :U 125 ]
-"128
+"127
 [e :UE 122 ]
 }
 [p f _sprintf 8421504 ]

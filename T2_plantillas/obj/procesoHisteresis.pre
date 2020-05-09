@@ -1,13 +1,13 @@
 
 # 1 "procesoHisteresis.c"
 
-# 21 "c:\sed_tools\xc8\include\htc.h"
+# 21 "d:\sed_tools\xc8\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 47 "c:\sed_tools\xc8\include\pic16f88.h"
+# 47 "d:\sed_tools\xc8\include\pic16f88.h"
 extern volatile unsigned char INDF @ 0x000;
 
 asm("INDF equ 00h");
@@ -1253,25 +1253,25 @@ extern volatile __bit nW @ (((unsigned) &SSPSTAT)*8) + 2;
 extern volatile __bit nWRITE @ (((unsigned) &SSPSTAT)*8) + 2;
 
 
-# 27 "c:\sed_tools\xc8\include\pic.h"
+# 27 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 # 80
 extern unsigned int flash_read(unsigned short addr);
 
-# 41 "c:\sed_tools\xc8\include\eeprom_routines.h"
+# 41 "d:\sed_tools\xc8\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 153 "c:\sed_tools\xc8\include\pic.h"
+# 153 "d:\sed_tools\xc8\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 4 "c:\sed_tools\xc8\include\stdlib.h"
+# 4 "d:\sed_tools\xc8\include\stdlib.h"
 typedef int ptrdiff_t;
 typedef unsigned size_t;
 typedef unsigned short wchar_t;
@@ -1371,7 +1371,7 @@ max_duty=249;
 
 void estado100()
 {
-if(ADC_resultado > 100){
+if(ADC_resultado >818){
 estado[2]=estado10;
 max_duty=25;
 }else{
@@ -1401,17 +1401,17 @@ void estado50(void)
 
 
 
-if( (30<=ADC_resultado) || (ADC_resultado<=70) ){
+if( (245<=ADC_resultado) || (ADC_resultado<=573) ){
 
 estado[2]=estado50;
 max_duty=125;
 }
-if( ADC_resultado>70 ){
+if( ADC_resultado>573 ){
 
 estado[2]=estado10;
 max_duty=25;
 }
-if( ADC_resultado<30 ){
+if( ADC_resultado<245 ){
 
 estado[2]=estado100;
 max_duty=249;

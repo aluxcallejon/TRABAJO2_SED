@@ -9,8 +9,8 @@ int errorAnt=0;                           // Valor interno del PI (error anterio
 int salidaPI=0;                           // Valor interno del PI (salida sin dividir)
 unsigned short int Ton=0;                 // Valor de salida del PI (salida ya dividida)
 unsigned short int max_duty;              // Valor de saturaci�n del Duty Cycle
-unsigned  short int cuenta_ints_T0=4;   // Contador de interrupciones para temporizar 0,25 seg con el Timer 0
-unsigned  short int cuenta_1s=16;        // Contador de interrupciones para temporizar 1 seg con el Timer 0
+unsigned  short int cuenta_ints_T0=0;   // Contador de interrupciones para temporizar 0,25 seg con el Timer 0
+unsigned  short int cuenta_1s=0;        // Contador de interrupciones para temporizar 1 seg con el Timer 0
 
 //==================================
 //Variables definidas en otros archivos
@@ -46,10 +46,12 @@ static void interrupt rutinaInterrupcion(void)
         TMR0IF =  0;            // Baja la bandera. Evento: desbordamiento de TMR0
         TMR0   = 12;           // Prepara el timer para la siguiente interrupci�n
 
+        cuenta_ints_T0++; //Aumentamos en uno el contador de interrupciones
+        cuenta_1s++; //Exactamente igual
         // Actualiza cuenta_ints_T0
         if(cuenta_ints_T0 == 4)   // Cada ??? interrupciones -> 0,25 segundos
         {
-            cuenta_ints_T0++;
+            cuenta_ints_T0=0;
             valor_TMR1 = TMR1;           // Guarda el valor de pulsos leidos en TMR1 en 0.25seg, para mostrarlo en el LCD
             TMR1=0;                      // Reinicia la cuenta de pulsos para la nueva ventana de 0.25s
 
@@ -61,7 +63,7 @@ static void interrupt rutinaInterrupcion(void)
         // Actualiza cuenta_1s
         if(cuenta_1s == 16)        // Cada ???? interrupciones -> 1 segundo
         {
-            cuenta_1s++;
+            cuenta_1s=0;
             tiempo_1s=1;        // Activa la bandera para avisar de que ha pasado 1 segundo
         }
     }

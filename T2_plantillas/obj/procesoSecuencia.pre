@@ -1906,11 +1906,13 @@ LCD_mensaje_opciones2();
 }
 else if(tecla==11)
 {
-if(start)
-CCP1CON=00001100;
+if(start){
+
+CCP1CON=0b00001100;
+}
 else
 {
-CCP1CON=00000000;
+CCP1CON=0b00000000;
 RB3=0;
 }
 if(sentido)
