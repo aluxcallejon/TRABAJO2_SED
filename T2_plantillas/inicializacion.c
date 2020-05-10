@@ -95,7 +95,7 @@ void init_Timer2(void)
 
     //-------------------------------------------------
     // Periodo PWM =  4.Tosc.(PR2+1).Preescalador  = 4ms   // Periodo del TMR2
-	  // Detallar aqu� los c�lculos
+      // Detallar aqu� los c�lculos
     //           4*(1/4M)*(PR2+1)*Preescalador=4ms------> Maximizamos el valor de PR2 a 255 --> Preescalador nos sale 15.625 -->Valor mas proximo -->Preescalador =16
     //           4*(1/4M)*(PR2+1)*16=4ms----------------> Calculamos ahora el valor de PR2  --> PR2 = 249
     //-------------------------------------------------

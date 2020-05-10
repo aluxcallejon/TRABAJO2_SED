@@ -22,7 +22,7 @@
 #define T50  409             // valor correspondiente a Temperatura  50 C
 #define T30  245            // valor correspondiente a Temperatura  30 C (245.52)
 
-
+ 
 
 //CCPR1L= (ciclo*PR2)/100
 //Si queremos un ciclo de 100%,entonces obtenemos que CCPR1L=PR2=249=M100

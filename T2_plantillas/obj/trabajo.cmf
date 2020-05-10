@@ -12,84 +12,65 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $obj\startup.obj
-end_init CODE 0 11 11 2 2
+end_init CODE 0 F F 2 2
 reset_vec CODE 0 0 0 2 2
 config CONFIG 0 2007 2007 2 2
 $obj\trabajo.obj
-cinit CODE 0 13 13 3B 2
+cinit CODE 0 11 11 21 2
 functab CODE 0 100 100 20 2
-intentry CODE 0 4 4 D 2
-text39 CODE 0 9CA 9CA 23 2
-text38 CODE 0 E2D E2D 8F 2
-text37 CODE 0 DAE DAE 7F 2
-text36 CODE 0 CD4 CD4 66 2
-text35 CODE 0 EBC EBC 9C 2
-text34 CODE 0 C22 C22 59 2
-text33 CODE 0 AD0 AD0 35 2
-text32 CODE 0 6C6 6C6 BE 2
-text31 CODE 0 A35 A35 25 2
-text30 CODE 0 AA8 AA8 28 2
-text29 CODE 0 C7B C7B 59 2
-text28 CODE 0 A5A A5A 27 2
-text27 CODE 0 A81 A81 27 2
-text26 CODE 0 B7B B7B 51 2
-text25 CODE 0 607 607 BF 2
-text24 CODE 0 BCC BCC 56 2
-text23 CODE 0 9ED 9ED 24 2
-text22 CODE 0 520 520 E7 2
-text21 CODE 0 439 439 E7 2
-text20 CODE 0 9AA 9AA 20 2
-text19 CODE 0 A11 A11 24 2
-text18 CODE 0 95B 95B 13 2
-text17 CODE 0 911 911 D 2
-text16 CODE 0 92B 92B 10 2
-text15 CODE 0 907 907 A 2
-text14 CODE 0 93B 93B 10 2
-text13 CODE 0 981 981 14 2
-text12 CODE 0 F58 F58 A8 2
-text11 CODE 0 303 303 136 2
-text10 CODE 0 D3A D3A 74 2
-text9 CODE 0 995 995 15 2
-text8 CODE 0 91E 91E D 2
-text7 CODE 0 8F1 8F1 7 2
-text6 CODE 0 8F8 8F8 7 2
-text5 CODE 0 96E 96E 13 2
-text4 CODE 0 B3B B3B 40 2
-text3 CODE 0 B05 B05 36 2
-text2 CODE 0 94B 94B 10 2
-text1 CODE 0 120 120 1E3 2
-maintext CODE 0 4E 4E AC 2
-cstackBANK0 BANK0 1 20 20 24 1
-cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK1 BANK1 1 CA CA B 1
-clrtext CODE 0 8FF 8FF 8 2
-dataBANK1 BANK1 1 D5 D5 6 1
-bssBANK1 BANK1 1 A0 A0 2A 1
-dataBANK0 BANK0 1 65 65 4 1
-bssBANK0 BANK0 1 44 44 21 1
-strings STRING 0 784 784 7B 2
-idataBANK1 CODE 0 FA FA 6 2
-idataBANK0 CODE 0 8ED 8ED 4 2
+intentry CODE 0 4 4 B 2
+text37 CODE 0 65F 65F D6 2
+text29 CODE 0 AD AD 3F 2
+text28 CODE 0 F57 F57 1B 2
+text27 CODE 0 F72 F72 1B 2
+text23 CODE 0 F45 F45 12 2
+text20 CODE 0 120 120 3C5 2
+text19 CODE 0 EC EC 12 2
+text18 CODE 0 735 735 9C 2
+text17 CODE 0 7D1 7D1 23 2
+text16 CODE 0 7F4 7F4 C 2
+text15 CODE 0 F0A F0A 7 2
+text14 CODE 0 F19 F19 D 2
+text13 CODE 0 F26 F26 F 2
+text8 CODE 0 F04 F04 6 2
+text7 CODE 0 EFC EFC 3 2
+text6 CODE 0 EFF EFF 5 2
+text5 CODE 0 F35 F35 10 2
+text1 CODE 0 4E5 4E5 17A 2
+maintext CODE 0 F8D F8D 73 2
+cstackBANK0 BANK0 1 47 47 22 1
+cstackCOMMON COMMON 1 70 70 C 1
+cstackBANK1 BANK1 1 C6 C6 1 1
+clrtext CODE 0 F11 F11 8 2
+dataBANK1 BANK1 1 C0 C0 6 1
+bssBANK1 BANK1 1 A0 A0 20 1
+dataBANK0 BANK0 1 69 69 4 1
+bssBANK0 BANK0 1 20 20 27 1
+bssCOMMON COMMON 1 7C 7C 2 1
+strings STRING 0 32 32 7B 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-BANK0 0069-006F 1
-BANK1 00DB-00EF 1
+BANK0 006D-006F 1
+BANK1 00C7-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
 CODE 0002-0003 2
-CODE 07FF-08EC 2
+CODE 00FE-00FF 2
+CODE 0800-0EFB 2
 CONST 0002-0003 2
-CONST 07FF-08EC 2
+CONST 00FE-00FF 2
+CONST 0800-0EFB 2
 EEDATA 2100-21FF 2
 ENTRY 0002-0003 2
-ENTRY 07FF-08EC 2
+ENTRY 00FE-00FF 2
+ENTRY 0800-0EFB 2
 IDLOC 2000-2003 2
-RAM 0069-006F 1
-RAM 00DB-00EF 1
+RAM 006D-006F 1
+RAM 00C7-00EF 1
 RAM 0110-016F 1
 RAM 0190-01EF 1
 SFR0 0000-001F 1
@@ -98,9 +79,11 @@ SFR2 0100-010F 1
 SFR3 0180-018F 1
 STACK 0110-016F 1
 STRCODE 0002-0003 2
-STRCODE 07FF-08EC 2
+STRCODE 00FE-00FF 2
+STRCODE 0800-0EFB 2
 STRING 0002-0003 2
-STRING 07FF-08EC 2
+STRING 00FE-00FF 2
+STRING 0800-0EFB 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -115,583 +98,581 @@ STRING 07FF-08EC 2
 # All other numeric values are in decimal.
 %LINETAB
 $obj\startup.obj
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":63 0 reset_vec CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":68 0 reset_vec CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":73 11 init CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":76 11 end_init CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":39 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":40 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":41 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":42 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":43 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\startup.as":44 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":63 0 reset_vec CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":68 0 reset_vec CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":73 F init CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":76 F end_init CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":39 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":40 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":41 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":42 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":43 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\startup.as":44 100 functab CODE
 $obj\trabajo.obj
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":43 4 intentry CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1320 13 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1323 13 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1485 13 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1486 14 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1487 15 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1488 16 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1489 17 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1492 1A cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1493 1B cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1494 1C cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1495 1D cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1500 20 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1501 21 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1502 22 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1503 25 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1504 26 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1505 29 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1506 2A cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1507 2D cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1508 2E cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1509 31 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1510 32 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1511 35 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1512 36 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1513 39 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1517 3A cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1518 3B cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1519 3C cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1520 3F cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1521 40 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1522 43 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1523 44 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1524 47 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1525 48 cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1526 4A cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1532 4B cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1533 4B cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1534 4C cinit CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":59 4E maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":66 4E maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":68 51 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":70 54 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":72 57 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":74 5A maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":76 5D maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":78 60 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":80 63 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":82 66 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":84 69 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":86 6F maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":87 72 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":89 73 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":96 74 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":98 79 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":100 7F maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":102 85 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":104 8B maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":105 8D maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":106 B3 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":107 DD maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":112 E6 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":116 E9 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":121 ED maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\trabajo.c":94 F9 maintext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11293 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11295 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11296 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11297 100 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11298 101 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11299 102 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11300 103 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11301 104 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11303 105 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11304 105 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11307 106 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11308 106 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11311 108 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11312 108 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11315 10A functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11316 10A functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11319 10C functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11320 10C functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11323 10E functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11324 10E functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11327 110 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11328 110 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11331 112 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11332 112 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11335 114 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11336 114 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11339 116 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11340 116 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11343 118 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11344 118 functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11347 11A functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11348 11A functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11351 11C functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11352 11C functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11355 11E functab CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":11356 11E functab CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":492 120 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":542 123 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":545 12B text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":547 13D text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":550 141 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":551 154 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":555 155 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":557 157 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":606 158 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":607 164 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":609 168 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":610 18D text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":611 1AC text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":644 1B6 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1268 1CD text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1270 1DF text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1271 1E1 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1272 1E9 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1314 1EE text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1315 1F4 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1314 211 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1354 21D text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1355 225 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1390 22B text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1391 246 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1393 25C text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1437 260 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1439 264 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1440 277 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1447 281 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1448 285 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1481 298 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1483 2A0 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1498 2AC text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1533 2E8 text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1483 2FB text1 CODE
-"c:\sed_tools\xc8\sources\common\doprnt.c":1547 2FC text1 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":77 303 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":80 306 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":81 312 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":82 316 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":84 31A text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":85 324 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":86 32E text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":87 338 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":88 342 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":89 350 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":92 360 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":93 36A text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":94 36E text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":97 372 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":98 377 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":101 381 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":102 38A text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":103 38E text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":106 392 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":107 397 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":110 3A1 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":111 3AE text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":112 3B0 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":113 3BD text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":119 3C3 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":120 3D1 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":121 3DE text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":122 3E7 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":123 3F0 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":124 3F9 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":126 402 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":127 40D text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":128 411 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":129 41B text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":130 41F text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":131 426 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":132 42A text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":133 431 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":135 435 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":137 438 text11 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":183 439 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":185 439 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":187 43F text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":188 440 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":190 444 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":191 450 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":192 452 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":193 458 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":194 459 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":196 45D text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":197 473 text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":198 49E text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":199 51B text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":201 51F text21 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":159 520 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":161 520 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":163 526 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":164 527 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":166 52B text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":167 537 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":168 539 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":169 53F text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":170 540 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":172 544 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":173 55A text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":174 585 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":175 602 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":177 606 text22 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":141 607 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":143 607 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":145 60D text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":146 60E text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":148 612 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":149 619 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":150 644 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":151 6C1 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":152 6C5 text25 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":237 6C6 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":242 6C6 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":243 6C9 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":244 6CA text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":252 6CB text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":253 6D4 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":254 6E0 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":256 6EB text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":257 6EC text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":258 6EE text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":260 6EE text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":271 6EF text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":273 6F0 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":274 6F2 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":275 6F4 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":276 6F6 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":277 6FA text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":271 6FB text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":282 706 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":285 70B text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":288 71B text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":289 727 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":295 732 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":299 73F text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":282 743 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":312 748 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":313 74D text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":314 752 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":315 757 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":318 759 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":319 75E text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":320 765 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":321 76F text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":306 771 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":327 779 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":330 781 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":331 782 text32 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":39 8F1 text7 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":41 8F1 text7 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":42 8F7 text7 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":24 8F8 text6 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":26 8F8 text6 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":27 8FE text6 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1472 8FF clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1473 8FF clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1474 900 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1475 900 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1476 901 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1477 902 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1478 903 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1479 904 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1480 905 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\obj\trabajo.as":1481 906 clrtext CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":44 907 text15 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":56 907 text15 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":68 90B text15 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":69 90C text15 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":70 910 text15 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":45 911 text17 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":47 911 text17 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":49 917 text17 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":53 91E text8 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":55 91E text8 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":56 924 text8 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":57 92A text8 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":112 92B text16 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":119 92B text16 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":128 92F text16 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":138 933 text16 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":139 93A text16 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":71 93B text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":76 93B text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":77 93E text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":78 93F text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":79 940 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":80 941 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":81 942 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":83 943 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":84 945 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":85 946 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":87 949 text14 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":88 94A text14 CODE
-"c:\sed_tools\xc8\sources\common\isdigit.c":8 94B text2 CODE
-"c:\sed_tools\xc8\sources\common\isdigit.c":14 94E text2 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":32 95B text18 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":34 95B text18 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":36 961 text18 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":37 967 text18 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoTeclado.c":38 969 text18 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":17 96E text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":22 96E text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":33 972 text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":36 974 text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":37 977 text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":38 978 text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":39 97C text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":40 97E text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":42 980 text5 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":89 981 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":94 981 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":102 984 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":103 988 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":107 98C text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":109 98F text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":110 992 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":111 994 text13 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":140 995 text9 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":143 995 text9 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":145 999 text9 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":147 9A7 text9 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\inicializacion.c":148 9A9 text9 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":207 9AA text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":209 9AA text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":211 9B0 text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":212 9B1 text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":214 9B5 text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":215 9C1 text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":216 9C3 text20 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":217 9C9 text20 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":3 9CA text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":31 9CA text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":33 9CC text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":34 9CE text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":35 9D4 text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":36 9DB text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":37 9E2 text39 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":40 9E6 text39 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":223 9ED text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":225 9ED text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":227 9F3 text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":228 9F4 text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":230 9F8 text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":231 A05 text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":232 A0B text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":235 A0C text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":236 A10 text23 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":242 A11 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":244 A11 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":246 A17 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":247 A18 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":249 A1C text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":250 A29 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":251 A2F text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":254 A30 text19 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":255 A34 text19 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":3 A35 text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":31 A35 text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":33 A39 text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":34 A3B text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":35 A41 text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":36 A48 text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":37 A4F text31 CODE
-"c:\sed_tools\xc8\sources\common\wmul.c":40 A53 text31 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":60 A5A text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":62 A5A text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":63 A67 text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":64 A6D text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":65 A73 text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":66 A74 text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":67 A7A text28 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":71 A81 text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":74 A81 text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":76 A8E text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":77 A94 text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":78 A9A text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":80 A9B text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":81 AA1 text27 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":210 AA8 text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":215 AA8 text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":218 AB3 text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":219 ABF text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":221 ACA text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":222 ACB text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":223 ACD text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":225 ACD text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":226 ACE text30 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":47 AD0 text33 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":49 AD0 text33 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":50 AFC text33 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":51 B04 text33 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":6 B05 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":13 B05 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":14 B0B text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":15 B0D text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":16 B0F text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":17 B16 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":15 B1A text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":20 B1B text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":21 B23 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":22 B29 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":23 B30 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwmod.c":25 B34 text3 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":6 B3B text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":14 B3B text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":15 B3F text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":16 B43 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":17 B45 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":18 B47 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":19 B4E text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":17 B52 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":22 B53 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":23 B5A text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":24 B62 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":25 B68 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":27 B69 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":28 B70 text4 CODE
-"c:\sed_tools\xc8\sources\common\lwdiv.c":30 B74 text4 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":71 B7B text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":73 B7B text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":75 B81 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":76 B82 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":78 B86 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":79 BB0 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":80 BB8 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":81 BBE text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":82 BBF text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":84 BC3 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":85 BC5 text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":87 BCB text26 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":92 BCC text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":94 BCC text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":96 BD2 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":97 BD3 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":99 BD6 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":100 BE1 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":101 BE3 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":102 BE4 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":104 BEA text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":105 BF5 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":106 BF7 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":107 BF8 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":109 BFE text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":110 C02 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":111 C03 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":113 C07 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":115 C0B text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":116 C0D text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":119 C0E text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":120 C0F text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":122 C10 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":124 C14 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":125 C15 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":126 C16 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":127 C17 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":129 C17 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":130 C18 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":132 C19 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":133 C1B text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":135 C21 text24 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":53 C22 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":55 C22 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":56 C4E text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":57 C55 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":59 C57 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":60 C60 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":61 C67 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":63 C69 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":65 C72 text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoSecuencia.c":66 C7A text34 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":86 C7B text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":92 C7B text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":94 C95 text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":95 C9B text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":97 CA1 text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":99 CAE text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":100 CB4 text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":102 CBA text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":104 CC7 text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\procesoHisteresis.c":105 CCD text29 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":148 CD4 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":151 CD7 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":154 CE0 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":156 CE4 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":159 CF2 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":160 CFB text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":161 D00 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":164 D05 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":167 D0E text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":168 D15 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":169 D1E text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":170 D27 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":172 D30 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":173 D39 text36 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":126 D3A text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":128 D3D text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":130 D41 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":131 D4B text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":133 D57 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":135 D65 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":138 D66 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":140 D69 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":142 D6B text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":144 D6F text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":135 D70 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":144 D85 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":150 D85 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":154 D87 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":167 D8D text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":171 D8E text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":175 D95 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":178 D99 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":195 D9C text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":201 D9C text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":202 D9F text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\TECLADO.c":204 DA6 text10 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":43 DAE text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":45 DAE text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":47 DB1 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":48 DB2 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":50 DB4 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":51 DBC text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":53 DC2 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":55 DC7 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":56 DC9 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":57 DD7 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":60 DDB text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":61 DFC text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":62 E0D text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":65 E11 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":67 E18 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":68 E1A text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":70 E1E text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":75 E1F text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":76 E20 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":78 E21 text37 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":26 E2D text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":31 E2D text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":32 E6E text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":33 E76 text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":34 E91 text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":35 EA6 text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":36 EAA text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\interrupcion.c":37 EAC text38 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":240 EBC text35 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":243 EBC text35 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":244 ECC text35 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":243 F53 text35 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":196 F58 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":198 F5B text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":201 F63 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":203 F76 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":207 F89 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":209 F8A text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":210 F9E text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":211 FB2 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":213 FC6 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":214 FD9 text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":207 FDA text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":218 FEA text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":220 FFC text12 CODE
-"C:\Users\adria\github\TRABAJO2_SED\T2_plantillas\LCD.c":221 FFF text12 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":43 4 intentry CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1318 11 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1321 11 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1485 11 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1480 12 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1481 13 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1484 14 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1486 15 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1487 16 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1488 17 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1491 1A cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1492 1B cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1493 1C cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1494 1D cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1499 1F cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":15 20 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1501 21 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":14 22 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1503 23 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1505 24 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":34 25 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1507 26 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1509 27 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1511 28 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1515 29 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1517 2A cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1519 2B cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1521 2C cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":23 2D cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1523 2E cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1529 2F cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1530 2F cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1531 30 cinit CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":86 AD text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":92 AD text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":94 B6 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":95 BA text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":97 BD text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":99 C2 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":100 C6 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":102 C9 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":104 CF text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":105 D3 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":108 D6 text29 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":242 EC text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":244 EC text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":247 EE text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":246 EF text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":247 F0 text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":249 F3 text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":250 F6 text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":249 F7 text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":250 F8 text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":251 FA text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":254 FB text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":257 FD text19 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8704 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8706 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8707 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8708 100 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8709 101 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8710 102 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8711 103 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8712 104 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8714 105 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8715 105 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8718 106 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8719 106 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8722 108 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8723 108 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8726 10A functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8727 10A functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8730 10C functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8731 10C functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8734 10E functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8735 10E functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8738 110 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8739 110 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8742 112 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8743 112 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8746 114 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8747 114 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8750 116 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8751 116 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8754 118 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8755 118 functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8758 11A functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8759 11A functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8762 11C functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8763 11C functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8766 11E functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":8767 11E functab CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":207 120 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":209 120 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":211 122 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":212 123 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":214 127 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":215 12B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":216 12C text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":219 12E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":140 12F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":143 12F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":145 132 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":147 13A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":92 13B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":94 13B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":96 13D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":97 13E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":99 141 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":100 148 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":102 149 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":104 14B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":107 153 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":109 157 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":110 159 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":111 15A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":113 15E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":115 162 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":116 164 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":119 165 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":120 166 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":122 167 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":124 16B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":125 16C text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":126 16D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":127 16E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":129 16E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":130 16F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":132 170 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":133 171 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":71 174 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":73 174 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":75 176 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":76 177 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":78 17B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":79 18B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":80 190 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":81 192 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":82 193 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":84 197 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":85 198 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":88 19A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":53 19B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":55 19B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":56 1AB text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":57 1AF text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":59 1B1 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":60 1B7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":61 1BB text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":63 1BD text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":65 1C3 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":240 1C8 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":243 1C8 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":244 1D0 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":243 200 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":77 202 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":80 203 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":81 20B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":82 20D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":84 20F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":85 216 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":86 21D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":87 224 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":88 22B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":89 232 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":92 239 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":93 241 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":94 245 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":97 247 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":98 24B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":101 250 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":102 259 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":103 25D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":106 25F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":107 263 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":110 268 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":111 275 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":112 277 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":113 283 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":119 286 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":120 28E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":121 295 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":122 29A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":123 29D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":124 29F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":126 2A8 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":127 2AC text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":128 2AF text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":129 2B7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":130 2BA text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":131 2BF text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":132 2C2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":133 2C7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":135 2CA text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":141 2CC text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":143 2CC text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":146 2CE text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":145 2CF text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":146 2D0 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":148 2D3 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":149 2D5 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":148 2D6 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":149 2D7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":150 2E5 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":151 304 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":154 306 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":183 307 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":185 307 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":187 309 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":188 30A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":190 30E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":191 312 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":192 313 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":193 315 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":194 316 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":196 31A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":197 321 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":198 32E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":199 34F text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":202 351 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":159 352 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":161 352 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":163 354 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":164 355 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":166 359 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":167 35D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":168 35E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":169 360 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":170 361 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":172 365 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":173 36C text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":174 37B text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":175 39A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":178 39C text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":196 39D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":198 39E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":201 3A6 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":203 3B2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":209 3B9 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":210 3C2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":211 3CB text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":213 3D4 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":207 3DD text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":218 3EB text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":220 3F2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":221 3F3 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":148 3F4 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":151 3F7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":154 3FE text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":156 402 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":159 407 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":160 40E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":161 410 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":164 412 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":167 419 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":168 420 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":169 427 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":170 42A text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":172 433 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\LCD.c":173 43C text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":47 43D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":49 43D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":50 44D text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":126 495 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":128 496 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":130 497 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":131 49E text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":133 4A6 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":138 4B0 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":140 4B2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":142 4B4 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":143 4B6 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":135 4B7 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":144 4CC text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":150 4CC text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":154 4CE text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":167 4D1 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":171 4D2 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":175 4D5 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":178 4D8 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":195 4DA text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":201 4DA text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":202 4DD text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":204 4E1 text20 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":205 4E4 text20 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":492 4E5 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":542 4E6 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":545 4E8 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":547 4F2 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":550 4F6 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":551 4F9 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":555 4FA text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":557 4FC text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":606 4FD text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":607 506 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":609 508 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":610 514 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":611 526 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":644 52F text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1268 540 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1270 54A text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1271 54C text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1272 54E text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1314 553 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1315 555 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1314 568 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1354 56D text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1355 575 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1390 579 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1391 58A text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1393 597 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1437 59B text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1439 59F text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1440 5A4 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1439 5A5 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1440 5A6 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1447 5AD text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1448 5B1 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1481 5B7 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1483 5B9 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1498 5BA text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1533 5D8 text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1483 5DB text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":545 5DE text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1547 5DF text1 CODE
+"c:\sed_tools\xc8\sources\common\doprnt.c":1550 5E3 text1 CODE
+"c:\sed_tools\xc8\sources\common\isdigit.c":8 5E4 text1 CODE
+"c:\sed_tools\xc8\sources\common\isdigit.c":14 5E5 text1 CODE
+"c:\sed_tools\xc8\sources\common\isdigit.c":15 5F1 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":3 5F2 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":31 5F2 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":33 5F4 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":34 5F6 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":35 5FC text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":36 5FF text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":37 602 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":40 606 text1 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":41 60A text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":6 60B text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":14 60B text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":15 60D text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":16 611 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":18 612 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":19 612 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":17 613 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":18 615 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":17 618 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":22 619 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":23 61C text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":24 624 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":25 62A text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":27 62B text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":28 62E text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":30 630 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwdiv.c":31 634 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":6 635 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":13 635 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":14 639 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":16 63A text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":17 63A text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":15 63B text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":16 63D text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":15 640 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":20 641 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":21 649 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":22 64F text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":23 652 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":25 654 text1 CODE
+"c:\sed_tools\xc8\sources\common\lwmod.c":26 658 text1 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":43 65F text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":45 65F text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":47 662 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":48 663 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":50 665 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":51 669 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":53 66C text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":55 671 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":56 673 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":57 678 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":60 67A text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":61 68B text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":62 697 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":65 699 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":67 69F text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":68 6A1 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":75 6A5 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":76 6A6 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":78 6A7 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":26 6B1 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":31 6B1 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":32 6DF text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":33 6E3 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":34 6FD text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":35 70C text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":36 70E text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":37 710 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\interrupcion.c":38 71B text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":3 71C text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":31 71C text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":33 71E text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":34 720 text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":35 726 text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":36 729 text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":37 72C text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":40 730 text37 CODE
+"c:\sed_tools\xc8\sources\common\wmul.c":41 734 text37 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":32 735 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":34 735 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":36 73A text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":38 73C text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":37 73D text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":38 73F text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":40 740 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":237 741 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":242 741 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":252 742 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":253 749 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":254 750 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":257 751 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":254 752 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":273 753 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":274 755 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":275 757 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":276 759 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":271 75D text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":282 768 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":285 769 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":288 779 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":289 780 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":295 782 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":299 78E text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":282 790 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":312 796 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":313 79B text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":314 7A0 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":318 7A8 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":319 7AD text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":320 7B2 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":306 7B5 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":327 7BD text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":331 7C3 text18 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":45 7D1 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":47 7D1 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":49 7D6 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":51 7D8 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":210 7D9 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":215 7D9 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":218 7E0 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":219 7E8 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":222 7F2 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\TECLADO.c":226 7F3 text17 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":112 7F4 text16 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":119 7F4 text16 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":128 7F6 text16 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":138 7F9 text16 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":139 7FF text16 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":39 EFC text7 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":41 EFC text7 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":42 EFE text7 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":24 EFF text6 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":26 EFF text6 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoTeclado.c":27 F03 text6 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":53 F04 text8 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":55 F04 text8 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":56 F06 text8 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":57 F09 text8 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":44 F0A text15 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":56 F0A text15 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":68 F0C text15 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":69 F0D text15 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":70 F10 text15 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1467 F11 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1468 F11 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1469 F12 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1470 F12 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1471 F13 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1472 F14 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1473 F15 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1474 F16 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1475 F17 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\obj\trabajo.as":1476 F18 clrtext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":71 F19 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":76 F19 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":77 F1A text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":78 F1B text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":79 F1C text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":80 F1D text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":81 F1E text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":83 F1F text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":84 F21 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":85 F22 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":87 F24 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":88 F25 text14 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":89 F26 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":94 F26 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":102 F28 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":103 F2B text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":107 F2E text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":109 F30 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":110 F32 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":111 F34 text13 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":17 F35 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":22 F35 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":33 F38 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":36 F3A text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":37 F3C text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":38 F3D text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":39 F40 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":40 F42 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\inicializacion.c":42 F44 text5 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":223 F45 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":225 F45 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":228 F47 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":227 F48 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":228 F49 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":230 F4C text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":231 F4F text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":230 F50 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":231 F51 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":232 F53 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":235 F54 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoSecuencia.c":238 F56 text23 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":60 F57 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":62 F57 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":63 F62 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":64 F66 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":65 F69 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":66 F6A text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":67 F6E text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":69 F71 text28 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":71 F72 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":74 F72 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":76 F7D text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":77 F81 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":78 F84 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":80 F85 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":81 F89 text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\procesoHisteresis.c":83 F8C text27 CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":59 F8D maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":66 F8D maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":68 F90 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":70 F93 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":72 F96 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":74 F99 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":76 F9C maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":78 F9F maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":80 FA2 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":82 FA5 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":84 FA8 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":86 FAB maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":87 FAC maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":89 FAD maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":96 FAE maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":98 FB3 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":100 FB9 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":102 FBF maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":105 FC5 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":104 FC6 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":105 FC8 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":106 FD6 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":107 FE9 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":112 FF0 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":116 FF1 maintext CODE
+"C:\Users\adria\Desktop\Universidad\3º\2 Cuatrimestre\SED-Sistemas Electrónicos Digitales\Trabajos\2\T2_plantillas\trabajo.c":121 FF6 maintext CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -705,64 +686,77 @@ $obj\trabajo.obj
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __size_of_init_procesoSecuencia 0 0 ABS 0 - obj\trabajo.obj
-___lwdiv@dividend 28 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+___lwdiv@dividend 4C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_ofPL12 1D8 0 CODE 0 text29 obj\trabajo.obj
+__end_ofPL8 8D8 0 CODE 0 text20 obj\trabajo.obj
 __size_of_init_procesoHisteresis 0 0 ABS 0 - obj\trabajo.obj
-sprintf@f 34 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_espera01Almohadilla 1798 0 CODE 0 text24 obj\trabajo.obj
-___lwdiv@counter 2B 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaTercerValor 872 0 CODE 0 text21 obj\trabajo.obj
-_Ki D5 0 BANK1 1 dataBANK1 obj\trabajo.obj
-_Kp D7 0 BANK1 1 dataBANK1 obj\trabajo.obj
+sprintf@f 56 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_espera01Almohadilla 276 0 CODE 0 text20 obj\trabajo.obj
+___lwdiv@counter 4E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+PL2 8A4 0 CODE 0 text20 obj\trabajo.obj
+PL4 8B4 0 CODE 0 text20 obj\trabajo.obj
+PL6 F88 0 CODE 0 text18 obj\trabajo.obj
+PL8 8C8 0 CODE 0 text20 obj\trabajo.obj
+_esperaTercerValor 60E 0 CODE 0 text20 obj\trabajo.obj
+_Ki C0 0 BANK1 1 dataBANK1 obj\trabajo.obj
+_Kp C2 0 BANK1 1 dataBANK1 obj\trabajo.obj
 __CFG_WRT$OFF 0 0 ABS 0 - obj\trabajo.obj
+PL10 1AE 0 CODE 0 text29 obj\trabajo.obj
+PL20 906 0 CODE 0 text20 obj\trabajo.obj
+PL12 1C4 0 CODE 0 text29 obj\trabajo.obj
+PL22 CB2 0 CODE 0 text1 obj\trabajo.obj
+PL14 8D8 0 CODE 0 text20 obj\trabajo.obj
+PL24 912 0 CODE 0 text20 obj\trabajo.obj
+PL16 8EA 0 CODE 0 text20 obj\trabajo.obj
+PL26 91E 0 CODE 0 text20 obj\trabajo.obj
+PL18 8F8 0 CODE 0 text20 obj\trabajo.obj
 _RB3 33 0 ABS 0 - obj\trabajo.obj
 _RB4 34 0 ABS 0 - obj\trabajo.obj
 _RB5 35 0 ABS 0 - obj\trabajo.obj
 _PR2 92 0 ABS 0 - obj\trabajo.obj
 __S0 2009 0 ABS 0 - -
-__S1 DB 0 ABS 0 - -
+__S1 C7 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-LCD_envia_4bits@a 29 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_envia_4bits@a 4D 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 _GIE 5F 0 ABS 0 - obj\trabajo.obj
-__end_of_rutinaInterrupcion 1C5A 0 CODE 0 text37 obj\trabajo.obj
-_LCD_var_TRIS 5C 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_LCD_RS_PORT_TRIS_PUNTERO A2 0 BANK1 1 bssBANK1 obj\trabajo.obj
+__end_of_rutinaInterrupcion D62 0 CODE 0 text37 obj\trabajo.obj
+_LCD_RS_PORT_TRIS_PUNTERO 2F 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__end_ofPL22 CBE 0 CODE 0 text1 obj\trabajo.obj
 __CFG_CCPMX$RB3 0 0 ABS 0 - obj\trabajo.obj
-__Hintentry 22 0 CODE 0 intentry -
+__Hintentry 1E 0 CODE 0 intentry -
 __Lintentry 8 0 CODE 0 intentry -
 __size_of_TECLADO_leer 0 0 ABS 0 - obj\trabajo.obj
 __pintentry 8 0 CODE 0 intentry obj\trabajo.obj
 __size_of_TECLADO_pulsado 0 0 ABS 0 - obj\trabajo.obj
-LCD_envia_4bits@LCD_var_TRIS 28 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaSoltarTecla 1222 0 CODE 0 text17 obj\trabajo.obj
-_cuenta_1s A8 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_Ton A6 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_esperaPulsarTecla 12B6 0 CODE 0 text18 obj\trabajo.obj
-_esperaKi 1422 0 CODE 0 text19 obj\trabajo.obj
+LCD_envia_4bits@LCD_var_TRIS 4C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_esperaSoltarTecla FA2 0 CODE 0 text17 obj\trabajo.obj
+_cuenta_1s A4 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_Ton A2 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_esperaPulsarTecla E6A 0 CODE 0 text18 obj\trabajo.obj
+_esperaKi 1D8 0 CODE 0 text19 obj\trabajo.obj
 _TMR0 1 0 ABS 0 - obj\trabajo.obj
 _TMR1 E 0 ABS 0 - obj\trabajo.obj
 _PEIE 5E 0 ABS 0 - obj\trabajo.obj
 _RBIF 58 0 ABS 0 - obj\trabajo.obj
-__end_of_estado10 1550 0 CODE 0 text27 obj\trabajo.obj
-_tiempo_1s D9 0 BANK1 1 dataBANK1 obj\trabajo.obj
-__end_of_estado100 1502 0 CODE 0 text28 obj\trabajo.obj
+__end_of_estado10 1F1A 0 CODE 0 text27 obj\trabajo.obj
+_tiempo_1s C4 0 BANK1 1 dataBANK1 obj\trabajo.obj
+__end_of_estado100 1EE4 0 CODE 0 text28 obj\trabajo.obj
 _IOFS 47A 0 ABS 0 - obj\trabajo.obj
-LCD_envia_4bits@dato 2A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_envia_4bits@dato 4E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of_control_PI 0 0 ABS 0 - obj\trabajo.obj
 ?_control_PI 76 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-__end_of_init_librerias 1354 0 CODE 0 text9 obj\trabajo.obj
-_main 9C 0 CODE 0 maintext obj\trabajo.obj
+__end_of_init_librerias 276 0 CODE 0 text20 obj\trabajo.obj
+_main 1F1A 0 CODE 0 maintext obj\trabajo.obj
 ___sp 0 0 STACK 2 stack obj\startup.obj
 btemp 7E 0 ABS 0 - obj\trabajo.obj
 ltemp 7E 0 ABS 0 - obj\trabajo.obj
 ttemp 7E 0 ABS 0 - obj\trabajo.obj
 wtemp 7E 0 ABS 0 - obj\trabajo.obj
-start 22 0 CODE 0 init obj\startup.obj
-_esperaTercerValor$207 3A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaTercerValor$208 3C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaTercerValor$209 3E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaKp 13DA 0 CODE 0 text23 obj\trabajo.obj
-__end_of_LCD_mensaje_opciones2 18F6 0 CODE 0 text34 obj\trabajo.obj
+start 1E 0 CODE 0 init obj\startup.obj
+_esperaKp 1E8A 0 CODE 0 text23 obj\trabajo.obj
+__end_ofPL14 8EA 0 CODE 0 text20 obj\trabajo.obj
+__end_of_LCD_mensaje_opciones2 390 0 CODE 0 text20 obj\trabajo.obj
 _TRISA 85 0 ABS 0 - obj\trabajo.obj
 _TRISB 86 0 ABS 0 - obj\trabajo.obj
 _PORTA 5 0 ABS 0 - obj\trabajo.obj
@@ -770,7 +764,7 @@ reset_vec 0 0 CODE 0 reset_vec obj\startup.obj
 _PORTB 6 0 ABS 0 - obj\trabajo.obj
 _ANSEL 9B 0 ABS 0 - obj\trabajo.obj
 _T2CON 12 0 ABS 0 - obj\trabajo.obj
-_LCD_E 5A 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_LCD_E 3E 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __fptable 200 0 CODE 0 functab obj\trabajo.obj
 ltemp0 7E 0 ABS 0 - obj\trabajo.obj
 ttemp0 7E 0 ABS 0 - obj\trabajo.obj
@@ -790,22 +784,23 @@ wtemp5 88 0 ABS 0 - obj\trabajo.obj
 wtemp6 7F 0 ABS 0 - obj\trabajo.obj
 _nRBPU 40F 0 ABS 0 - obj\trabajo.obj
 interrupt_function 8 0 CODE 0 intentry obj\trabajo.obj
+__end_ofPL24 91E 0 CODE 0 text20 obj\trabajo.obj
 __Hconfig 4012 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
-__end_of__stringtab F28 0 STRING 0 strings obj\trabajo.obj
-?___lwmod 2E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_TECLADO_ini$364 28 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_tecla 64 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__end_of__stringtab 84 0 STRING 0 strings obj\trabajo.obj
+?___lwmod 51 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_TECLADO_ini$364 4C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_tecla 46 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 fpbase 20A 0 CODE 0 functab obj\trabajo.obj
-__end_of__stringdata FFE 0 STRING 0 strings obj\trabajo.obj
-_valor 57 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_error AC 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_start 67 0 BANK0 1 dataBANK0 obj\trabajo.obj
-?_sprintf 34 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_errorAnt AE 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_init_registros 12DC 0 CODE 0 text5 obj\trabajo.obj
+__end_of__stringdata 15A 0 STRING 0 strings obj\trabajo.obj
+_valor 39 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_error A8 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_start 6B 0 BANK0 1 dataBANK0 obj\trabajo.obj
+?_sprintf 56 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_errorAnt AA 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_init_registros 1E6A 0 CODE 0 text5 obj\trabajo.obj
 __Hfunctab 240 0 CODE 0 functab -
 __Lfunctab 200 0 CODE 0 functab -
 _ADCON0 1F 0 ABS 0 - obj\trabajo.obj
@@ -813,13 +808,14 @@ __pfunctab 200 0 CODE 0 functab obj\trabajo.obj
 _ADCON1 9F 0 ABS 0 - obj\trabajo.obj
 _OPTION_REG 81 0 ABS 0 - obj\trabajo.obj
 __Hcommon 0 0 ABS 0 common -
-LCD_enciende@config 2D 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_enciende@config 51 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __Lcommon 0 0 ABS 0 common -
+__end_ofPL16 8F8 0 CODE 0 text20 obj\trabajo.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_init_procesoSecuencia 11E2 0 CODE 0 text7 obj\trabajo.obj
-i1___wmul 1394 0 CODE 0 text39 obj\trabajo.obj
-sprintf@ap CA 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+_init_procesoSecuencia 1DF8 0 CODE 0 text7 obj\trabajo.obj
+i1___wmul E38 0 CODE 0 text37 obj\trabajo.obj
+sprintf@ap 5E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 _TMR0IE 5D 0 ABS 0 - obj\trabajo.obj
 _TMR1IE 460 0 ABS 0 - obj\trabajo.obj
 _TMR2IE 461 0 ABS 0 - obj\trabajo.obj
@@ -827,21 +823,22 @@ _TMR0IF 5A 0 ABS 0 - obj\trabajo.obj
 ___int_sp 0 0 STACK 2 stack obj\startup.obj
 _TMR1IF 60 0 ABS 0 - obj\trabajo.obj
 _CCPR1L 15 0 ABS 0 - obj\trabajo.obj
-_estado100 14B4 0 CODE 0 text28 obj\trabajo.obj
-_esperaPrimerValor C0E 0 CODE 0 text25 obj\trabajo.obj
-?___lwdiv 26 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_estado100 1EAE 0 CODE 0 text28 obj\trabajo.obj
+_esperaPrimerValor 598 0 CODE 0 text20 obj\trabajo.obj
+?___lwdiv 4A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_ofPL26 92A 0 CODE 0 text20 obj\trabajo.obj
 _TMR1CS 81 0 ABS 0 - obj\trabajo.obj
 _ADRESH 1E 0 ABS 0 - obj\trabajo.obj
 _TMR1ON 80 0 ABS 0 - obj\trabajo.obj
 _OSCCON 8F 0 ABS 0 - obj\trabajo.obj
 __Habs1 0 0 ABS 0 abs1 -
-_TECLADO_FIL_PINES 5F 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_TECLADO_FIL_PINES 42 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __Labs1 0 0 ABS 0 abs1 -
 _ADRESL 9E 0 ABS 0 - obj\trabajo.obj
 _INTCON B 0 ABS 0 - obj\trabajo.obj
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Lsfr0 0 0 ABS 0 sfr0 -
-LCD_enviaCadena@i 33 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_enviaCadena@i 56 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -850,78 +847,73 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __size_of_esperaKi 0 0 ABS 0 - obj\trabajo.obj
 __size_of_esperaKp 0 0 ABS 0 - obj\trabajo.obj
-_num_pulsos_ref B2 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_LCD_RS 5B 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_LCD_mensaje_opciones_inicial$185 36 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaPrimerValor$200 2F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_init_procesoTeclado 11F0 0 CODE 0 text6 obj\trabajo.obj
-_esperaPrimerValor$201 31 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_max_duty B0 0 BANK1 1 bssBANK1 obj\trabajo.obj
-__end_of_dpowers F54 0 STRING 0 strings obj\trabajo.obj
-_esperaPrimerValor$199 2D 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-__end_of_esperaTercerValor A40 0 CODE 0 text21 obj\trabajo.obj
+_num_pulsos_ref 37 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_LCD_RS 3F 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_init_procesoTeclado 1DFE 0 CODE 0 text6 obj\trabajo.obj
+_max_duty 35 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__end_of_dpowers B0 0 STRING 0 strings obj\trabajo.obj
+__end_of_esperaTercerValor 6A4 0 CODE 0 text20 obj\trabajo.obj
+__end_ofPL18 906 0 CODE 0 text20 obj\trabajo.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
-_cadena B6 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_cadena AC 0 BANK1 1 bssBANK1 obj\trabajo.obj
 fptable 200 0 CODE 0 functab obj\trabajo.obj
 stackhi 0 0 ABS 0 - obj\startup.obj
-sprintf@sp D1 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+sprintf@sp 65 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_estado 44 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_estado 20 0 BANK0 1 bssBANK0 obj\trabajo.obj
 fptotal 27 0 ABS 0 - obj\trabajo.obj
 i1___wmul@product 74 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-__pcstackBANK0 20 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__pcstackBANK0 47 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 stacklo 0 0 ABS 0 - obj\startup.obj
-__end_of_esperaPulsarTecla 12DC 0 CODE 0 text18 obj\trabajo.obj
+__end_of_esperaPulsarTecla E82 0 CODE 0 text18 obj\trabajo.obj
 saved_w 7E 0 ABS 0 - obj\trabajo.obj
-__Hinit 22 0 CODE 0 init -
-__Linit 22 0 CODE 0 init -
-___wmul 146A 0 CODE 0 text31 obj\trabajo.obj
-__end_of_main 1F4 0 CODE 0 maintext obj\trabajo.obj
-_nuevaTecla 63 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_TECLADO_COL_PINES 5E 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__Hinit 1E 0 CODE 0 init -
+__Linit 1E 0 CODE 0 init -
+___wmul BE4 0 CODE 0 text1 obj\trabajo.obj
+__end_of_main 2000 0 CODE 0 maintext obj\trabajo.obj
+_nuevaTecla 45 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_TECLADO_COL_PINES 41 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __Htext 0 0 ABS 0 text -
 __Ltext 0 0 ABS 0 text -
-sprintf@width D2 0 BANK1 1 cstackBANK1 obj\trabajo.obj
-___wmul@multiplier 26 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+sprintf@width 66 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+___wmul@multiplier 4A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
-__pdataBANK0 65 0 BANK0 1 dataBANK0 obj\trabajo.obj
-end_of_initialization 96 0 CODE 0 cinit obj\trabajo.obj
-_esperaAlmohadillaValor 1354 0 CODE 0 text20 obj\trabajo.obj
-__end_of_control_PI 1D78 0 CODE 0 text38 obj\trabajo.obj
-___wmul@multiplicand 28 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-LCD_enviaCadena@cadena 2B 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__pdataBANK0 69 0 BANK0 1 dataBANK0 obj\trabajo.obj
+end_of_initialization 5E 0 CODE 0 cinit obj\trabajo.obj
+_esperaAlmohadillaValor 240 0 CODE 0 text20 obj\trabajo.obj
+__end_of_control_PI E38 0 CODE 0 text37 obj\trabajo.obj
+___wmul@multiplicand 4C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_enviaCadena@cadena 4F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of_LCD_enviaCadena 0 0 ABS 0 - obj\trabajo.obj
 _T1CKPS0 84 0 ABS 0 - obj\trabajo.obj
-__stringtab F08 0 STRING 0 strings obj\trabajo.obj
+__stringtab 64 0 STRING 0 strings obj\trabajo.obj
 _T1CKPS1 85 0 ABS 0 - obj\trabajo.obj
-__end_of_LCD_enviaCadena 1EB0 0 CODE 0 text35 obj\trabajo.obj
-_LCD_BUS_PORT_PINES 59 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_TECLADO_config 61 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_LCD_enviaCadena 1D78 0 CODE 0 text35 obj\trabajo.obj
-__end_of_esperaSoltarTecla 123C 0 CODE 0 text17 obj\trabajo.obj
+__end_of_LCD_enviaCadena 404 0 CODE 0 text20 obj\trabajo.obj
+_LCD_BUS_PORT_PINES 3D 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_TECLADO_config 43 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_LCD_enviaCadena 390 0 CODE 0 text20 obj\trabajo.obj
+__end_of_esperaSoltarTecla FB2 0 CODE 0 text17 obj\trabajo.obj
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
-__pdataBANK1 D5 0 BANK1 1 dataBANK1 obj\trabajo.obj
-__end_of_TECLADO_pulsado 15A0 0 CODE 0 text30 obj\trabajo.obj
+__pdataBANK1 C0 0 BANK1 1 dataBANK1 obj\trabajo.obj
+__end_of_TECLADO_pulsado FE8 0 CODE 0 text17 obj\trabajo.obj
 ?i1___wmul 70 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-__end_of_tabla_3col F40 0 STRING 0 strings obj\trabajo.obj
-_LCD_enviaCadena$433 2F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_LCD_enviaCadena$434 31 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_of_tabla_3col 9C 0 STRING 0 strings obj\trabajo.obj
 __Hstrings 0 0 ABS 0 strings -
 __Lstrings 0 0 ABS 0 strings -
-__pstrings F08 0 STRING 0 strings obj\trabajo.obj
-_TECLADO_leer D8C 0 CODE 0 text32 obj\trabajo.obj
-__end_of_init_registros 1302 0 CODE 0 text5 obj\trabajo.obj
+__pstrings 64 0 STRING 0 strings obj\trabajo.obj
+_TECLADO_leer E82 0 CODE 0 text18 obj\trabajo.obj
+__end_of_init_registros 1E8A 0 CODE 0 text5 obj\trabajo.obj
 _nT1SYNC 82 0 ABS 0 - obj\trabajo.obj
 __size_of_LCD_enciende 0 0 ABS 0 - obj\trabajo.obj
 _T1OSCEN 83 0 ABS 0 - obj\trabajo.obj
-__end_of_LCD_envia_4bits 1A74 0 CODE 0 text36 obj\trabajo.obj
-__end_ofi1___wmul 13DA 0 CODE 0 text39 obj\trabajo.obj
+__end_of_LCD_envia_4bits 87A 0 CODE 0 text20 obj\trabajo.obj
+__end_ofi1___wmul E6A 0 CODE 0 text37 obj\trabajo.obj
 _CCP1CON 17 0 ABS 0 - obj\trabajo.obj
-LCD_ini@E_PIN 2F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_ini@E_PIN 53 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Lbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -931,231 +923,234 @@ __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
 ___latbits 1 0 ABS 0 - obj\trabajo.obj
-_esperaSegundoValor A40 0 CODE 0 text22 obj\trabajo.obj
-__end_of_init_procesoTeclado 11FE 0 CODE 0 text6 obj\trabajo.obj
+_esperaSegundoValor 6A4 0 CODE 0 text20 obj\trabajo.obj
+__end_of_init_procesoTeclado 1E08 0 CODE 0 text6 obj\trabajo.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
-_LCD_ini$410 32 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-__end_of_esperaPrimeraTecla 1798 0 CODE 0 text26 obj\trabajo.obj
-__ptext1 240 0 CODE 0 text1 obj\trabajo.obj
-__ptext2 1296 0 CODE 0 text2 obj\trabajo.obj
-__ptext3 160A 0 CODE 0 text3 obj\trabajo.obj
-_tabla_3col F28 0 STRING 0 strings obj\trabajo.obj
-__ptext4 1676 0 CODE 0 text4 obj\trabajo.obj
+_LCD_ini$410 56 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_of_esperaPrimeraTecla 336 0 CODE 0 text20 obj\trabajo.obj
+__ptext1 9CA 0 CODE 0 text1 obj\trabajo.obj
+__ptext2 BC8 0 CODE 0 text1 obj\trabajo.obj
+__ptext3 C6A 0 CODE 0 text1 obj\trabajo.obj
+_tabla_3col 84 0 STRING 0 strings obj\trabajo.obj
+__ptext4 C16 0 CODE 0 text1 obj\trabajo.obj
 __size_of_LCD_envia_4bits 0 0 ABS 0 - obj\trabajo.obj
-__ptext5 12DC 0 CODE 0 text5 obj\trabajo.obj
-__ptext6 11F0 0 CODE 0 text6 obj\trabajo.obj
-__ptext7 11E2 0 CODE 0 text7 obj\trabajo.obj
+__ptext5 1E6A 0 CODE 0 text5 obj\trabajo.obj
+__ptext6 1DFE 0 CODE 0 text6 obj\trabajo.obj
+__ptext7 1DF8 0 CODE 0 text7 obj\trabajo.obj
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
-__ptext8 123C 0 CODE 0 text8 obj\trabajo.obj
-__ptext9 132A 0 CODE 0 text9 obj\trabajo.obj
-__pcstackBANK1 CA 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+__ptext8 1E08 0 CODE 0 text8 obj\trabajo.obj
+__ptext9 25E 0 CODE 0 text20 obj\trabajo.obj
+__pcstackBANK1 C6 0 BANK1 1 cstackBANK1 obj\trabajo.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lclrtext 0 0 ABS 0 clrtext -
-__end_of__initialization 96 0 CODE 0 cinit obj\trabajo.obj
-__end_of___lwdiv 16F6 0 CODE 0 text4 obj\trabajo.obj
+__end_of__initialization 5E 0 CODE 0 cinit obj\trabajo.obj
+__end_of___lwdiv C6A 0 CODE 0 text1 obj\trabajo.obj
 control_PI@error 76 0 COMMON 1 cstackCOMMON obj\trabajo.obj
 __size_of_init_ADC 0 0 ABS 0 - obj\trabajo.obj
-__end_of_esperaPrimerValor D8C 0 CODE 0 text25 obj\trabajo.obj
+__end_of_esperaPrimerValor 60E 0 CODE 0 text20 obj\trabajo.obj
 __size_of_esperaSoltarTecla 0 0 ABS 0 - obj\trabajo.obj
 __size_of_esperaPulsarTecla 0 0 ABS 0 - obj\trabajo.obj
-_control_PI 1C5A 0 CODE 0 text38 obj\trabajo.obj
-__end_of_init_ADC 1276 0 CODE 0 text16 obj\trabajo.obj
-_LCD_enciende 1EB0 0 CODE 0 text12 obj\trabajo.obj
-_esperaSegundoValor$203 3A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaSegundoValor$204 3C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaSegundoValor$205 3E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-__end_of_init_Timer0 1222 0 CODE 0 text15 obj\trabajo.obj
-__end_of_init_Timer1 1296 0 CODE 0 text14 obj\trabajo.obj
-__end_of_init_Timer2 132A 0 CODE 0 text13 obj\trabajo.obj
+_control_PI D62 0 CODE 0 text37 obj\trabajo.obj
+__end_of_init_ADC 1000 0 CODE 0 text16 obj\trabajo.obj
+_LCD_enciende 73A 0 CODE 0 text20 obj\trabajo.obj
+__end_of_init_Timer0 1E22 0 CODE 0 text15 obj\trabajo.obj
+__end_of_init_Timer1 1E4C 0 CODE 0 text14 obj\trabajo.obj
+__end_of_init_Timer2 1E6A 0 CODE 0 text13 obj\trabajo.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __Lidloc 0 0 IDLOC 0 idloc -
-__end_of_LCD_ini 872 0 CODE 0 text11 obj\trabajo.obj
-_LCD_ini 606 0 CODE 0 text11 obj\trabajo.obj
+__end_of_LCD_ini 598 0 CODE 0 text20 obj\trabajo.obj
+_LCD_ini 404 0 CODE 0 text20 obj\trabajo.obj
 __Hstack 0 0 STACK 2 stack -
 __Lstack 0 0 STACK 2 stack -
-_main$103 42 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-___lwmod 160A 0 CODE 0 text3 obj\trabajo.obj
-_REBOTES_lectura 51 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_sprintf 240 0 CODE 0 text1 obj\trabajo.obj
-_sentido 65 0 BANK0 1 dataBANK0 obj\trabajo.obj
-?___wmul 26 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_isdigit 1296 0 CODE 0 text2 obj\trabajo.obj
-__Hcinit 9C 0 CODE 0 cinit -
-__Lcinit 26 0 CODE 0 cinit -
-___lwdiv 1676 0 CODE 0 text4 obj\trabajo.obj
-_LCD_BUS_PORT_TRIS_PUNTERO 4B 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_TECLADO_dato 62 0 BANK0 1 bssBANK0 obj\trabajo.obj
+___lwmod C6A 0 CODE 0 text1 obj\trabajo.obj
+_REBOTES_lectura 31 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_sprintf 9CA 0 CODE 0 text1 obj\trabajo.obj
+_sentido 69 0 BANK0 1 dataBANK0 obj\trabajo.obj
+?___wmul 4A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_isdigit BC8 0 CODE 0 text1 obj\trabajo.obj
+__Hcinit 64 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+___lwdiv C16 0 CODE 0 text1 obj\trabajo.obj
+_LCD_BUS_PORT_TRIS_PUNTERO 27 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_TECLADO_dato 44 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __size_of_main 0 0 ABS 0 - obj\trabajo.obj
-_dpowers F40 0 STRING 0 strings obj\trabajo.obj
-_LCD_E_PORT_TRIS_PUNTERO A0 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_TECLADO_pulsado 1550 0 CODE 0 text30 obj\trabajo.obj
+_dpowers 9C 0 STRING 0 strings obj\trabajo.obj
+_LCD_E_PORT_TRIS_PUNTERO 2B 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_TECLADO_pulsado FB2 0 CODE 0 text17 obj\trabajo.obj
 __size_of_rutinaInterrupcion 0 0 ABS 0 - obj\trabajo.obj
-__end_of_esperaAlmohadillaValor 1394 0 CODE 0 text20 obj\trabajo.obj
+__end_of_esperaAlmohadillaValor 25E 0 CODE 0 text20 obj\trabajo.obj
 __size_of_init_Timer0 0 0 ABS 0 - obj\trabajo.obj
 __size_of_init_Timer1 0 0 ABS 0 - obj\trabajo.obj
 __size_of_init_Timer2 0 0 ABS 0 - obj\trabajo.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
-__pidataBANK0 11DA 0 CODE 0 idataBANK0 obj\trabajo.obj
-__end_of_isdigit 12B6 0 CODE 0 text2 obj\trabajo.obj
-__end_of_sprintf 606 0 CODE 0 text1 obj\trabajo.obj
+__pidataBANK0 0 0 CODE 0 idataBANK0 obj\trabajo.obj
+__end_of_isdigit BE4 0 CODE 0 text1 obj\trabajo.obj
+__end_of_sprintf BC8 0 CODE 0 text1 obj\trabajo.obj
 __size_of_LCD_ini 0 0 ABS 0 - obj\trabajo.obj
-_LCD_BUS_PORT_PUNTERO 49 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_LCD_BUS_PORT_PUNTERO 25 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __CFG_DEBUG$OFF 0 0 ABS 0 - obj\trabajo.obj
-clear_ram0 11FE 0 CODE 0 clrtext obj\trabajo.obj
-_LCD_mensaje_opciones_inicial 15A0 0 CODE 0 text33 obj\trabajo.obj
+clear_ram0 1E22 0 CODE 0 clrtext obj\trabajo.obj
+_LCD_mensaje_opciones_inicial 87A 0 CODE 0 text20 obj\trabajo.obj
 __size_of___lwdiv 0 0 ABS 0 - obj\trabajo.obj
-_init_librerias 132A 0 CODE 0 text9 obj\trabajo.obj
+_init_librerias 25E 0 CODE 0 text20 obj\trabajo.obj
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__pbssBANK0 44 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__pbssBANK0 20 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __size_of_init_librerias 0 0 ABS 0 - obj\trabajo.obj
-LCD_ini@config 34 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__Hpa_nodes 0 0 ABS 0 pa_nodes -
+__Lpa_nodes 0 0 ABS 0 pa_nodes -
+LCD_ini@config 58 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of_isdigit 0 0 ABS 0 - obj\trabajo.obj
-_estado10 1502 0 CODE 0 text27 obj\trabajo.obj
+_estado10 1EE4 0 CODE 0 text27 obj\trabajo.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - obj\trabajo.obj
 __size_of_estado10 0 0 ABS 0 - obj\trabajo.obj
-sprintf@flag CC 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+sprintf@flag 60 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of_estado50 0 0 ABS 0 - obj\trabajo.obj
-_estado50 18F6 0 CODE 0 text29 obj\trabajo.obj
+_estado50 15A 0 CODE 0 text29 obj\trabajo.obj
 __size_of_estado100 0 0 ABS 0 - obj\trabajo.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 obj\trabajo.obj
 i1___wmul@multiplier 70 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-__ptext10 1A74 0 CODE 0 text10 obj\trabajo.obj
+__ptext10 92A 0 CODE 0 text20 obj\trabajo.obj
 __size_of_esperaSegundoValor 0 0 ABS 0 - obj\trabajo.obj
-__ptext20 1354 0 CODE 0 text20 obj\trabajo.obj
-_TECLADO_banderas 60 0 BANK0 1 bssBANK0 obj\trabajo.obj
-__end_of_LCD_mensaje_opciones_inicial 160A 0 CODE 0 text33 obj\trabajo.obj
-__end_of_esperaKi 146A 0 CODE 0 text19 obj\trabajo.obj
-__end_of_esperaKp 1422 0 CODE 0 text23 obj\trabajo.obj
-__ptext11 606 0 CODE 0 text11 obj\trabajo.obj
-__ptext30 1550 0 CODE 0 text30 obj\trabajo.obj
+__ptext20 240 0 CODE 0 text20 obj\trabajo.obj
+__end_of_LCD_mensaje_opciones_inicial 8A4 0 CODE 0 text20 obj\trabajo.obj
+__end_of_esperaKi 1FC 0 CODE 0 text19 obj\trabajo.obj
+__end_of_esperaKp 1EAE 0 CODE 0 text23 obj\trabajo.obj
+__ptext11 404 0 CODE 0 text20 obj\trabajo.obj
+__ptext30 FB2 0 CODE 0 text17 obj\trabajo.obj
 __size_of_LCD_mensaje_opciones_inicial 0 0 ABS 0 - obj\trabajo.obj
-__ptext21 872 0 CODE 0 text21 obj\trabajo.obj
-_TECLADO_PORT_FIL_PUNTERO 53 0 BANK0 1 bssBANK0 obj\trabajo.obj
-__ptext12 1EB0 0 CODE 0 text12 obj\trabajo.obj
-__ptext31 146A 0 CODE 0 text31 obj\trabajo.obj
-__ptext22 A40 0 CODE 0 text22 obj\trabajo.obj
-__ptext13 1302 0 CODE 0 text13 obj\trabajo.obj
-__ptext32 D8C 0 CODE 0 text32 obj\trabajo.obj
-__ptext23 13DA 0 CODE 0 text23 obj\trabajo.obj
-sprintf@prec CB 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+__ptext21 60E 0 CODE 0 text20 obj\trabajo.obj
+_TECLADO_PORT_FIL_PUNTERO 33 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__ptext12 73A 0 CODE 0 text20 obj\trabajo.obj
+__ptext31 BE4 0 CODE 0 text1 obj\trabajo.obj
+__ptext22 6A4 0 CODE 0 text20 obj\trabajo.obj
+__ptext13 1E4C 0 CODE 0 text13 obj\trabajo.obj
+__ptext32 E82 0 CODE 0 text18 obj\trabajo.obj
+__ptext23 1E8A 0 CODE 0 text23 obj\trabajo.obj
+sprintf@prec 5F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
-__ptext14 1276 0 CODE 0 text14 obj\trabajo.obj
-__ptext33 15A0 0 CODE 0 text33 obj\trabajo.obj
-__pidataBANK1 1F4 0 CODE 0 idataBANK1 obj\trabajo.obj
-_init_Timer0 120E 0 CODE 0 text15 obj\trabajo.obj
+__ptext14 1E32 0 CODE 0 text14 obj\trabajo.obj
+__ptext33 87A 0 CODE 0 text20 obj\trabajo.obj
+__pidataBANK1 0 0 CODE 0 idataBANK1 obj\trabajo.obj
+_init_Timer0 1E14 0 CODE 0 text15 obj\trabajo.obj
 __size_of_espera01Almohadilla 0 0 ABS 0 - obj\trabajo.obj
-__ptext24 1798 0 CODE 0 text24 obj\trabajo.obj
-_ADC_resultado 47 0 BANK0 1 bssBANK0 obj\trabajo.obj
-__ptext15 120E 0 CODE 0 text15 obj\trabajo.obj
-__ptext34 1844 0 CODE 0 text34 obj\trabajo.obj
-__ptext25 C0E 0 CODE 0 text25 obj\trabajo.obj
-__ptext16 1256 0 CODE 0 text16 obj\trabajo.obj
-__ptext35 1D78 0 CODE 0 text35 obj\trabajo.obj
-__ptext26 16F6 0 CODE 0 text26 obj\trabajo.obj
+__ptext24 276 0 CODE 0 text20 obj\trabajo.obj
+_ADC_resultado 23 0 BANK0 1 bssBANK0 obj\trabajo.obj
+__ptext15 1E14 0 CODE 0 text15 obj\trabajo.obj
+__ptext34 336 0 CODE 0 text20 obj\trabajo.obj
+__ptext25 598 0 CODE 0 text20 obj\trabajo.obj
+__ptext16 FE8 0 CODE 0 text16 obj\trabajo.obj
+__ptext35 390 0 CODE 0 text20 obj\trabajo.obj
+__ptext26 2E8 0 CODE 0 text20 obj\trabajo.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - obj\trabajo.obj
-__ptext17 1222 0 CODE 0 text17 obj\trabajo.obj
-__ptext36 19A8 0 CODE 0 text36 obj\trabajo.obj
-__end_of___lwmod 1676 0 CODE 0 text3 obj\trabajo.obj
-__ptext27 1502 0 CODE 0 text27 obj\trabajo.obj
-___lwmod@divisor 2E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-__ptext18 12B6 0 CODE 0 text18 obj\trabajo.obj
-__ptext37 1B5C 0 CODE 0 text37 obj\trabajo.obj
+__ptext17 FA2 0 CODE 0 text17 obj\trabajo.obj
+__ptext36 7E8 0 CODE 0 text20 obj\trabajo.obj
+__end_of___lwmod CB2 0 CODE 0 text1 obj\trabajo.obj
+__ptext27 1EE4 0 CODE 0 text27 obj\trabajo.obj
+___lwmod@divisor 51 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__ptext18 E6A 0 CODE 0 text18 obj\trabajo.obj
+__ptext37 CBE 0 CODE 0 text37 obj\trabajo.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - obj\trabajo.obj
-__ptext28 14B4 0 CODE 0 text28 obj\trabajo.obj
-__ptext19 1422 0 CODE 0 text19 obj\trabajo.obj
-__ptext38 1C5A 0 CODE 0 text38 obj\trabajo.obj
-__ptext29 18F6 0 CODE 0 text29 obj\trabajo.obj
-__ptext39 1394 0 CODE 0 text39 obj\trabajo.obj
-TECLADO_leer@i 28 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-__Hend_init 26 0 CODE 0 end_init -
-__Lend_init 22 0 CODE 0 end_init -
-_LCD_var_cursor 5D 0 BANK0 1 bssBANK0 obj\trabajo.obj
-_init_Timer1 1276 0 CODE 0 text14 obj\trabajo.obj
-_init_ADC 1256 0 CODE 0 text16 obj\trabajo.obj
+__ptext28 1EAE 0 CODE 0 text28 obj\trabajo.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__ptext19 1D8 0 CODE 0 text19 obj\trabajo.obj
+__ptext38 D62 0 CODE 0 text37 obj\trabajo.obj
+__pbssCOMMON 7C 0 COMMON 1 bssCOMMON obj\trabajo.obj
+__ptext29 15A 0 CODE 0 text29 obj\trabajo.obj
+__ptext39 E38 0 CODE 0 text37 obj\trabajo.obj
+TECLADO_leer@i 4C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 1E 0 CODE 0 end_init -
+_LCD_var_cursor 40 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_init_Timer1 1E32 0 CODE 0 text14 obj\trabajo.obj
+_init_ADC FE8 0 CODE 0 text16 obj\trabajo.obj
 __end_of__fptable 240 0 CODE 0 functab obj\trabajo.obj
-___lwdiv@divisor 26 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_LCD_E_PORT_PUNTERO 4D 0 BANK0 1 bssBANK0 obj\trabajo.obj
+___lwdiv@divisor 4A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_LCD_E_PORT_PUNTERO 29 0 BANK0 1 bssBANK0 obj\trabajo.obj
 i1___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-TECLADO_leer@bit_a_testear 29 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+TECLADO_leer@bit_a_testear 4D 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of___wmul 0 0 ABS 0 - obj\trabajo.obj
 _GO_nDONE FA 0 ABS 0 - obj\trabajo.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of_estado50 19A8 0 CODE 0 text29 obj\trabajo.obj
-_TECLADO_PORT_COL_PUNTERO A4 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_esperaPrimeraTecla 16F6 0 CODE 0 text26 obj\trabajo.obj
-__end_of_LCD_enciende 2000 0 CODE 0 text12 obj\trabajo.obj
-_init_Timer2 1302 0 CODE 0 text13 obj\trabajo.obj
+__end_of_estado50 1AE 0 CODE 0 text29 obj\trabajo.obj
+_TECLADO_PORT_COL_PUNTERO A0 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_esperaPrimeraTecla 2E8 0 CODE 0 text20 obj\trabajo.obj
+__end_of_LCD_enciende 7E8 0 CODE 0 text20 obj\trabajo.obj
+_init_Timer2 1E4C 0 CODE 0 text13 obj\trabajo.obj
 __size_of_esperaPrimeraTecla 0 0 ABS 0 - obj\trabajo.obj
 __size_of_esperaAlmohadillaValor 0 0 ABS 0 - obj\trabajo.obj
-__stringdata F54 0 STRING 0 strings obj\trabajo.obj
-__end_of_TECLADO_ini 1B5C 0 CODE 0 text10 obj\trabajo.obj
+__stringdata B0 0 STRING 0 strings obj\trabajo.obj
+__end_of_TECLADO_ini 9CA 0 CODE 0 text20 obj\trabajo.obj
 __size_of_init_registros 0 0 ABS 0 - obj\trabajo.obj
 __size_ofi1___wmul 0 0 ABS 0 - obj\trabajo.obj
 intlevel0 200 0 CODE 0 functab obj\startup.obj
-TECLADO_ini@config 2A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_init_procesoHisteresis 123C 0 CODE 0 text8 obj\trabajo.obj
+TECLADO_ini@config 4E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_init_procesoHisteresis 1E08 0 CODE 0 text8 obj\trabajo.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - obj\trabajo.obj
 intlevel1 200 0 CODE 0 functab obj\startup.obj
 intlevel2 200 0 CODE 0 functab obj\startup.obj
 __size_of_LCD_mensaje_opciones2 0 0 ABS 0 - obj\trabajo.obj
-_LCD_mensaje_opciones2 1844 0 CODE 0 text34 obj\trabajo.obj
+_LCD_mensaje_opciones2 336 0 CODE 0 text20 obj\trabajo.obj
 intlevel3 200 0 CODE 0 functab obj\startup.obj
-_cuenta_ints_T0 AA 0 BANK1 1 bssBANK1 obj\trabajo.obj
-_valor_TMR1 B4 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_cuenta_ints_T0 A6 0 BANK1 1 bssBANK1 obj\trabajo.obj
+_valor_TMR1 3B 0 BANK0 1 bssBANK0 obj\trabajo.obj
 intlevel4 200 0 CODE 0 functab obj\startup.obj
 intlevel5 200 0 CODE 0 functab obj\startup.obj
-__end_of_TECLADO_leer F08 0 CODE 0 text32 obj\trabajo.obj
-_salidaPI 55 0 BANK0 1 bssBANK0 obj\trabajo.obj
-__end_of_espera01Almohadilla 1844 0 CODE 0 text24 obj\trabajo.obj
+__end_of_TECLADO_leer F88 0 CODE 0 text18 obj\trabajo.obj
+_salidaPI 7C 0 COMMON 1 bssCOMMON obj\trabajo.obj
+__end_ofPL2 8B4 0 CODE 0 text20 obj\trabajo.obj
+__end_of_espera01Almohadilla 2E8 0 CODE 0 text20 obj\trabajo.obj
 __size_of___lwmod 0 0 ABS 0 - obj\trabajo.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON obj\trabajo.obj
-__end_of___wmul 14B4 0 CODE 0 text31 obj\trabajo.obj
+__end_of___wmul C16 0 CODE 0 text1 obj\trabajo.obj
 __CFG_CPD$OFF 0 0 ABS 0 - obj\trabajo.obj
-start_initialization 26 0 CODE 0 cinit obj\trabajo.obj
-___lwdiv@quotient 2C 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_isdigit$639 26 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_TECLADO_ini 1A74 0 CODE 0 text10 obj\trabajo.obj
+start_initialization 22 0 CODE 0 cinit obj\trabajo.obj
+___lwdiv@quotient 4F 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_isdigit$639 4A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+_TECLADO_ini 92A 0 CODE 0 text20 obj\trabajo.obj
+__end_ofPL10 1C4 0 CODE 0 text29 obj\trabajo.obj
+__end_ofPL4 8C8 0 CODE 0 text20 obj\trabajo.obj
 __Hmaintext 0 0 ABS 0 maintext -
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_IESO$OFF 0 0 ABS 0 - obj\trabajo.obj
-__pmaintext 9C 0 CODE 0 maintext obj\trabajo.obj
-__end_of_init_procesoSecuencia 11F0 0 CODE 0 text7 obj\trabajo.obj
+__pmaintext 1F1A 0 CODE 0 maintext obj\trabajo.obj
+__end_of_init_procesoSecuencia 1DFE 0 CODE 0 text7 obj\trabajo.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - obj\trabajo.obj
-__end_of_init_procesoHisteresis 1256 0 CODE 0 text8 obj\trabajo.obj
-_LCD_mensaje_opciones2$188 36 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_esperaPrimeraTecla$195 3A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_of_init_procesoHisteresis 1E14 0 CODE 0 text8 obj\trabajo.obj
 __size_of_sprintf 0 0 ABS 0 - obj\trabajo.obj
+__end_ofPL20 912 0 CODE 0 text20 obj\trabajo.obj
 __CFG_FOSC$INTOSCIO 0 0 ABS 0 - obj\trabajo.obj
-__end_of_esperaSegundoValor C0E 0 CODE 0 text22 obj\trabajo.obj
+__end_of_esperaSegundoValor 73A 0 CODE 0 text20 obj\trabajo.obj
 __size_of__fptable 0 0 ABS 0 - obj\trabajo.obj
-__initialization 26 0 CODE 0 cinit obj\trabajo.obj
+__initialization 22 0 CODE 0 cinit obj\trabajo.obj
 __size_of_esperaTercerValor 0 0 ABS 0 - obj\trabajo.obj
 __size_of_esperaPrimerValor 0 0 ABS 0 - obj\trabajo.obj
-__stringbase F26 0 STRING 0 strings obj\trabajo.obj
+__stringbase 82 0 STRING 0 strings obj\trabajo.obj
 __size_of_TECLADO_ini 0 0 ABS 0 - obj\trabajo.obj
-LCD_ini@RS_PIN 2E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-_rutinaInterrupcion 1B5C 0 CODE 0 text37 obj\trabajo.obj
-___lwmod@dividend 30 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-sprintf@_val CD 0 BANK1 1 cstackBANK1 obj\trabajo.obj
-___wmul@product 2A 0 BANK0 1 cstackBANK0 obj\trabajo.obj
-___lwmod@counter 33 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+LCD_ini@RS_PIN 52 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+__end_ofPL6 FA2 0 CODE 0 text18 obj\trabajo.obj
+_rutinaInterrupcion CBE 0 CODE 0 text37 obj\trabajo.obj
+___lwmod@dividend 53 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+sprintf@_val 61 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+___wmul@product 4E 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+___lwmod@counter 55 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __CFG_CP$OFF 0 0 ABS 0 - obj\trabajo.obj
-_LCD_envia_4bits 19A8 0 CODE 0 text36 obj\trabajo.obj
-_LCD_RS_PORT_PUNTERO 4F 0 BANK0 1 bssBANK0 obj\trabajo.obj
+_LCD_envia_4bits 7E8 0 CODE 0 text20 obj\trabajo.obj
+_LCD_RS_PORT_PUNTERO 2D 0 BANK0 1 bssBANK0 obj\trabajo.obj
 __CFG_LVP$OFF 0 0 ABS 0 - obj\trabajo.obj
-sprintf@c D4 0 BANK1 1 cstackBANK1 obj\trabajo.obj
+sprintf@c 68 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 __size_of_init_procesoTeclado 0 0 ABS 0 - obj\trabajo.obj
-isdigit@c 27 0 BANK0 1 cstackBANK0 obj\trabajo.obj
+isdigit@c 4B 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1182,45 +1177,23 @@ isdigit@c 27 0 BANK0 1 cstackBANK0 obj\trabajo.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 2 2
-intentry 0 4 8 FC 2
-functab 0 100 200 684 2
+intentry 0 4 8 2E 2
+functab 0 100 200 700 2
 config 0 2007 400E 2 2
 cstackCOMMON 1 70 70 E 1
-bssBANK1 1 A0 A0 3B 1
-cstackBANK0 1 20 20 49 1
-text12 0 F58 1EB0 A8 2
-text35 0 EBC 1D78 9C 2
-text38 0 E2D 1C5A 8F 2
-text37 0 DAE 1B5C 7F 2
-strings 0 784 F08 7B 2
-text10 0 D3A 1A74 74 2
-text36 0 CD4 19A8 66 2
-text29 0 C7B 18F6 59 2
-text34 0 C22 1844 59 2
-text24 0 BCC 1798 56 2
-text26 0 B7B 16F6 51 2
-text4 0 B3B 1676 40 2
-text3 0 B05 160A 36 2
-text33 0 AD0 15A0 35 2
-text30 0 AA8 1550 28 2
-text27 0 A81 1502 27 2
-text28 0 A5A 14B4 27 2
-text31 0 A35 146A 25 2
-text19 0 A11 1422 24 2
-text23 0 9ED 13DA 24 2
-text39 0 9CA 1394 23 2
-text20 0 9AA 1354 20 2
-text9 0 995 132A 15 2
-text13 0 981 1302 14 2
-text5 0 96E 12DC 13 2
-text18 0 95B 12B6 13 2
-text2 0 94B 1296 10 2
-text14 0 93B 1276 10 2
-text16 0 92B 1256 10 2
-text8 0 91E 123C D 2
-text17 0 911 1222 D 2
-text15 0 907 120E A 2
-clrtext 0 8FF 11FE 8 2
-text6 0 8F8 11F0 7 2
-text7 0 8F1 11E2 7 2
-idataBANK0 0 8ED 11DA 4 2
+bssBANK0 1 20 20 4D 1
+bssBANK1 1 A0 A0 27 1
+strings 0 32 64 7B 2
+maintext 0 F8D 1F1A 73 2
+text29 0 AD 15A 51 2
+text27 0 F72 1EE4 1B 2
+text28 0 F57 1EAE 1B 2
+text23 0 F45 1E8A 12 2
+text5 0 F35 1E6A 10 2
+text13 0 F26 1E4C F 2
+text14 0 F19 1E32 D 2
+clrtext 0 F11 1E22 8 2
+text15 0 F0A 1E14 7 2
+text8 0 F04 1E08 6 2
+text6 0 EFF 1DFE 5 2
+text7 0 EFC 1DF8 3 2

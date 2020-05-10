@@ -14,7 +14,7 @@ void esperaTercerValor(void);
 void esperaAlmohadillaValor(void);
 void espera01Almohadilla(void);
 void esperaKp(void);
-void esperaKi(void);
+void esperaKi(void); 
 
 //==================================
 //Variables globales

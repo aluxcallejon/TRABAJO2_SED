@@ -57,7 +57,7 @@ void init_librerias(void);
 // M�dulo principal (bucle infinito)
 // *******************************************
 void main(void)
-{
+{   
     //-----------------
     // Inicializaciones
     //-----------------

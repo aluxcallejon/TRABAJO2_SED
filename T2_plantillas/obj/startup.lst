@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.31 build 56723 
-                                                                                                           Sun May 10 18:10:20 2020
+                                                                                                           Sun May 10 18:31:44 2020
 
 
      1                           
@@ -71,15 +71,15 @@ Microchip Technology PIC Macro Assembler V1.31 build 56723
     65                           	global start
     66                           
     67                           ; jump to start
-    68  0000  118A  2811         	goto	start & 0x7FF | (reset_vec & not 0x7FF)
+    68  0000  118A  280F         	goto	start & 0x7FF | (reset_vec & not 0x7FF)
     69                           
     70                           
     71                           
     72                           	psect	init
-    73  0011                     start
+    73  000F                     start
     74                           	psect	end_init
     75                           	global start_initialization
-    76  0011  118A  2813         	ljmp start_initialization	;jump to C runtime clear & initialization
+    76  000F  118A  2811         	ljmp start_initialization	;jump to C runtime clear & initialization
     77                           
     78                           ; Config register CONFIG1 @ 0x2007
     79                           ;	Brown-out Reset Enable bit
@@ -122,9 +122,9 @@ Microchip Technology PIC Macro Assembler V1.31 build 56723
 
 
 Microchip Technology PIC Macro Assembler V1.31 build 56723 
-Symbol Table                                                                                               Sun May 10 18:10:20 2020
+Symbol Table                                                                                               Sun May 10 18:31:44 2020
 
-               ___sp 0000                 _main 004E                 start 0011               stackhi 0000  
-             stacklo 0000  start_initialization 0013             ___int_sp 0000             intlevel0 0100  
+               ___sp 0000                 _main 0F8D                 start 000F               stackhi 0000  
+             stacklo 0000  start_initialization 0011             ___int_sp 0000             intlevel0 0100  
            intlevel1 0100             intlevel2 0100             intlevel3 0100             intlevel4 0100  
            intlevel5 0100             reset_vec 0000  

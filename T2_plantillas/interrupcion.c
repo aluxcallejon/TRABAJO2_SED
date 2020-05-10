@@ -20,7 +20,7 @@ extern unsigned short int tiempo_1s;
 extern unsigned short int num_pulsos_ref;
 extern unsigned int valor_TMR1;
 
-// ==================================
+// ================================== 
 // control_PI
 // ==================================
 short int control_PI(int error)
