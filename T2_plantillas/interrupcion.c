@@ -11,7 +11,8 @@ unsigned short int Ton=0;                 // Valor de salida del PI (salida ya d
 unsigned short int max_duty;              // Valor de saturaci�n del Duty Cycle
 unsigned  short int cuenta_ints_T0=0;   // Contador de interrupciones para temporizar 0,25 seg con el Timer 0
 unsigned  short int cuenta_1s=0;        // Contador de interrupciones para temporizar 1 seg con el Timer 0
-
+unsigned  short int Kp = 4;             //Convertimos a globales las constantes de este fichero
+unsigned  short int Ki = 1;             //
 //==================================
 //Variables definidas en otros archivos
 //==================================
@@ -24,8 +25,8 @@ extern unsigned int valor_TMR1;
 // ==================================
 short int control_PI(int error)
 {
-    #define Kp 4                          // Definici�n de constantes
-    #define Ki 1
+    //#define Kp 4                          // Definici�n de constantes
+    //#define Ki 1
 
     salidaPI=salidaPI+Kp*(error-errorAnt)+Ki*error;     // Expresi�n del PI en valores multiplicados por 16
     errorAnt=error;                                     // Se guarda el valor anterior del error

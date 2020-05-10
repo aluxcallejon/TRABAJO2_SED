@@ -1,25 +1,25 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2361 d:\sed_tools\xc8\include\pic16f88.h
+"2361 c:\sed_tools\xc8\include\pic16f88.h
 [v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
 "2359
 [v _TMR0IE `Vb ~T0 @X0 0 e@93 ]
 "53
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"20 interrupcion.c
+"21 interrupcion.c
 [v _valor_TMR1 `ui ~T0 @X0 0 e ]
-"464 d:\sed_tools\xc8\include\pic16f88.h
+"464 c:\sed_tools\xc8\include\pic16f88.h
 [v _TMR1 `Vus ~T0 @X0 0 e@14 ]
-"19 interrupcion.c
+"20 interrupcion.c
 [v _num_pulsos_ref `us ~T0 @X0 0 e ]
-"710 d:\sed_tools\xc8\include\pic16f88.h
+"710 c:\sed_tools\xc8\include\pic16f88.h
 [v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
-"18 interrupcion.c
+"19 interrupcion.c
 [v _tiempo_1s `us ~T0 @X0 0 e ]
-"299 d:\sed_tools\xc8\include\pic16f88.h
+"299 c:\sed_tools\xc8\include\pic16f88.h
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 "2281
 [v _RBIF `Vb ~T0 @X0 0 e@88 ]
-"49 d:\sed_tools\xc8\include\pic16f88.h
+"49 c:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -154,96 +154,106 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _cuenta_1s
 -> -> 0 `i `us
 ]
-"25
-[v _control_PI `(s ~T0 @X0 1 ef1`i ]
+"14
+[v _Kp `us ~T0 @X0 1 e ]
+[i _Kp
+-> -> 4 `i `us
+]
+"15
+[v _Ki `us ~T0 @X0 1 e ]
+[i _Ki
+-> -> 1 `i `us
+]
 "26
+[v _control_PI `(s ~T0 @X0 1 ef1`i ]
+"27
 {
 [e :U _control_PI ]
 [v _error `i ~T0 @X0 1 r1 ]
 [f ]
-"30
-[e = _salidaPI + + _salidaPI * -> 4 `i - _error _errorAnt * -> 1 `i _error ]
 "31
-[e = _errorAnt _error ]
+[e = _salidaPI -> + + -> _salidaPI `ui * -> _Kp `ui -> - _error _errorAnt `ui * -> _Ki `ui -> _error `ui `i ]
 "32
-[e $ ! > _salidaPI << -> _max_duty `i -> 4 `i 94  ]
+[e = _errorAnt _error ]
 "33
+[e $ ! > _salidaPI << -> _max_duty `i -> 4 `i 94  ]
+"34
 [e = _salidaPI << -> _max_duty `i -> 4 `i ]
 [e :U 94 ]
-"34
-[e $ ! < _salidaPI -> 0 `i 95  ]
 "35
+[e $ ! < _salidaPI -> 0 `i 95  ]
+"36
 [e = _salidaPI -> 0 `i ]
 [e :U 95 ]
-"36
+"37
 [e ) -> >> _salidaPI -> 4 `i `s ]
 [e $UE 93  ]
-"37
+"38
 [e :UE 93 ]
 }
-[v F1117 `(v ~T0 @X0 1 tf ]
-"42
-[v _rutinaInterrupcion `IF1117 ~T0 @X0 1 s ]
+[v F1119 `(v ~T0 @X0 1 tf ]
 "43
+[v _rutinaInterrupcion `IF1119 ~T0 @X0 1 s ]
+"44
 {
 [e :U _rutinaInterrupcion ]
 [f ]
-"44
-[e $ ! && _TMR0IF _TMR0IE 97  ]
 "45
-{
+[e $ ! && _TMR0IF _TMR0IE 97  ]
 "46
-[e = _TMR0IF -> -> 0 `i `b ]
-"47
-[e = _TMR0 -> -> 12 `i `uc ]
-"49
-[e ++ _cuenta_ints_T0 -> -> 1 `i `us ]
-"50
-[e ++ _cuenta_1s -> -> 1 `i `us ]
-"52
-[e $ ! == -> _cuenta_ints_T0 `ui -> -> 4 `i `ui 98  ]
-"53
 {
+"47
+[e = _TMR0IF -> -> 0 `i `b ]
+"48
+[e = _TMR0 -> -> 12 `i `uc ]
+"50
+[e ++ _cuenta_ints_T0 -> -> 1 `i `us ]
+"51
+[e ++ _cuenta_1s -> -> 1 `i `us ]
+"53
+[e $ ! == -> _cuenta_ints_T0 `ui -> -> 4 `i `ui 98  ]
 "54
-[e = _cuenta_ints_T0 -> -> 0 `i `us ]
+{
 "55
-[e = _valor_TMR1 -> _TMR1 `ui ]
+[e = _cuenta_ints_T0 -> -> 0 `i `us ]
 "56
+[e = _valor_TMR1 -> _TMR1 `ui ]
+"57
 [e = _TMR1 -> -> 0 `i `us ]
-"59
-[e = _error -> - -> _num_pulsos_ref `ui _valor_TMR1 `i ]
 "60
-[e = _Ton -> ( _control_PI (1 _error `us ]
+[e = _error -> - -> _num_pulsos_ref `ui _valor_TMR1 `i ]
 "61
-[e = _CCPR1L -> _Ton `uc ]
+[e = _Ton -> ( _control_PI (1 _error `us ]
 "62
+[e = _CCPR1L -> _Ton `uc ]
+"63
 }
 [e :U 98 ]
-"64
-[e $ ! == -> _cuenta_1s `ui -> -> 16 `i `ui 99  ]
 "65
-{
+[e $ ! == -> _cuenta_1s `ui -> -> 16 `i `ui 99  ]
 "66
-[e = _cuenta_1s -> -> 0 `i `us ]
+{
 "67
-[e = _tiempo_1s -> -> 1 `i `us ]
+[e = _cuenta_1s -> -> 0 `i `us ]
 "68
-}
-[e :U 99 ]
+[e = _tiempo_1s -> -> 1 `i `us ]
 "69
 }
+[e :U 99 ]
+"70
+}
 [e $U 100  ]
-"71
+"72
 [e :U 97 ]
-"73
-{
 "74
-[e = _INTCON -> -> 0 `i `uc ]
+{
 "75
-[e = _RBIF -> -> 0 `i `b ]
+[e = _INTCON -> -> 0 `i `uc ]
 "76
+[e = _RBIF -> -> 0 `i `b ]
+"77
 }
 [e :U 100 ]
-"77
+"78
 [e :UE 96 ]
 }

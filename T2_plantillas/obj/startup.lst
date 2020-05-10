@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.31 build 56723 
-                                                                                                           Sat May 09 20:54:12 2020
+                                                                                                           Sun May 10 18:10:20 2020
 
 
      1                           
@@ -122,9 +122,9 @@ Microchip Technology PIC Macro Assembler V1.31 build 56723
 
 
 Microchip Technology PIC Macro Assembler V1.31 build 56723 
-Symbol Table                                                                                               Sat May 09 20:54:12 2020
+Symbol Table                                                                                               Sun May 10 18:10:20 2020
 
-               ___sp 0000                 _main 0F66                 start 0011               stackhi 0000  
+               ___sp 0000                 _main 004E                 start 0011               stackhi 0000  
              stacklo 0000  start_initialization 0013             ___int_sp 0000             intlevel0 0100  
            intlevel1 0100             intlevel2 0100             intlevel3 0100             intlevel4 0100  
            intlevel5 0100             reset_vec 0000  

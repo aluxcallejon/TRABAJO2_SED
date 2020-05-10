@@ -1,22 +1,24 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F1526 `(v ~T0 @X0 0 tf ]
-"30 procesoSecuencia.c
-[v _estado `*F1526 ~T0 @X0 -> 0 `x e ]
+[v F1530 `(v ~T0 @X0 0 tf ]
+"32 procesoSecuencia.c
+[v _estado `*F1530 ~T0 @X0 -> 0 `x e ]
 "10
 [v _esperaPrimeraTecla `(v ~T0 @X0 0 ef ]
 "72 LCD.h
 [v _LCD_envia_4bits `(v ~T0 @X0 0 ef1`uc ]
 "75
 [v _LCD_enviaCadena `(v ~T0 @X0 0 ef1`*Cuc ]
-"29 procesoSecuencia.c
+"31 procesoSecuencia.c
 [v _nuevaTecla `uc ~T0 @X0 0 e ]
-"28
+"30
 [v _tecla `uc ~T0 @X0 0 e ]
 "11
 [v _esperaPrimerValor `(v ~T0 @X0 0 ef ]
 "15
 [v _espera01Almohadilla `(v ~T0 @X0 0 ef ]
-"722 d:\sed_tools\xc8\include\pic16f88.h
+"16
+[v _esperaKp `(v ~T0 @X0 0 ef ]
+"722 c:\sed_tools\xc8\include\pic16f88.h
 [v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
 "2269
 [v _RB3 `Vb ~T0 @X0 0 e@51 ]
@@ -26,13 +28,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RB5 `Vb ~T0 @X0 0 e@53 ]
 "12 procesoSecuencia.c
 [v _esperaSegundoValor `(v ~T0 @X0 0 ef ]
-"27
+"29
 [v _num_pulsos_ref `us ~T0 @X0 0 e ]
 "13
 [v _esperaTercerValor `(v ~T0 @X0 0 ef ]
 "14
 [v _esperaAlmohadillaValor `(v ~T0 @X0 0 ef ]
-"49 d:\sed_tools\xc8\include\pic16f88.h
+"33
+[v _Kp `us ~T0 @X0 0 e ]
+"17
+[v _esperaKi `(v ~T0 @X0 0 ef ]
+"34
+[v _Ki `us ~T0 @X0 0 e ]
+"49 c:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
@@ -160,36 +168,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LCD_RS_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
 "158
 [v _LCD_E_PORT_TRIS_PUNTERO `*Vuc ~T0 @X0 1 e ]
-"20 procesoSecuencia.c
+"22 procesoSecuencia.c
 [v _valor `i ~T0 @X0 1 e ]
-"21
+"23
 [v _start `us ~T0 @X0 1 e ]
 [i _start
 -> -> 1 `i `us
 ]
-"22
+"24
 [v _sentido `us ~T0 @X0 1 e ]
 [i _sentido
 -> -> 1 `i `us
 ]
-"35
+"39
 [v _init_procesoSecuencia `(v ~T0 @X0 1 ef ]
-"36
+"40
 {
 [e :U _init_procesoSecuencia ]
 [f ]
-"37
+"41
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
-"38
+"42
 [e :UE 121 ]
 }
-"43
+"47
 [v _LCD_mensaje_opciones_inicial `(v ~T0 @X0 1 ef ]
-"44
+"48
 {
 [e :U _LCD_mensaje_opciones_inicial ]
 [f ]
-"45
+"49
 [e :U 125 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
@@ -206,18 +214,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 127 ]
 }
 [e :U 124 ]
-"46
+"50
 [e ( _LCD_enviaCadena (1 :s 1C ]
-"47
+"51
 [e :UE 122 ]
 }
-"49
+"53
 [v _LCD_mensaje_opciones2 `(v ~T0 @X0 1 ef ]
-"50
+"54
 {
 [e :U _LCD_mensaje_opciones2 ]
 [f ]
-"51
+"55
 [e :U 135 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
@@ -234,46 +242,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 137 ]
 }
 [e :U 134 ]
-"52
+"56
 [e $ ! == -> _start `ui -> -> 1 `i `ui 142  ]
-"53
+"57
 [e ( _LCD_enviaCadena (1 :s 2C ]
 [e $U 143  ]
-"54
+"58
 [e :U 142 ]
-"55
+"59
 [e ( _LCD_enviaCadena (1 :s 3C ]
 [e :U 143 ]
-"56
+"60
 [e $ ! == -> _sentido `ui -> -> 1 `i `ui 144  ]
-"57
+"61
 [e ( _LCD_enviaCadena (1 :s 4C ]
 [e $U 145  ]
-"58
+"62
 [e :U 144 ]
-"59
+{
+"63
 [e ( _LCD_enviaCadena (1 :s 5C ]
+"64
+}
 [e :U 145 ]
-"60
+"65
+[e ( _LCD_enviaCadena (1 :s 6C ]
+"66
 [e :UE 132 ]
 }
-"65
+"71
 [v _esperaPrimeraTecla `(v ~T0 @X0 1 ef ]
-"66
+"72
 {
 [e :U _esperaPrimeraTecla ]
 [f ]
-"67
+"73
 [e $ ! == -> _nuevaTecla `i -> 1 `i 147  ]
-"68
+"74
 {
-"69
+"75
 [e = _nuevaTecla -> -> 0 `i `uc ]
-"70
+"76
 [e $ ! == -> _tecla `i -> 10 `i 148  ]
-"71
+"77
 {
-"72
+"78
 [e :U 151 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
@@ -290,99 +303,87 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 153 ]
 }
 [e :U 150 ]
-"73
-[e ( _LCD_enviaCadena (1 :s 6C ]
-"74
+"79
+[e ( _LCD_enviaCadena (1 :s 7C ]
+"80
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimerValor ]
-"75
+"81
 }
 [e $U 158  ]
-"76
+"82
 [e :U 148 ]
 [e $ ! == -> _tecla `i -> 11 `i 159  ]
-"77
+"83
 {
-"78
+"84
 [e ( _LCD_mensaje_opciones2 ..  ]
-"79
+"85
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _espera01Almohadilla ]
-"80
+"86
 }
 [e :U 159 ]
-"81
+"87
 [e :U 158 ]
 }
 [e :U 147 ]
-"82
+"88
 [e :UE 146 ]
 }
-"86
+"92
 [v _espera01Almohadilla `(v ~T0 @X0 1 ef ]
-"87
+"93
 {
 [e :U _espera01Almohadilla ]
 [f ]
-"88
-[e $ ! == -> _nuevaTecla `i -> 1 `i 161  ]
-"89
-{
-"90
-[e = _nuevaTecla -> -> 0 `i `uc ]
-"91
-[e $ ! == -> _tecla `i -> 0 `i 162  ]
-"92
-{
-"93
-[e = _start -> -> ! != -> _start `ui -> -> -> 0 `i `us `ui `i `us ]
 "94
-[e ( _LCD_mensaje_opciones2 ..  ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 161  ]
 "95
+{
+"96
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"97
+[e $ ! == -> _tecla `i -> 0 `i 162  ]
+"98
+{
+"99
+[e = _start -> -> ! != -> _start `ui -> -> -> 0 `i `us `ui `i `us ]
+"100
+[e ( _LCD_mensaje_opciones2 ..  ]
+"101
 }
 [e $U 163  ]
-"96
+"102
 [e :U 162 ]
 [e $ ! == -> _tecla `i -> 1 `i 164  ]
-"97
-{
-"98
-[e = _sentido -> -> ! != -> _sentido `ui -> -> -> 0 `i `us `ui `i `us ]
-"99
-[e ( _LCD_mensaje_opciones2 ..  ]
-"100
-}
-[e $U 165  ]
-"101
-[e :U 164 ]
-[e $ ! == -> _tecla `i -> 11 `i 166  ]
-"102
-{
 "103
-[e $ ! != -> _start `ui -> -> -> 0 `i `us `ui 167  ]
 {
+"104
+[e = _sentido -> -> ! != -> _sentido `ui -> -> -> 0 `i `us `ui `i `us ]
 "105
-[e = _CCP1CON -> -> 12 `i `uc ]
+[e ( _LCD_mensaje_opciones2 ..  ]
 "106
 }
-[e $U 168  ]
+[e $U 165  ]
 "107
-[e :U 167 ]
+[e :U 164 ]
+[e $ ! == -> _tecla `i -> 2 `i 166  ]
 "108
 {
 "109
-[e = _CCP1CON -> -> 0 `i `uc ]
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaKp ]
 "110
-[e = _RB3 -> -> 0 `i `b ]
-"111
 }
-[e :U 168 ]
+[e $U 167  ]
+"111
+[e :U 166 ]
+[e $ ! == -> _tecla `i -> 11 `i 168  ]
 "112
-[e $ ! != -> _sentido `ui -> -> -> 0 `i `us `ui 169  ]
-"113
 {
-"114
-[e = _RB4 -> -> 1 `i `b ]
+"113
+[e $ ! != -> _start `ui -> -> -> 0 `i `us `ui 169  ]
+{
 "115
-[e = _RB5 -> -> 0 `i `b ]
+[e = _CCP1CON -> -> 12 `i `uc ]
 "116
 }
 [e $U 170  ]
@@ -391,400 +392,500 @@ Version 3.2 HI-TECH Software Intermediate Code
 "118
 {
 "119
-[e = _RB4 -> -> 0 `i `b ]
+[e = _CCP1CON -> -> 0 `i `uc ]
 "120
-[e = _RB5 -> -> 1 `i `b ]
+[e = _RB3 -> -> 0 `i `b ]
 "121
 }
 [e :U 170 ]
 "122
-[e ( _LCD_mensaje_opciones_inicial ..  ]
+[e $ ! != -> _sentido `ui -> -> -> 0 `i `us `ui 171  ]
 "123
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+{
 "124
-}
-[e :U 166 ]
+[e = _RB4 -> -> 1 `i `b ]
 "125
+[e = _RB5 -> -> 0 `i `b ]
+"126
+}
+[e $U 172  ]
+"127
+[e :U 171 ]
+"128
+{
+"129
+[e = _RB4 -> -> 0 `i `b ]
+"130
+[e = _RB5 -> -> 1 `i `b ]
+"131
+}
+[e :U 172 ]
+"132
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"133
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"134
+}
+[e :U 168 ]
+"135
+[e :U 167 ]
 [e :U 165 ]
 [e :U 163 ]
 }
 [e :U 161 ]
-"126
+"136
 [e :UE 160 ]
 }
-"131
+"141
 [v _esperaPrimerValor `(v ~T0 @X0 1 ef ]
-"132
+"142
 {
 [e :U _esperaPrimerValor ]
 [f ]
-"133
-[e $ ! == -> _nuevaTecla `i -> 1 `i 172  ]
-"134
+"143
+[e $ ! == -> _nuevaTecla `i -> 1 `i 174  ]
+"144
 {
-"135
+"145
 [e = _nuevaTecla -> -> 0 `i `uc ]
-"136
-[e $ ! <= -> _tecla `i -> 9 `i 173  ]
-"137
+"146
+[e $ ! <= -> _tecla `i -> 9 `i 175  ]
+"147
 {
-"138
+"148
 [e = _valor -> _tecla `i ]
-"139
-[e :U 176 ]
+"149
+[e :U 178 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 11 `i `uc ]
-[e :U 179 ]
+[e :U 181 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 182 ]
+[e :U 184 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
 }
-[e :U 181 ]
+[e :U 183 ]
 }
-[e :U 178 ]
+[e :U 180 ]
 }
-[e :U 175 ]
-"140
-[e :U 185 ]
+[e :U 177 ]
+"150
+[e :U 187 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
-[e :U 188 ]
+[e :U 190 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
-[e :U 187 ]
-[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 189  ]
+[e :U 189 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 191  ]
 {
-[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 190  ]
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 192  ]
 {
-[e :U 193 ]
+[e :U 195 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 196 ]
-{
-[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 199 ]
-{
-[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
 [e :U 198 ]
-}
-[e :U 195 ]
-}
-[e :U 192 ]
-}
-[e $U 200  ]
-[e :U 190 ]
-{
-[e :U 203 ]
-{
-[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 206 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 209 ]
+[e :U 201 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
-[e :U 208 ]
-}
-[e :U 205 ]
-}
-[e :U 202 ]
 }
 [e :U 200 ]
+}
+[e :U 197 ]
+}
+[e :U 194 ]
+}
+[e $U 202  ]
+[e :U 192 ]
+{
+[e :U 205 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 208 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 211 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 210 ]
+}
+[e :U 207 ]
+}
+[e :U 204 ]
+}
+[e :U 202 ]
 [e =& _LCD_var_cursor -> -> 224 `i `uc ]
 }
-[e :U 189 ]
+[e :U 191 ]
 }
-[e :U 184 ]
-"141
+[e :U 186 ]
+"151
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaSegundoValor ]
-"142
+"152
 }
-[e :U 173 ]
-"143
+[e :U 175 ]
+"153
 }
-[e :U 172 ]
-"144
-[e :UE 171 ]
+[e :U 174 ]
+"154
+[e :UE 173 ]
 }
-"149
+"159
 [v _esperaSegundoValor `(v ~T0 @X0 1 ef ]
-"150
+"160
 {
 [e :U _esperaSegundoValor ]
 [f ]
-"151
-[e $ ! == -> _nuevaTecla `i -> 1 `i 211  ]
-"152
-{
-"153
-[e = _nuevaTecla -> -> 0 `i `uc ]
-"154
-[e $ ! == -> _tecla `i -> 11 `i 212  ]
-"155
-{
-"156
-[e = _num_pulsos_ref -> _valor `us ]
-"157
-[e ( _LCD_mensaje_opciones_inicial ..  ]
-"158
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
-"159
-}
-[e $U 213  ]
-"160
-[e :U 212 ]
-[e $ ! <= -> _tecla `i -> 9 `i 214  ]
 "161
-{
+[e $ ! == -> _nuevaTecla `i -> 1 `i 213  ]
 "162
-[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+{
 "163
-[e :U 217 ]
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"164
+[e $ ! == -> _tecla `i -> 11 `i 214  ]
+"165
+{
+"166
+[e = _num_pulsos_ref -> _valor `us ]
+"167
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"168
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"169
+}
+[e $U 215  ]
+"170
+[e :U 214 ]
+[e $ ! <= -> _tecla `i -> 9 `i 216  ]
+"171
+{
+"172
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"173
+[e :U 219 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 12 `i `uc ]
-[e :U 220 ]
+[e :U 222 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 223 ]
+[e :U 225 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
 }
-[e :U 222 ]
+[e :U 224 ]
 }
-[e :U 219 ]
+[e :U 221 ]
 }
-[e :U 216 ]
-"164
-[e :U 226 ]
+[e :U 218 ]
+"174
+[e :U 228 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
-[e :U 229 ]
+[e :U 231 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
-[e :U 228 ]
-[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 230  ]
+[e :U 230 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 232  ]
 {
-[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 231  ]
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 233  ]
 {
-[e :U 234 ]
+[e :U 236 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 237 ]
-{
-[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 240 ]
-{
-[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
 [e :U 239 ]
-}
-[e :U 236 ]
-}
-[e :U 233 ]
-}
-[e $U 241  ]
-[e :U 231 ]
-{
-[e :U 244 ]
-{
-[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 247 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 250 ]
+[e :U 242 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
-[e :U 249 ]
-}
-[e :U 246 ]
-}
-[e :U 243 ]
 }
 [e :U 241 ]
+}
+[e :U 238 ]
+}
+[e :U 235 ]
+}
+[e $U 243  ]
+[e :U 233 ]
+{
+[e :U 246 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 249 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 252 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 251 ]
+}
+[e :U 248 ]
+}
+[e :U 245 ]
+}
+[e :U 243 ]
 [e =& _LCD_var_cursor -> -> 224 `i `uc ]
 }
-[e :U 230 ]
+[e :U 232 ]
 }
-[e :U 225 ]
-"165
+[e :U 227 ]
+"175
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaTercerValor ]
-"166
+"176
 }
-[e :U 214 ]
-"167
+[e :U 216 ]
+"177
+[e :U 215 ]
+}
 [e :U 213 ]
+"178
+[e :UE 212 ]
 }
-[e :U 211 ]
-"168
-[e :UE 210 ]
-}
-"173
+"183
 [v _esperaTercerValor `(v ~T0 @X0 1 ef ]
-"174
+"184
 {
 [e :U _esperaTercerValor ]
 [f ]
-"175
-[e $ ! == -> _nuevaTecla `i -> 1 `i 252  ]
-"176
-{
-"177
-[e = _nuevaTecla -> -> 0 `i `uc ]
-"178
-[e $ ! == -> _tecla `i -> 11 `i 253  ]
-"179
-{
-"180
-[e = _num_pulsos_ref -> _valor `us ]
-"181
-[e ( _LCD_mensaje_opciones_inicial ..  ]
-"182
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
-"183
-}
-[e $U 254  ]
-"184
-[e :U 253 ]
-[e $ ! <= -> _tecla `i -> 9 `i 255  ]
 "185
-{
+[e $ ! == -> _nuevaTecla `i -> 1 `i 254  ]
 "186
-[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+{
 "187
-[e :U 258 ]
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"188
+[e $ ! == -> _tecla `i -> 11 `i 255  ]
+"189
+{
+"190
+[e = _num_pulsos_ref -> _valor `us ]
+"191
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"192
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"193
+}
+[e $U 256  ]
+"194
+[e :U 255 ]
+[e $ ! <= -> _tecla `i -> 9 `i 257  ]
+"195
+{
+"196
+[e = _valor + -> _tecla `i * _valor -> 10 `i ]
+"197
+[e :U 260 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 13 `i `uc ]
-[e :U 261 ]
+[e :U 263 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 264 ]
+[e :U 266 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
 }
-[e :U 263 ]
+[e :U 265 ]
 }
-[e :U 260 ]
+[e :U 262 ]
 }
-[e :U 257 ]
-"188
-[e :U 267 ]
+[e :U 259 ]
+"198
+[e :U 269 ]
 {
 [e =| *U _LCD_RS_PORT_PUNTERO _LCD_RS ]
-[e :U 270 ]
+[e :U 272 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> + -> _tecla `i -> 48 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & + -> _tecla `i -> 48 `i -> 15 `i `uc ]
 }
-[e :U 269 ]
-[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 271  ]
+[e :U 271 ]
+[e $ ! != & -> =+ _LCD_var_cursor -> -> 1 `i `uc `i -> 16 `i -> 0 `i 273  ]
 {
-[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 272  ]
+[e $ ! == & -> _LCD_var_cursor `i -> 128 `i -> 0 `i 274  ]
 {
-[e :U 275 ]
+[e :U 277 ]
 {
 [e = _LCD_var_cursor -> | ? == -> 0 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 278 ]
-{
-[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 281 ]
-{
-[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
-[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
 [e :U 280 ]
-}
-[e :U 277 ]
-}
-[e :U 274 ]
-}
-[e $U 282  ]
-[e :U 272 ]
-{
-[e :U 285 ]
-{
-[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
-[e :U 288 ]
 {
 [e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
-[e :U 291 ]
+[e :U 283 ]
 {
 [e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
 [e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
-}
-[e :U 290 ]
-}
-[e :U 287 ]
-}
-[e :U 284 ]
 }
 [e :U 282 ]
+}
+[e :U 279 ]
+}
+[e :U 276 ]
+}
+[e $U 284  ]
+[e :U 274 ]
+{
+[e :U 287 ]
+{
+[e = _LCD_var_cursor -> | ? == -> 1 `i -> 0 `i : -> 0 `i -> 64 `i -> 0 `i `uc ]
+[e :U 290 ]
+{
+[e =& *U _LCD_RS_PORT_PUNTERO -> ~ -> _LCD_RS `i `uc ]
+[e :U 293 ]
+{
+[e ( _LCD_envia_4bits (1 -> & >> | -> _LCD_var_cursor `i -> 128 `i -> 4 `i -> 15 `i `uc ]
+[e ( _LCD_envia_4bits (1 -> & | -> _LCD_var_cursor `i -> 128 `i -> 15 `i `uc ]
+}
+[e :U 292 ]
+}
+[e :U 289 ]
+}
+[e :U 286 ]
+}
+[e :U 284 ]
 [e =& _LCD_var_cursor -> -> 224 `i `uc ]
 }
-[e :U 271 ]
+[e :U 273 ]
 }
-[e :U 266 ]
-"189
+[e :U 268 ]
+"199
 [e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaAlmohadillaValor ]
-"190
+"200
 }
-[e :U 255 ]
-"191
+[e :U 257 ]
+"201
+[e :U 256 ]
+}
 [e :U 254 ]
+"202
+[e :UE 253 ]
 }
-[e :U 252 ]
-"192
-[e :UE 251 ]
-}
-"197
+"207
 [v _esperaAlmohadillaValor `(v ~T0 @X0 1 ef ]
-"198
+"208
 {
 [e :U _esperaAlmohadillaValor ]
 [f ]
-"199
-[e $ ! == -> _nuevaTecla `i -> 1 `i 293  ]
-"200
-{
-"201
-[e = _nuevaTecla -> -> 0 `i `uc ]
-"202
-[e $ ! == -> _tecla `i -> 11 `i 294  ]
-"203
-{
-"204
-[e = _num_pulsos_ref -> _valor `us ]
-"205
-[e ( _LCD_mensaje_opciones_inicial ..  ]
-"206
-[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
-"207
-}
-[e :U 294 ]
-"208
-}
-[e :U 293 ]
 "209
-[e :UE 292 ]
+[e $ ! == -> _nuevaTecla `i -> 1 `i 295  ]
+"210
+{
+"211
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"212
+[e $ ! == -> _tecla `i -> 11 `i 296  ]
+"213
+{
+"214
+[e = _num_pulsos_ref -> _valor `us ]
+"215
+[e ( _LCD_mensaje_opciones_inicial ..  ]
+"216
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaPrimeraTecla ]
+"217
 }
-[a 6C 86 65 76 79 82 32 82 69 70 58 32 95 95 95 32 35 0 ]
+[e :U 296 ]
+"218
+}
+[e :U 295 ]
+"219
+[e :UE 294 ]
+}
+"223
+[v _esperaKp `(v ~T0 @X0 1 ef ]
+"224
+{
+[e :U _esperaKp ]
+[f ]
+"225
+[e $ ! == -> _nuevaTecla `i -> 1 `i 298  ]
+"226
+{
+"227
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"228
+[e $ ! <= -> _tecla `i -> 9 `i 299  ]
+"229
+{
+"230
+[e = _Kp -> _tecla `us ]
+"231
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaKi ]
+"232
+}
+[e $U 300  ]
+"233
+[e :U 299 ]
+"234
+{
+"235
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaKp ]
+"236
+}
+[e :U 300 ]
+"237
+}
+[e :U 298 ]
+"238
+[e :UE 297 ]
+}
+"242
+[v _esperaKi `(v ~T0 @X0 1 ef ]
+"243
+{
+[e :U _esperaKi ]
+[f ]
+"244
+[e $ ! == -> _nuevaTecla `i -> 1 `i 302  ]
+"245
+{
+"246
+[e = _nuevaTecla -> -> 0 `i `uc ]
+"247
+[e $ ! <= -> _tecla `i -> 9 `i 303  ]
+"248
+{
+"249
+[e = _Ki -> _tecla `us ]
+"250
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaAlmohadillaValor ]
+"251
+}
+[e $U 304  ]
+"252
+[e :U 303 ]
+"253
+{
+"254
+[e = *U + &U _estado * -> -> -> 1 `i `ui `ux -> -> # *U &U _estado `ui `ux &U _esperaKi ]
+"255
+}
+[e :U 304 ]
+"256
+}
+[e :U 302 ]
+"257
+[e :UE 301 ]
+}
+[a 7C 86 65 76 79 82 32 82 69 70 58 32 95 95 95 32 35 0 ]
+[a 5C 49 58 67 67 87 32 0 ]
+[a 4C 49 58 67 87 32 0 ]
 [a 2C 48 58 83 84 65 82 84 32 0 ]
-[a 3C 48 58 83 84 79 80 32 32 0 ]
-[a 5C 49 58 67 67 87 32 32 32 0 ]
-[a 4C 49 58 67 87 32 32 32 32 0 ]
+[a 3C 48 58 83 84 79 80 32 0 ]
+[a 6C 50 58 75 32 0 ]
 [a 1C 79 80 67 73 79 78 69 83 32 42 32 35 32 32 32 32 0 ]

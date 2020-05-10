@@ -13,6 +13,8 @@ void esperaSegundoValor(void);
 void esperaTercerValor(void);
 void esperaAlmohadillaValor(void);
 void espera01Almohadilla(void);
+void esperaKp(void);
+void esperaKi(void);
 
 //==================================
 //Variables globales
@@ -28,6 +30,8 @@ extern unsigned short int num_pulsos_ref;
 extern unsigned char tecla;
 extern unsigned char nuevaTecla;
 extern void (*estado[2])(void);
+extern unsigned short int Kp;
+extern unsigned short int Ki;
 
 //==================================
 //Funciones de inicializaci�n
@@ -52,11 +56,13 @@ void LCD_mensaje_opciones2(void)
     if(start==1)
         LCD_enviaCadena("0:START ");      // Muestra el mensaje START/STOP seg�n indique la variable start
     else
-        LCD_enviaCadena("0:STOP  ");
+        LCD_enviaCadena("0:STOP ");
     if(sentido==1)
-        LCD_enviaCadena("1:CW    ");      // Muestra el mensaje CW/CCW seg�n indique la variable sentido
-    else
-        LCD_enviaCadena("1:CCW   ");
+        LCD_enviaCadena("1:CW ");      // Muestra el mensaje CW/CCW seg�n indique la variable sentido
+    else{
+        LCD_enviaCadena("1:CCW ");
+      }
+    LCD_enviaCadena("2:K ");          //Mostramos por pantalla la opcion de cambiar de K
 }
 
 //==================================
@@ -97,6 +103,10 @@ void espera01Almohadilla(void)
         {
             sentido=!sentido;
             LCD_mensaje_opciones2();      // Muestra el mensaje con las opciones
+        }
+        else if(tecla==2)                 //La tecla nueva es un 2 por lo que vamos a cambiar Kp y Ki
+        {
+          estado[1] = esperaKp;           //Nos movemos al estado de espera de Kp
         }
         else if(tecla==11)                // Si la tecla es almohadilla, aplica los valores
         {
@@ -206,4 +216,42 @@ void esperaAlmohadillaValor(void)
             estado[1] = esperaPrimeraTecla;              // Siguiente estado esperaPrimeraTecla
         }
     }
+}
+//==================================
+// Estado esperaKp
+//==================================
+void esperaKp(void)
+{
+  if(nuevaTecla==1)        // �Hay un nuevo car�cter?
+  {
+    nuevaTecla = 0;       //Bajamos la bandera de detección de tecla
+    if(tecla<=9)          //Comprobamos que sea un numero
+    {
+      Kp = tecla;         //Actualizamos el valor de Kp
+      estado[1] = esperaKi; //Nos movemos al siguiente estado
+    }
+    else                  //No hemos introducido un nº por lo que volvemos de nuevo a este estado
+    {
+        estado[1]=esperaKp;
+    }
+  }
+}
+//==================================
+// Estado esperaKi
+//==================================
+void esperaKi(void)
+{
+  if(nuevaTecla==1)        // �Hay un nuevo car�cter?
+  {
+    nuevaTecla = 0;       //Bajamos la bandera de detección de tecla
+    if(tecla<=9)          //Comprobamos que sea un numero
+    {
+      Ki = tecla;         //Actualizamos el valor de Kp
+      estado[1] = esperaAlmohadillaValor; //Nos movemos al siguiente estado
+    }
+    else                  //No hemos introducido un nº por lo que volvemos de nuevo a este estado
+    {
+        estado[1]=esperaKi;
+    }
+  }
 }

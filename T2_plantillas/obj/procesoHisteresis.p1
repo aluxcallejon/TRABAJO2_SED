@@ -12,7 +12,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _estado10 `(v ~T0 @X0 0 ef ]
 "41
 [v _estado50 `(v ~T0 @X0 0 ef ]
-"49 d:\sed_tools\xc8\include\pic16f88.h
+"49 c:\sed_tools\xc8\include\pic16f88.h
 [; <" INDF equ 00h ;# ">
 "55
 [; <" TMR0 equ 01h ;# ">
